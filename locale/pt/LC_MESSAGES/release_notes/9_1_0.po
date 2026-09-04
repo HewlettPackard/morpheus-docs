@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Morpheus Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-26 11:17-0400\n"
+"POT-Creation-Date: 2026-09-04 16:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -67,16 +67,16 @@ msgid ""
 "agent upgrade."
 msgstr ""
 "Após atualizar para |morphver|, é recomendado verificar também se há "
-"atualizações do agente do HVM Host. Para atualizar os agentes do HVM Host, "
-"navegue até a página de detalhes de cada HVM Host, expanda o menu ACTIONS e "
-"clique em \"Upgrade Agent.\" Este processo deve ser realizado em todos os HVM "
-"Hosts. Alternativamente, você pode selecionar \"Download Agent Script\" para "
-"baixar um script shell para realizar a atualização. Conecte-se ao HVM Host "
-"por uma sessão de terminal e execute o script baixado. Os scripts são únicos "
-"para cada HVM Host, portanto você deve baixar todos os scripts necessários e "
-"executar o script correto no HVM Host correto. Embora muitos contenham, é "
-"possível que alguns saltos de atualização de versão não incluam uma "
-"atualização do agente do HVM Host."
+"atualizações do agente do HVM Host. Para atualizar os agentes do HVM "
+"Host, navegue até a página de detalhes de cada HVM Host, expanda o menu "
+"ACTIONS e clique em \"Upgrade Agent.\" Este processo deve ser realizado "
+"em todos os HVM Hosts. Alternativamente, você pode selecionar \"Download "
+"Agent Script\" para baixar um script shell para realizar a atualização. "
+"Conecte-se ao HVM Host por uma sessão de terminal e execute o script "
+"baixado. Os scripts são únicos para cada HVM Host, portanto você deve "
+"baixar todos os scripts necessários e executar o script correto no HVM "
+"Host correto. Embora muitos contenham, é possível que alguns saltos de "
+"atualização de versão não incluam uma atualização do agente do HVM Host."
 
 #: ../../release_notes/9_1_0.rst:20
 msgid "New Features"
@@ -94,8 +94,8 @@ msgid ""
 "additional automation and integration capabilities. See "
 ":doc:`feature_matrix` for the complete tier comparison."
 msgstr ""
-"Introduzido o nível de licença **Advanced**, expandindo a plataforma para "
-"três níveis: VM Essentials, Advanced e Enterprise. O Advanced inclui "
+"Introduzido o nível de licença **Advanced**, expandindo a plataforma para"
+" três níveis: VM Essentials, Advanced e Enterprise. O Advanced inclui "
 "Ansible, Kubernetes (HKS), Workflows, Service Catalog, Personas e "
 "recursos adicionais de automação e integração. Consulte "
 ":doc:`feature_matrix` para a comparação completa de níveis."
@@ -119,8 +119,8 @@ msgid ""
 "NVIDIA vGPU slicing: create SR-IOV vGPU profiles on supported HVM Hosts "
 "and bind physical GPU types or vGPU Segment Types to Service Plans"
 msgstr ""
-"NVIDIA vGPU slicing: criar perfis SR-IOV vGPU em HVM Hosts compatíveis "
-"e vincular tipos de GPU física ou tipos de segmento vGPU a Service Plans"
+"NVIDIA vGPU slicing: criar perfis SR-IOV vGPU em HVM Hosts compatíveis e "
+"vincular tipos de GPU física ou tipos de segmento vGPU a Service Plans"
 
 #: ../../release_notes/9_1_0.rst:26
 msgid ""
@@ -135,16 +135,17 @@ msgid ""
 "Host Configuration Backup & Restore: back up HVM host identity and "
 "configuration for faster hardware replacement"
 msgstr ""
-"Backup e Restauração de Configuração de Host: realizar backup da identidade "
-"e configuração do HVM Host para substituição de hardware mais rápida"
+"Backup e Restauração de Configuração de Host: realizar backup da "
+"identidade e configuração do HVM Host para substituição de hardware mais "
+"rápida"
 
 #: ../../release_notes/9_1_0.rst:28
 msgid ""
 "Bulk operations: trigger actions on multiple VMs or hosts simultaneously "
 "(migrate, snapshot, power operations, tag, and more)"
 msgstr ""
-"Operações em massa: disparar ações em múltiplas VMs ou Hosts simultaneamente "
-"(migrar, snapshot, operações de energia, tags e mais)"
+"Operações em massa: disparar ações em múltiplas VMs ou Hosts "
+"simultaneamente (migrar, snapshot, operações de energia, tags e mais)"
 
 #: ../../release_notes/9_1_0.rst:29
 msgid ""
@@ -156,24 +157,34 @@ msgstr ""
 
 #: ../../release_notes/9_1_0.rst:30
 msgid ""
+"Cross-cluster Move: relocate running HVM/KVM VMs between HVM clusters in "
+"the same Cloud, mapping datastores and networks from Instance or VM "
+":guilabel:`Actions` > :guilabel:`Move`"
+msgstr ""
+"Movimentação entre clusters: realoque VMs HVM/KVM em execução entre "
+"clusters HVM na mesma Nuvem, mapeando Armazéns de dados e Redes a partir "
+"de :guilabel:`Actions` > :guilabel:`Move` da Instância ou VM"
+
+#: ../../release_notes/9_1_0.rst:31
+msgid ""
 "Connect and disconnect virtual network interfaces on running VMs without "
 "requiring a full reconfigure, supporting backup recovery and security "
 "isolation workflows"
 msgstr ""
-"Conectar e desconectar interfaces de rede virtuais em VMs em execução sem "
-"necessidade de reconfiguração completa, suportando fluxos de trabalho de "
-"recuperação de backup e isolamento de segurança"
+"Conectar e desconectar interfaces de rede virtuais em VMs em execução sem"
+" necessidade de reconfiguração completa, suportando fluxos de trabalho de"
+" recuperação de backup e isolamento de segurança"
 
-#: ../../release_notes/9_1_0.rst:31
+#: ../../release_notes/9_1_0.rst:32
 msgid ""
 "Expose advanced VM deployment settings (TPM, Secure Boot, UEFI, Nested "
 "Virtualization) in Reconfigure for Day 2 modifications without rebuilding"
 msgstr ""
-"Expor configurações avançadas de implantação de VM (TPM, Secure Boot, UEFI, "
-"Virtualização Aninhada) em Reconfigure para modificações Day 2 sem "
+"Expor configurações avançadas de implantação de VM (TPM, Secure Boot, "
+"UEFI, Virtualização Aninhada) em Reconfigure para modificações Day 2 sem "
 "necessidade de reconstrução"
 
-#: ../../release_notes/9_1_0.rst:32
+#: ../../release_notes/9_1_0.rst:33
 msgid ""
 "Centralized Affinity Placement management: view and manage VM affinity "
 "rules and pinning overrides from a single cluster-level interface"
@@ -182,7 +193,7 @@ msgstr ""
 "regras de afinidade de VM e sobrescritas de fixação a partir de uma "
 "interface única em nível de Cluster"
 
-#: ../../release_notes/9_1_0.rst:33
+#: ../../release_notes/9_1_0.rst:34
 msgid ""
 "Linked clones: create space-efficient clones that share a base disk image"
 " with the parent VM"
@@ -190,78 +201,80 @@ msgstr ""
 "Linked clones: criar clones eficientes em espaço que compartilham uma "
 "imagem de disco base com a VM pai"
 
-#: ../../release_notes/9_1_0.rst:34
+#: ../../release_notes/9_1_0.rst:35
 msgid ""
 "Datastore Evacuation / Maintenance Mode: automatically migrate VMs off a "
 "datastore being retired or replaced"
 msgstr ""
-"Evacuação de Datastore / Modo de Manutenção: migrar automaticamente VMs de "
-"um datastore sendo desativado ou substituído"
+"Evacuação de Datastore / Modo de Manutenção: migrar automaticamente VMs "
+"de um datastore sendo desativado ou substituído"
 
-#: ../../release_notes/9_1_0.rst:35
+#: ../../release_notes/9_1_0.rst:36
 msgid ""
 "Raw Device Block Mapping (RDBM): attach raw host block devices directly "
 "to VMs for performance-sensitive workloads"
 msgstr ""
-"Raw Device Block Mapping (RDBM): conectar dispositivos de bloco brutos do "
-"Host diretamente a VMs para cargas de trabalho sensíveis a desempenho"
+"Raw Device Block Mapping (RDBM): conectar dispositivos de bloco brutos do"
+" Host diretamente a VMs para cargas de trabalho sensíveis a desempenho"
 
-#: ../../release_notes/9_1_0.rst:36
+#: ../../release_notes/9_1_0.rst:37
 msgid "Virtual machine console access directly from HVM hosts"
 msgstr "Acesso ao console de máquina virtual diretamente dos HVM Hosts"
 
-#: ../../release_notes/9_1_0.rst:37
+#: ../../release_notes/9_1_0.rst:38
 msgid "CPU Ready-equivalent metric for monitoring vCPU scheduling contention"
 msgstr ""
 "Métrica equivalente ao CPU Ready para monitoramento de contenção de "
 "agendamento de vCPU"
 
-#: ../../release_notes/9_1_0.rst:38
+#: ../../release_notes/9_1_0.rst:39
 msgid ""
 "Leverage QEMU Guest Agent to gather guest OS information (IP addresses, "
 "OS version, hostname) without network-based access"
 msgstr ""
-"Utilizar o QEMU Guest Agent para coletar informações do sistema operacional "
-"convidado (endereços IP, versão do SO, hostname) sem acesso baseado em rede"
+"Utilizar o QEMU Guest Agent para coletar informações do sistema "
+"operacional convidado (endereços IP, versão do SO, hostname) sem acesso "
+"baseado em rede"
 
-#: ../../release_notes/9_1_0.rst:39
+#: ../../release_notes/9_1_0.rst:40
 msgid ""
 "VSS-aware application-consistent snapshots: when the QEMU Guest Agent is "
 "connected, snapshots trigger Windows Volume Shadow Copy Service for "
 "database and application consistency"
 msgstr ""
-"Snapshots consistentes com a aplicação via VSS: quando o QEMU Guest Agent "
-"está conectado, os snapshots acionam o Windows Volume Shadow Copy Service "
-"para consistência de banco de dados e aplicação"
+"Snapshots consistentes com a aplicação via VSS: quando o QEMU Guest Agent"
+" está conectado, os snapshots acionam o Windows Volume Shadow Copy "
+"Service para consistência de banco de dados e aplicação"
 
-#: ../../release_notes/9_1_0.rst:40
+#: ../../release_notes/9_1_0.rst:41
 msgid ""
 "vNUMA provisioning: automatic or manual virtual NUMA topology for wide "
 "VMs spanning multiple CPU sockets, with Off/Auto/Manual modes"
 msgstr ""
-"Provisionamento vNUMA: topologia NUMA virtual automática ou manual para VMs "
-"amplas que abrangem múltiplos soquetes de CPU, com modos Off/Auto/Manual"
+"Provisionamento vNUMA: topologia NUMA virtual automática ou manual para "
+"VMs amplas que abrangem múltiplos soquetes de CPU, com modos "
+"Off/Auto/Manual"
 
-#: ../../release_notes/9_1_0.rst:41
+#: ../../release_notes/9_1_0.rst:42
 msgid ""
 "vCPU Placement: cluster-level CPU affinity management with Unmanaged, "
 "Region, and Pinned modes for NUMA-aware workload performance"
 msgstr ""
-"vCPU Placement: gerenciamento de afinidade de CPU em nível de Cluster com "
-"modos Unmanaged, Region e Pinned para desempenho de carga de trabalho com "
-"reconhecimento de NUMA"
+"vCPU Placement: gerenciamento de afinidade de CPU em nível de Cluster com"
+" modos Unmanaged, Region e Pinned para desempenho de carga de trabalho "
+"com reconhecimento de NUMA"
 
-#: ../../release_notes/9_1_0.rst:42
+#: ../../release_notes/9_1_0.rst:43
 msgid ""
 "Improved audit logging: administrative actions (datastore changes, "
 "cluster settings, VM promotions) now recorded in object History for full "
 "traceability"
 msgstr ""
 "Registro de auditoria aprimorado: ações administrativas (alterações de "
-"datastore, configurações de Cluster, promoções de VM) agora registradas no "
-"Histórico do objeto para rastreabilidade completa"
+"datastore, configurações de Cluster, promoções de VM) agora registradas "
+"no Histórico do objeto para rastreabilidade completa"
 
-#: ../../release_notes/9_1_0.rst:43
+#: ../../release_notes/9_1_0.rst:44
 msgid ""
 "HVM Cluster OS Layout Ubuntu/HVM 26.04 support for confidential compute "
 "functions"
@@ -273,7 +286,7 @@ msgstr ""
 msgid "Monitoring & Administration"
 msgstr "Monitoramento & Administração"
 
-#: ../../release_notes/9_1_0.rst:45
+#: ../../release_notes/9_1_0.rst:46
 msgid ""
 "Monitoring tab time ranges for instance and server details, allowing "
 "analysis over configurable periods"
@@ -281,11 +294,13 @@ msgstr ""
 "Intervalos de tempo na aba de monitoramento para detalhes de Instância e "
 "servidor, permitindo análise em períodos configuráveis"
 
-#: ../../release_notes/9_1_0.rst:46
-msgid "Log rotation and retention period configuration from the GUI"
-msgstr "Configuração de rotação de logs e período de retenção pela interface gráfica"
-
 #: ../../release_notes/9_1_0.rst:47
+msgid "Log rotation and retention period configuration from the GUI"
+msgstr ""
+"Configuração de rotação de logs e período de retenção pela interface "
+"gráfica"
+
+#: ../../release_notes/9_1_0.rst:48
 msgid ""
 "Read-only access level for Appliance Settings permission, allowing "
 "auditors and operators to view configuration without modification rights"
@@ -298,29 +313,29 @@ msgstr ""
 msgid "Storage & Backup"
 msgstr "Armazenamento & Backup"
 
-#: ../../release_notes/9_1_0.rst:49
+#: ../../release_notes/9_1_0.rst:50
 msgid ""
 "Unified File Support Phase 2: Morpheus File Shares (create, grow, "
 "inventory, security toggles)"
 msgstr ""
-"Suporte Unificado a Arquivos Fase 2: Morpheus File Shares (criar, expandir, "
-"inventariar, opções de segurança)"
+"Suporte Unificado a Arquivos Fase 2: Morpheus File Shares (criar, "
+"expandir, inventariar, opções de segurança)"
 
 #: ../../release_notes/9_1_0.rst
 msgid "BMaaS / Bare Metal"
 msgstr "BMaaS / Bare Metal"
 
-#: ../../release_notes/9_1_0.rst:51
+#: ../../release_notes/9_1_0.rst:52
 msgid ""
 "PXE/Network Boot support: boot Bare Metal hosts via customer PXE "
 "infrastructure instead of virtual media, with optional Config ISO for "
 "post-deployment automation"
 msgstr ""
-"Suporte a PXE/Network Boot: inicializar Hosts Bare Metal via infraestrutura "
-"PXE do cliente em vez de mídia virtual, com Config ISO opcional para "
-"automação pós-implantação"
+"Suporte a PXE/Network Boot: inicializar Hosts Bare Metal via "
+"infraestrutura PXE do cliente em vez de mídia virtual, com Config ISO "
+"opcional para automação pós-implantação"
 
-#: ../../release_notes/9_1_0.rst:52
+#: ../../release_notes/9_1_0.rst:53
 msgid ""
 "Brownfield import in Boot From SAN (BFS): discover and manage existing "
 "BFS-provisioned servers"
@@ -328,7 +343,7 @@ msgstr ""
 "Importação brownfield em Boot From SAN (BFS): descobrir e gerenciar "
 "servidores existentes provisionados via BFS"
 
-#: ../../release_notes/9_1_0.rst:53
+#: ../../release_notes/9_1_0.rst:54
 msgid ""
 "Support for multiple networks (VLANs) with Unmanaged Networking on a "
 "single physical or bond interface"
@@ -340,17 +355,17 @@ msgstr ""
 msgid "HKS / Kubernetes"
 msgstr "HKS / Kubernetes"
 
-#: ../../release_notes/9_1_0.rst:55
+#: ../../release_notes/9_1_0.rst:56
 msgid ""
 "NGINX Replacement with Kubernetes Gateway API (Phase 1): Gateway API CRDs"
 " (GatewayClass, Gateway, HTTPRoute) replace NGINX Ingress Controller on "
 "HVM, VMware, and Bare Metal layouts"
 msgstr ""
-"Substituição do NGINX pela Kubernetes Gateway API (Fase 1): CRDs da Gateway "
-"API (GatewayClass, Gateway, HTTPRoute) substituem o NGINX Ingress Controller "
-"em layouts HVM, VMware e Bare Metal"
+"Substituição do NGINX pela Kubernetes Gateway API (Fase 1): CRDs da "
+"Gateway API (GatewayClass, Gateway, HTTPRoute) substituem o NGINX Ingress"
+" Controller em layouts HVM, VMware e Bare Metal"
 
-#: ../../release_notes/9_1_0.rst:56
+#: ../../release_notes/9_1_0.rst:57
 msgid ""
 "HKS cluster packages updated to latest Kubernetes versions (1.33, 1.34, "
 "1.35) with CVE evaluation"
@@ -358,7 +373,7 @@ msgstr ""
 "Pacotes de Cluster HKS atualizados para as versões mais recentes do "
 "Kubernetes (1.33, 1.34, 1.35) com avaliação de CVE"
 
-#: ../../release_notes/9_1_0.rst:57
+#: ../../release_notes/9_1_0.rst:58
 msgid "HKS enhancements for 9.1.0"
 msgstr "Melhorias do HKS para 9.1.0"
 
@@ -366,14 +381,15 @@ msgstr "Melhorias do HKS para 9.1.0"
 msgid "Platform & Orchestration"
 msgstr "Plataforma & Orquestração"
 
-#: ../../release_notes/9_1_0.rst:59
+#: ../../release_notes/9_1_0.rst:60
 msgid ""
 "PCO Support for Host addition and removal within existing VMware/VME "
 "clusters"
 msgstr ""
-"Suporte PCO para adição e remoção de Host em Clusters VMware/VME existentes"
+"Suporte PCO para adição e remoção de Host em Clusters VMware/VME "
+"existentes"
 
-#: ../../release_notes/9_1_0.rst:60
+#: ../../release_notes/9_1_0.rst:61
 msgid ""
 "Unified & Contextual Approval Framework for consistent approval workflows"
 " across provisioning operations"
@@ -381,7 +397,7 @@ msgstr ""
 "Framework de Aprovação Unificado e Contextual para fluxos de trabalho de "
 "aprovação consistentes em operações de provisionamento"
 
-#: ../../release_notes/9_1_0.rst:61
+#: ../../release_notes/9_1_0.rst:62
 msgid ""
 "Import existing systems into |morpheus| for management without "
 "reprovisioning"
@@ -393,25 +409,25 @@ msgstr ""
 msgid "CLI & Tooling"
 msgstr "CLI & Ferramentas"
 
-#: ../../release_notes/9_1_0.rst:63
+#: ../../release_notes/9_1_0.rst:64
 msgid ""
 "hvmcli: unified CLI tool for HVM host management including log viewing, "
 "VM/node/storage/cluster status, network configuration, and health "
 "validation"
 msgstr ""
-"hvmcli: ferramenta CLI unificada para gerenciamento de HVM Host incluindo "
-"visualização de logs, status de VM/nó/armazenamento/Cluster, configuração "
-"de rede e validação de saúde"
+"hvmcli: ferramenta CLI unificada para gerenciamento de HVM Host incluindo"
+" visualização de logs, status de VM/nó/armazenamento/Cluster, "
+"configuração de rede e validação de saúde"
 
-#: ../../release_notes/9_1_0.rst:64
+#: ../../release_notes/9_1_0.rst:65
 msgid ""
 "Aruba CX Support Bundle: collect diagnostic logs from Aruba CX switches "
 "as part of the |morpheus| support bundle"
 msgstr ""
-"Aruba CX Support Bundle: coletar logs de diagnóstico de switches Aruba CX "
-"como parte do pacote de suporte do |morpheus|"
+"Aruba CX Support Bundle: coletar logs de diagnóstico de switches Aruba CX"
+" como parte do pacote de suporte do |morpheus|"
 
-#: ../../release_notes/9_1_0.rst:65
+#: ../../release_notes/9_1_0.rst:66
 msgid ""
 "Password Management for iLO, ESXi, and Switch credentials via Cypher-"
 "backed credential store with multi-device linking and rotation support"
@@ -420,11 +436,11 @@ msgstr ""
 "armazenamento de credenciais baseado em Cypher com vinculação multi-"
 "dispositivo e suporte a rotação"
 
-#: ../../release_notes/9_1_0.rst:66
+#: ../../release_notes/9_1_0.rst:67
 msgid "Plugin ReadMe Standardization"
 msgstr "Padronização de ReadMe de Plugins"
 
-#: ../../release_notes/9_1_0.rst:69
+#: ../../release_notes/9_1_0.rst:70
 msgid "Fixes"
 msgstr "Correções"
 
@@ -432,50 +448,52 @@ msgstr "Correções"
 msgid "HVM"
 msgstr "HVM"
 
-#: ../../release_notes/9_1_0.rst:71
+#: ../../release_notes/9_1_0.rst:72
 msgid ""
 "Fixed an issue where Dynamic Placement continuously attempted to move VMs"
 " to a memory-exhausted host, causing repeated migration failures"
 msgstr ""
-"Corrigido um problema em que o Dynamic Placement tentava continuamente mover "
-"VMs para um Host com memória esgotada, causando falhas de migração repetidas"
+"Corrigido um problema em que o Dynamic Placement tentava continuamente "
+"mover VMs para um Host com memória esgotada, causando falhas de migração "
+"repetidas"
 
-#: ../../release_notes/9_1_0.rst:72
+#: ../../release_notes/9_1_0.rst:73
 msgid "Fixed allocated memory displaying incorrect values after cluster syncs"
 msgstr ""
 "Corrigida a exibição de valores incorretos de memória alocada após "
 "sincronizações de Cluster"
 
-#: ../../release_notes/9_1_0.rst:73
+#: ../../release_notes/9_1_0.rst:74
 msgid "Fixed network statistic information not displaying in the cluster view"
 msgstr ""
 "Corrigida a não exibição de informações de estatísticas de Rede na "
 "visualização do Cluster"
 
-#: ../../release_notes/9_1_0.rst:74
+#: ../../release_notes/9_1_0.rst:75
 msgid "Fixed failure to attach a volume to a VM in certain configurations"
 msgstr ""
-"Corrigida a falha ao anexar um volume a uma VM em determinadas configurações"
+"Corrigida a falha ao anexar um volume a uma VM em determinadas "
+"configurações"
 
 #: ../../release_notes/9_1_0.rst
 msgid "Monitoring"
 msgstr "Monitoramento"
 
-#: ../../release_notes/9_1_0.rst:76
+#: ../../release_notes/9_1_0.rst:77
 #, python-format
 msgid ""
 "Fixed old open incidents not being automatically closed when all health "
 "checks return 100% healthy"
 msgstr ""
-"Corrigidos incidentes antigos abertos que não eram fechados automaticamente "
-"quando todas as verificações de saúde retornavam 100%% saudável"
+"Corrigidos incidentes antigos abertos que não eram fechados "
+"automaticamente quando todas as verificações de saúde retornavam 100%% "
+"saudável"
 
-#: ../../release_notes/9_1_0.rst:78
+#: ../../release_notes/9_1_0.rst:79
 msgid "Fixed HKS cluster provisioning failures in proxy environments"
-msgstr ""
-"Corrigidas falhas de provisionamento de Cluster HKS em ambientes com proxy"
+msgstr "Corrigidas falhas de provisionamento de Cluster HKS em ambientes com proxy"
 
-#: ../../release_notes/9_1_0.rst:80
+#: ../../release_notes/9_1_0.rst:81
 msgid ""
 "Fixed Bare Metal instance status remaining in \"Provisioning\" state in "
 "multi-node scenarios"
@@ -487,7 +505,7 @@ msgstr ""
 msgid "Networking"
 msgstr "Rede"
 
-#: ../../release_notes/9_1_0.rst:82
+#: ../../release_notes/9_1_0.rst:83
 msgid ""
 "Fixed Huawei Private Network option being unavailable when adding "
 "networks in a subtenant"
@@ -495,21 +513,21 @@ msgstr ""
 "Corrigida a opção Huawei Private Network indisponível ao adicionar redes "
 "em um subtenant"
 
-#: ../../release_notes/9_1_0.rst:84
+#: ../../release_notes/9_1_0.rst:85
 msgid "Note"
 msgstr "Nota"
 
-#: ../../release_notes/9_1_0.rst:84
+#: ../../release_notes/9_1_0.rst:85
 msgid ""
 "Additional bug fixes and regressions are being addressed throughout the "
 "9.1.0 development cycle. See MORPH-13190 and MORPH-13191 for ongoing "
 "tracking."
 msgstr ""
-"Correções de bugs adicionais e regressões estão sendo tratadas ao longo do "
-"ciclo de desenvolvimento 9.1.0. Consulte MORPH-13190 e MORPH-13191 para "
-"acompanhamento contínuo."
+"Correções de bugs adicionais e regressões estão sendo tratadas ao longo "
+"do ciclo de desenvolvimento 9.1.0. Consulte MORPH-13190 e MORPH-13191 "
+"para acompanhamento contínuo."
 
-#: ../../release_notes/9_1_0.rst:87
+#: ../../release_notes/9_1_0.rst:88
 msgid "Appliance & Agent Updates"
 msgstr "Atualizações de Appliance & Agente"
 
@@ -517,16 +535,15 @@ msgstr "Atualizações de Appliance & Agente"
 msgid "Node Packages"
 msgstr "Pacotes de Nó"
 
-#: ../../release_notes/9_1_0.rst:89
+#: ../../release_notes/9_1_0.rst:90
 msgid "|morpheus| Node and VM Node packages updated to |nodePackageVer|"
-msgstr ""
-"Pacotes |morpheus| Node e VM Node atualizados para |nodePackageVer|"
+msgstr "Pacotes |morpheus| Node e VM Node atualizados para |nodePackageVer|"
 
 #: ../../release_notes/9_1_0.rst
 msgid "Linux Agent"
 msgstr "Agente Linux"
 
-#: ../../release_notes/9_1_0.rst:90
+#: ../../release_notes/9_1_0.rst:91
 msgid "Updated to |linuxagentver|"
 msgstr "Atualizado para |linuxagentver|"
 
@@ -534,7 +551,7 @@ msgstr "Atualizado para |linuxagentver|"
 msgid "Windows Agent"
 msgstr "Agente Windows"
 
-#: ../../release_notes/9_1_0.rst:91
+#: ../../release_notes/9_1_0.rst:92
 msgid "|winagentver|"
 msgstr "|winagentver|"
 
@@ -542,7 +559,7 @@ msgstr "|winagentver|"
 msgid "macOS Agent"
 msgstr "Agente macOS"
 
-#: ../../release_notes/9_1_0.rst:92
+#: ../../release_notes/9_1_0.rst:93
 msgid "|macagentver|"
 msgstr "|macagentver|"
 
@@ -550,6 +567,7 @@ msgstr "|macagentver|"
 msgid "Plugin API"
 msgstr "Plugin API"
 
-#: ../../release_notes/9_1_0.rst:93
+#: ../../release_notes/9_1_0.rst:94
 msgid "Updated to |pluginVer|"
 msgstr "Atualizado para |pluginVer|"
+
