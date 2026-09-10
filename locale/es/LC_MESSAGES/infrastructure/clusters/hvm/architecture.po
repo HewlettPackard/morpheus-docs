@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Morpheus Docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-26 11:17-0400\n"
+"POT-Creation-Date: 2026-09-08 10:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -34,7 +34,12 @@ msgid ""
 "high availability. This architecture replaces the Pacemaker-based "
 "resource management used by Legacy layouts, providing tighter integration"
 " with the |morpheus| platform and simplified operations."
-msgstr "Los layouts 1.3 y 2.0 utilizan QuorumCheckService del Agente |morpheus| para alta disponibilidad. Esta arquitectura reemplaza la administración de recursos basada en Pacemaker utilizada por layouts Legacy, proporcionando una integración más estrecha con la plataforma |morpheus| y operaciones simplificadas."
+msgstr ""
+"Los layouts 1.3 y 2.0 utilizan QuorumCheckService del Agente |morpheus| "
+"para alta disponibilidad. Esta arquitectura reemplaza la administración "
+"de recursos basada en Pacemaker utilizada por layouts Legacy, "
+"proporcionando una integración más estrecha con la plataforma |morpheus| "
+"y operaciones simplificadas."
 
 #: ../../infrastructure/clusters/hvm/architecture.rst:9
 msgid "Note"
@@ -44,16 +49,18 @@ msgstr "Nota"
 msgid ""
 "This page applies to layouts 1.3 and 2.0. For the Pacemaker architecture "
 "used by Legacy layouts, see :doc:`/infrastructure/clusters/mvm`."
-msgstr "Esta página se aplica a los layouts 1.3 y 2.0. Para la arquitectura Pacemaker utilizada por layouts Legacy, consulte :doc:`/infrastructure/clusters/mvm`."
+msgstr ""
+"Esta página se aplica a los layouts 1.3 y 2.0. Para la arquitectura "
+"Pacemaker utilizada por layouts Legacy, consulte "
+":doc:`/infrastructure/clusters/mvm`."
 
 #: ../../infrastructure/clusters/hvm/architecture.rst:12
 msgid "Component Stack"
 msgstr "Component Stack"
 
 #: ../../infrastructure/clusters/hvm/architecture.rst:14
-#, fuzzy
 msgid "Layouts 1.3 and 2.0 rely on three core components:"
-msgstr "El HVM 1.3 cluster relies en three núcleo components:"
+msgstr "Los diseños 1.3 y 2.0 dependen de tres componentes principales:"
 
 #: ../../infrastructure/clusters/hvm/architecture.rst:16
 msgid "**Corosync**: Cluster membership and messaging layer"
@@ -105,54 +112,220 @@ msgstr "Un nodo es considered unreachable después de 60 seconds con no respuest
 
 #: ../../infrastructure/clusters/hvm/architecture.rst:31
 msgid ""
-"Cross-verification: reachability is confirmed by a majority of same-site "
-"peers"
+"On a two-node GFS2 cluster, both Hosts ping each other on TCP 7443 and "
+"must also reach the Distributed Worker URL. Do not apply same-site peer "
+"cross-verification to this topology."
 msgstr ""
-"Cross-verification: reachability es confirmed por un majority de mismo-"
-"site peers"
+"En un clúster GFS2 de dos nodos, ambos Hosts se hacen ping mutuamente "
+"por TCP 7443 y también deben alcanzar la Worker URL del Distributed "
+"Worker. No aplique la verificación cruzada de pares del mismo sitio a "
+"esta topología."
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:34
+#: ../../infrastructure/clusters/hvm/architecture.rst:32
+msgid ""
+"On a stretch cluster, reachability is confirmed by a majority of same-"
+"site peers. Site-level arbitration is documented in "
+":doc:`stretch_clusters`."
+msgstr ""
+"En un clúster stretch, la accesibilidad se confirma mediante una "
+"mayoría de pares del mismo sitio. El arbitraje a nivel de sitio se "
+"documenta en :doc:`stretch_clusters`."
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:35
 msgid "Majority Calculation"
 msgstr "Majority Calculation"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:36
+#: ../../infrastructure/clusters/hvm/architecture.rst:37
 msgid "The quorum algorithm uses a simple majority formula:"
 msgstr "El quorum algorithm usa un simple majority formula:"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:38
+#: ../../infrastructure/clusters/hvm/architecture.rst:39
 msgid "neededForQuorum = (totalNodes / 2) + 1"
 msgstr "neededForQuorum = (totalNodes / 2) + 1"
 
 #: ../../infrastructure/clusters/hvm/architecture.rst:43
+msgid ""
+"``totalNodes`` counts every Agent quorum member. On a two-node GFS2 "
+"cluster that includes a Distributed Worker witness, there are three "
+"members and majority is 2 of 3."
+msgstr ""
+"``totalNodes`` cuenta cada miembro del quórum del Agent. En un clúster "
+"GFS2 de dos nodos que incluye un testigo Distributed Worker, hay tres "
+"miembros y la mayoría es 2 de 3."
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:45
+msgid ""
+"Agent quorum is the operational authority for layouts 1.3 and 2.0. "
+"Corosync ``Quorate`` does not decide Agent quorum and may report ``No`` "
+"on a healthy two-node or stretch cluster. See :doc:`building_clusters` "
+"and :doc:`troubleshooting`."
+msgstr ""
+"El quórum del Agent es la autoridad operativa para los diseños 1.3 y "
+"2.0. El valor ``Quorate`` de Corosync no decide el quórum del Agent y "
+"puede indicar ``No`` en un clúster de dos nodos o stretch en buen "
+"estado. Consulte :doc:`building_clusters` y :doc:`troubleshooting`."
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:48
+msgid "Witness Topologies"
+msgstr "Topologías de testigo"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:50
+msgid ""
+"A Distributed Worker can provide a quorum-only vote for two supported "
+"GFS2 topologies. |morpheus| classifies the witness from Site Group "
+"presence, not from Host count. Agent quorum is sent only for layout 1.3 "
+"or later clusters that have at least one HPE Shared File System (GFS2) "
+"datastore."
+msgstr ""
+"Un Distributed Worker puede proporcionar un voto de solo quórum para "
+"dos topologías GFS2 admitidas. |morpheus| clasifica el testigo según la"
+" presencia de Grupos de sitio, no según el número de Hosts. El quórum "
+"del Agent solo se envía para clústeres de diseño 1.3 o posterior que "
+"tengan al menos un almacén de datos HPE Shared File System (GFS2)."
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:57
+msgid "Two-node GFS2"
+msgstr "GFS2 de dos nodos"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:58
+msgid "Stretch"
+msgstr "Stretch"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:59
+msgid "Compute Hosts"
+msgstr "Hosts de cómputo"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:60
+msgid "Two Hosts"
+msgstr "Dos Hosts"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:61
+msgid "Minimum 6 Hosts (3 per site); see :doc:`stretch_clusters`"
+msgstr "Mínimo 6 Hosts (3 por sitio); consulte :doc:`stretch_clusters`"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:62
+msgid "Site Groups"
+msgstr "Grupos de sitio"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:63
+msgid "None"
+msgstr "Ninguno"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:64
+msgid "One Site Group per physical site"
+msgstr "Un Grupo de sitio por sitio físico"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:65
+msgid "Witness"
+msgstr "Testigo"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:66
+msgid "One Distributed Worker, quorum-only"
+msgstr "Un Distributed Worker, solo quórum"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:67
+msgid "One Distributed Worker in a third location, quorum-only"
+msgstr "Un Distributed Worker en una tercera ubicación, solo quórum"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:68
+msgid "How |morpheus| classifies the witness"
+msgstr "Cómo clasifica |morpheus| el testigo"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:69
+msgid "No Site Groups present"
+msgstr "No hay Grupos de sitio presentes"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:70
+msgid "Site Groups present; the worker is assigned as ``siteWitness``"
+msgstr ""
+"Hay Grupos de sitio presentes; el worker se asigna como "
+"``siteWitness``"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:71
+msgid "Votes"
+msgstr "Votos"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:72
+msgid "3 members; majority is 2"
+msgstr "3 miembros; la mayoría es 2"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:73
+msgid "Site-level arbitration described in :doc:`stretch_clusters`"
+msgstr "Arbitraje a nivel de sitio descrito en :doc:`stretch_clusters`"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:74
+msgid "Quorum panel"
+msgstr "Panel de quórum"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:75
+msgid "Witness row; no Sites row; flat Host table"
+msgstr "Fila de testigo; sin fila de Sitios; tabla de Hosts plana"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:76
+msgid "Witness row; Sites row; Hosts grouped by site"
+msgstr "Fila de testigo; fila de Sitios; Hosts agrupados por sitio"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:77
+msgid "Activation"
+msgstr "Activación"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:78
+msgid "Layout 1.3 or later and at least one GFS2 datastore"
+msgstr "Diseño 1.3 o posterior y al menos un almacén de datos GFS2"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:79
+msgid "Same GFS2 activation; add Site Groups after cluster create"
+msgstr ""
+"Misma activación de GFS2; agregue Grupos de sitio después de crear el "
+"clúster"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:81
+msgid "Warning"
+msgstr "Advertencia"
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:81
+msgid ""
+"Creating Site Groups on a two-node GFS2 cluster switches the witness "
+"classification to stretch ``siteWitness``. Do not add Site Groups to a "
+"two-node cluster. Use :doc:`two_node_clusters` for two Hosts with no Site"
+" Groups, and :doc:`stretch_clusters` only when Site Groups exist."
+msgstr ""
+"Crear Grupos de sitio en un clúster GFS2 de dos nodos cambia la "
+"clasificación del testigo a ``siteWitness`` de stretch. No agregue "
+"Grupos de sitio a un clúster de dos nodos. Use :doc:`two_node_clusters`"
+" para dos Hosts sin Grupos de sitio, y :doc:`stretch_clusters` solo "
+"cuando existan Grupos de sitio."
+
+#: ../../infrastructure/clusters/hvm/architecture.rst:84
 msgid "Quorum States"
 msgstr "Quorum States"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:45
+#: ../../infrastructure/clusters/hvm/architecture.rst:86
 msgid "Each node operates in one of three states:"
 msgstr "Cada nodo operates en one de three estados:"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:51
+#: ../../infrastructure/clusters/hvm/architecture.rst:92
 msgid "State"
 msgstr "Estado"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:52
-#: ../../infrastructure/clusters/hvm/architecture.rst:112
+#: ../../infrastructure/clusters/hvm/architecture.rst:93
+#: ../../infrastructure/clusters/hvm/architecture.rst:153
 msgid "Description"
 msgstr "Descripción"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:53
+#: ../../infrastructure/clusters/hvm/architecture.rst:94
 msgid "Quorum Achieved"
 msgstr "Quorum Achieved"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:54
+#: ../../infrastructure/clusters/hvm/architecture.rst:95
 msgid "A majority of cluster nodes are reachable. Normal operations continue."
 msgstr "Un majority de cluster nodos son reachable. Normal operaciones continuar."
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:55
+#: ../../infrastructure/clusters/hvm/architecture.rst:96
 msgid "Quorum Lost"
 msgstr "Quorum Lost"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:56
+#: ../../infrastructure/clusters/hvm/architecture.rst:97
 msgid ""
 "The node cannot reach a majority of peers. The node self-fences to "
 "protect data integrity."
@@ -160,19 +333,19 @@ msgstr ""
 "El nodo cannot reach un majority de peers. El nodo self-fences a protect "
 "datos integrity."
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:57
+#: ../../infrastructure/clusters/hvm/architecture.rst:98
 msgid "Fenced"
 msgstr "Fenced"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:58
+#: ../../infrastructure/clusters/hvm/architecture.rst:99
 msgid "The node has been fenced and is waiting for recovery."
 msgstr "El nodo tiene been fenced y es waiting para recuperación."
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:61
+#: ../../infrastructure/clusters/hvm/architecture.rst:102
 msgid "Designated Coordinator"
 msgstr "Designated Coordinator"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:63
+#: ../../infrastructure/clusters/hvm/architecture.rst:104
 msgid ""
 "The cluster elects a Designated Coordinator from among the reachable "
 "nodes. The coordinator is determined by the lowest hash of reachable host"
@@ -184,11 +357,11 @@ msgstr ""
 "clave hashes (sorted alphabetically). Solo el coordinator es authorized a"
 " problema fencing operaciones."
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:66
+#: ../../infrastructure/clusters/hvm/architecture.rst:107
 msgid "Heartbeat Failover (MvmHeartbeatFailover)"
 msgstr "Heartbeat Failover (MvmHeartbeatFailover)"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:68
+#: ../../infrastructure/clusters/hvm/architecture.rst:109
 msgid ""
 "The heartbeat failover mechanism monitors host health via shared storage "
 "and orchestrates VM recovery when a host fails."
@@ -196,29 +369,29 @@ msgstr ""
 "El heartbeat conmutación por error mechanism monitors host health via "
 "shared storage y orchestrates VM recuperación cuando un host falla."
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:71
+#: ../../infrastructure/clusters/hvm/architecture.rst:112
 msgid "Heartbeat Writes"
 msgstr "Heartbeat Writes"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:73
+#: ../../infrastructure/clusters/hvm/architecture.rst:114
 msgid "Each host writes ``hb.properties`` to shared storage every 20 seconds"
 msgstr "Cada host writes ``hb.properties`` a shared storage cada 20 seconds"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:74
+#: ../../infrastructure/clusters/hvm/architecture.rst:115
 msgid "The heartbeat file contains hostname, memory statistics, and timestamp"
 msgstr "El heartbeat archivo contiene hostname, memoria statistics, y timestamp"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:75
+#: ../../infrastructure/clusters/hvm/architecture.rst:116
 msgid "VM XML definitions are written for all running VMs alongside the heartbeat"
 msgstr ""
 "VM XML definitions son written para todos ejecutando VMs alongside el "
 "heartbeat"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:78
+#: ../../infrastructure/clusters/hvm/architecture.rst:119
 msgid "Failure Detection"
 msgstr "Fallo Detection"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:80
+#: ../../infrastructure/clusters/hvm/architecture.rst:121
 msgid ""
 "A host is considered offline after 140 seconds (7 missed heartbeat "
 "intervals)"
@@ -226,7 +399,7 @@ msgstr ""
 "Un host es considered offline después de 140 seconds (7 missed heartbeat "
 "intervals)"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:81
+#: ../../infrastructure/clusters/hvm/architecture.rst:122
 msgid ""
 "The Designated Coordinator assigns the failed host's VMs to surviving "
 "hosts based on available memory"
@@ -234,17 +407,17 @@ msgstr ""
 "El Designated Coordinator asigna el falló host's VMs a surviving hosts "
 "basado en disponible memoria"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:84
+#: ../../infrastructure/clusters/hvm/architecture.rst:125
 msgid "Storage Structure"
 msgstr "Storage Structure"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:86
+#: ../../infrastructure/clusters/hvm/architecture.rst:127
 msgid "Heartbeat data is stored on the HPE Clustered Datastore (Shared LUN) at:"
 msgstr ""
 "Heartbeat datos es stored en el HPE Clustered Almacén de datos (Shared "
 "LUN) en:"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:88
+#: ../../infrastructure/clusters/hvm/architecture.rst:129
 msgid ""
 "<datastore>/mvm-hb/<cluster_uuid>-2/<host_hash>/\n"
 "  ├── hb.properties\n"
@@ -256,11 +429,11 @@ msgstr ""
 "  ├── *.xml          (VM definitions)\n"
 "  └── recover/"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:96
+#: ../../infrastructure/clusters/hvm/architecture.rst:137
 msgid "APD (All Paths Down) Protection"
 msgstr "APD (Todos Paths Down) Protection"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:98
+#: ../../infrastructure/clusters/hvm/architecture.rst:139
 msgid ""
 "APD protection prevents split-brain data corruption when a host loses "
 "access to shared storage."
@@ -268,7 +441,7 @@ msgstr ""
 "APD protection prevents split-brain datos corruption cuando un host loses"
 " acceso a shared storage."
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:100
+#: ../../infrastructure/clusters/hvm/architecture.rst:141
 msgid ""
 "After 6 consecutive failed heartbeat writes (~2 minutes), all non-pinned "
 "VMs on shared storage are shut down"
@@ -276,7 +449,7 @@ msgstr ""
 "Después de 6 consecutive falló heartbeat writes (~2 minutes), todos non-"
 "pinned VMs en shared storage son shut down"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:101
+#: ../../infrastructure/clusters/hvm/architecture.rst:142
 msgid ""
 "This prevents VMs from running with stale data while another host may be "
 "serving the same storage"
@@ -284,101 +457,101 @@ msgstr ""
 "Este prevents VMs desde ejecutando con stale datos mientras another host "
 "puede be serving el mismo storage"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:104
+#: ../../infrastructure/clusters/hvm/architecture.rst:145
 msgid "Timing Constants"
 msgstr "Timing Constants"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:110
+#: ../../infrastructure/clusters/hvm/architecture.rst:151
 msgid "Parameter"
 msgstr "Parámetro"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:111
+#: ../../infrastructure/clusters/hvm/architecture.rst:152
 msgid "Value"
 msgstr "Valor"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:113
+#: ../../infrastructure/clusters/hvm/architecture.rst:154
 msgid "Ping interval"
 msgstr "Ping interval"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:114
-#: ../../infrastructure/clusters/hvm/architecture.rst:120
+#: ../../infrastructure/clusters/hvm/architecture.rst:155
+#: ../../infrastructure/clusters/hvm/architecture.rst:161
 msgid "20s"
 msgstr "20s"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:115
+#: ../../infrastructure/clusters/hvm/architecture.rst:156
 msgid "Frequency of quorum peer checks"
 msgstr "Frequency de quorum peer checks"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:116
+#: ../../infrastructure/clusters/hvm/architecture.rst:157
 msgid "Quorum timeout"
 msgstr "Quorum timeout"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:117
-#: ../../infrastructure/clusters/hvm/architecture.rst:129
+#: ../../infrastructure/clusters/hvm/architecture.rst:158
+#: ../../infrastructure/clusters/hvm/architecture.rst:170
 msgid "60s"
 msgstr "60s"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:118
+#: ../../infrastructure/clusters/hvm/architecture.rst:159
 msgid "Time before a node is marked unreachable"
 msgstr "Tiempo antes de un nodo es marked unreachable"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:119
+#: ../../infrastructure/clusters/hvm/architecture.rst:160
 msgid "Heartbeat interval"
 msgstr "Heartbeat interval"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:121
+#: ../../infrastructure/clusters/hvm/architecture.rst:162
 msgid "Frequency of heartbeat writes to shared storage"
 msgstr "Frequency de heartbeat writes a shared storage"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:122
+#: ../../infrastructure/clusters/hvm/architecture.rst:163
 msgid "Heartbeat failure threshold"
 msgstr "Heartbeat fallo threshold"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:123
+#: ../../infrastructure/clusters/hvm/architecture.rst:164
 msgid "140s (7 missed)"
 msgstr "140s (7 missed)"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:124
+#: ../../infrastructure/clusters/hvm/architecture.rst:165
 msgid "Time before a host is considered offline"
 msgstr "Tiempo antes de un host es considered offline"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:125
+#: ../../infrastructure/clusters/hvm/architecture.rst:166
 msgid "APD threshold"
 msgstr "APD threshold"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:126
+#: ../../infrastructure/clusters/hvm/architecture.rst:167
 msgid "~2 minutes (6 failed cycles)"
 msgstr "~2 minutes (6 falló cycles)"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:127
+#: ../../infrastructure/clusters/hvm/architecture.rst:168
 msgid "Time before VMs shut down on storage loss"
 msgstr "Tiempo antes de VMs shut down en storage loss"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:128
+#: ../../infrastructure/clusters/hvm/architecture.rst:169
 msgid "Fence_ack cooldown"
 msgstr "Fence_ack cooldown"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:130
+#: ../../infrastructure/clusters/hvm/architecture.rst:171
 msgid "Cooldown period after a fence acknowledgement"
 msgstr "Cooldown period después de un fence acknowledgement"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:131
+#: ../../infrastructure/clusters/hvm/architecture.rst:172
 msgid "DLM fence_wait delay"
 msgstr "DLM fence_wait delay"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:132
+#: ../../infrastructure/clusters/hvm/architecture.rst:173
 msgid "Up to 30s"
 msgstr "Hasta 30s"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:133
+#: ../../infrastructure/clusters/hvm/architecture.rst:174
 msgid "Maximum DLM delay waiting for fence resolution"
 msgstr "Máximo DLM delay waiting para fence resolution"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:136
+#: ../../infrastructure/clusters/hvm/architecture.rst:177
 msgid "Persistence Files"
 msgstr "Persistence Files"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:138
+#: ../../infrastructure/clusters/hvm/architecture.rst:179
 msgid ""
 "The |morpheus| agent persists cluster state to the following files on "
 "each host:"
@@ -386,35 +559,35 @@ msgstr ""
 "El |morpheus| agent persists cluster estado al siguiente archivos en cada"
 " host:"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:144
+#: ../../infrastructure/clusters/hvm/architecture.rst:185
 msgid "File Path"
 msgstr "Archivo Ruta"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:145
+#: ../../infrastructure/clusters/hvm/architecture.rst:186
 msgid "Purpose"
 msgstr "Purpose"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:146
+#: ../../infrastructure/clusters/hvm/architecture.rst:187
 msgid "``/opt/morpheus-node/.quorum-nodes``"
 msgstr "``/opt/morpheus-node/.quorum-nodes``"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:147
+#: ../../infrastructure/clusters/hvm/architecture.rst:188
 msgid "Cluster member list"
 msgstr "Clúster miembro lista"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:148
+#: ../../infrastructure/clusters/hvm/architecture.rst:189
 msgid "``/opt/morpheus-node/.hb``"
 msgstr "``/opt/morpheus-node/.hb``"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:149
+#: ../../infrastructure/clusters/hvm/architecture.rst:190
 msgid "Heartbeat job configuration"
 msgstr "Heartbeat trabajo configuración"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:150
+#: ../../infrastructure/clusters/hvm/architecture.rst:191
 msgid "``/opt/morpheus-node/.mounts``"
 msgstr "``/opt/morpheus-node/.mounts``"
 
-#: ../../infrastructure/clusters/hvm/architecture.rst:151
+#: ../../infrastructure/clusters/hvm/architecture.rst:192
 msgid "HPE Clustered Datastore (GFS2) mount list"
 msgstr "HPE Clustered Almacén de datos (GFS2) mount lista"
 
@@ -438,4 +611,13 @@ msgstr "HPE Clustered Almacén de datos (GFS2) mount lista"
 #~ "providing tighter integration con el "
 #~ "|morpheus| plataforma y simplified "
 #~ "operaciones."
+
+#~ msgid ""
+#~ "Cross-verification: reachability is confirmed"
+#~ " by a majority of same-site "
+#~ "peers"
+#~ msgstr ""
+#~ "Cross-verification: reachability es confirmed"
+#~ " por un majority de mismo-site "
+#~ "peers"
 

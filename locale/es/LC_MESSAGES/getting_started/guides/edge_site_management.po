@@ -1,0 +1,582 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Morpheus Data
+# This file is distributed under the same license as the Morpheus Docs
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Morpheus Docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-08 10:52+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: es <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../getting_started/guides/edge_site_management.rst:2
+msgid "Edge Site Management Strategy"
+msgstr "Estrategia de gestión de sitios edge"
+
+#: ../../getting_started/guides/edge_site_management.rst:5
+msgid "Overview"
+msgstr "Descripción general"
+
+#: ../../getting_started/guides/edge_site_management.rst:7
+msgid ""
+"Large-scale deployments often span multiple geographic regions, data "
+"centers, and edge locations. |morpheus| supports a three-tier management "
+"architecture that scales from a single appliance to a fully federated multi-"
+"region deployment:"
+msgstr ""
+"Las implementaciones a gran escala suelen abarcar múltiples regiones "
+"geográficas, centros de datos y ubicaciones edge. |morpheus| admite una "
+"arquitectura de gestión de tres niveles que escala desde un único "
+"dispositivo hasta una implementación multirregión totalmente federada:"
+
+#: ../../getting_started/guides/edge_site_management.rst:13
+msgid "Tier"
+msgstr "Nivel"
+
+#: ../../getting_started/guides/edge_site_management.rst:14
+msgid "Component"
+msgstr "Componente"
+
+#: ../../getting_started/guides/edge_site_management.rst:15
+msgid "Role"
+msgstr "Función"
+
+#: ../../getting_started/guides/edge_site_management.rst:16
+msgid "Tier 1 — Federated Management"
+msgstr "Nivel 1: gestión federada"
+
+#: ../../getting_started/guides/edge_site_management.rst:17
+msgid "Morpheus Central"
+msgstr "Morpheus Central"
+
+#: ../../getting_started/guides/edge_site_management.rst:18
+msgid ""
+"Single pane of glass across multiple regional |morpheus| Managers. Provides "
+"federated visibility, license management, and cross-region coordination."
+msgstr ""
+"Panel único de control para múltiples Managers regionales de |morpheus|. "
+"Proporciona visibilidad federada, gestión de licencias y coordinación entre "
+"regiones."
+
+#: ../../getting_started/guides/edge_site_management.rst:19
+msgid "Tier 2 — Regional Management"
+msgstr "Nivel 2: gestión regional"
+
+#: ../../getting_started/guides/edge_site_management.rst:20
+msgid "|morpheus| Manager (Appliance)"
+msgstr "Manager de |morpheus| (dispositivo)"
+
+#: ../../getting_started/guides/edge_site_management.rst:21
+msgid ""
+"Full lifecycle management for a region or data center. Handles provisioning,"
+" governance, automation, and user access for all clouds and infrastructure "
+"within its scope."
+msgstr ""
+"Gestión del ciclo de vida completo para una región o centro de datos. Se "
+"encarga del aprovisionamiento, la gobernanza, la automatización y el acceso "
+"de usuarios para todas las nubes e infraestructura dentro de su alcance."
+
+#: ../../getting_started/guides/edge_site_management.rst:22
+msgid "Tier 3 — Edge Proxy"
+msgstr "Nivel 3: proxy edge"
+
+#: ../../getting_started/guides/edge_site_management.rst:23
+msgid "Distributed Workers"
+msgstr "Distributed Workers"
+
+#: ../../getting_started/guides/edge_site_management.rst:24
+msgid ""
+"Lightweight proxy nodes deployed at edge locations, remote sites, or "
+"isolated network segments. Relay Cloud API traffic, Agent communication, "
+"console sessions, and quorum witness services back to the regional Manager."
+msgstr ""
+"Nodos proxy ligeros implementados en ubicaciones edge, sitios remotos o "
+"segmentos de red aislados. Retransmiten el tráfico de la API de nube, la "
+"comunicación del Agent, las sesiones de consola y los servicios de testigo "
+"de quórum de vuelta al Manager regional."
+
+#: ../../getting_started/guides/edge_site_management.rst:27
+msgid "Architecture"
+msgstr "Arquitectura"
+
+#: ../../getting_started/guides/edge_site_management.rst:29
+msgid ""
+"              ┌─────────────────────────┐\n"
+"              │    Morpheus Central      │\n"
+"              │  (Federated Management)  │\n"
+"              └────────┬────────┬────────┘\n"
+"                       │        │\n"
+"          ┌────────────┘        └────────────┐\n"
+"          │                                   │\n"
+"┌─────────▼──────────┐             ┌─────────▼──────────┐\n"
+"│  Regional Manager  │             │  Regional Manager  │\n"
+"│   (Region A)       │             │   (Region B)       │\n"
+"└──┬──────┬──────┬───┘             └──┬──────┬──────┬───┘\n"
+"   │      │      │                    │      │      │\n"
+"   ▼      ▼      ▼                    ▼      ▼      ▼\n"
+"┌─────┐┌─────┐┌─────┐             ┌─────┐┌─────┐┌─────┐\n"
+"│Edge ││Edge ││Edge │             │Edge ││Edge ││Edge │\n"
+"│Wrkr ││Wrkr ││Wrkr │             │Wrkr ││Wrkr ││Wrkr │\n"
+"└─────┘└─────┘└─────┘             └─────┘└─────┘└─────┘"
+msgstr ""
+"              ┌─────────────────────────┐\n"
+"              │    Morpheus Central      │\n"
+"              │  (Federated Management)  │\n"
+"              └────────┬────────┬────────┘\n"
+"                       │        │\n"
+"          ┌────────────┘        └────────────┐\n"
+"          │                                   │\n"
+"┌─────────▼──────────┐             ┌─────────▼──────────┐\n"
+"│  Regional Manager  │             │  Regional Manager  │\n"
+"│   (Region A)       │             │   (Region B)       │\n"
+"└──┬──────┬──────┬───┘             └──┬──────┬──────┬───┘\n"
+"   │      │      │                    │      │      │\n"
+"   ▼      ▼      ▼                    ▼      ▼      ▼\n"
+"┌─────┐┌─────┐┌─────┐             ┌─────┐┌─────┐┌─────┐\n"
+"│Edge ││Edge ││Edge │             │Edge ││Edge ││Edge │\n"
+"│Wrkr ││Wrkr ││Wrkr │             │Wrkr ││Wrkr ││Wrkr │\n"
+"└─────┘└─────┘└─────┘             └─────┘└─────┘└─────┘"
+
+#: ../../getting_started/guides/edge_site_management.rst:50
+msgid "Tier 3: Distributed Workers at the Edge"
+msgstr "Nivel 3: Distributed Workers en el edge"
+
+#: ../../getting_started/guides/edge_site_management.rst:52
+msgid ""
+"Distributed Workers are the foundation of edge site management. Each Worker "
+"is a lightweight service deployed at a remote or edge location that "
+"maintains an outbound connection to its regional |morpheus| Manager. Workers"
+" proxy:"
+msgstr ""
+"Los Distributed Workers son la base de la gestión de sitios edge. Cada "
+"Worker es un servicio ligero implementado en una ubicación remota o edge que"
+" mantiene una conexión saliente hacia su Manager regional de |morpheus|. Los"
+" Workers actúan como proxy de:"
+
+#: ../../getting_started/guides/edge_site_management.rst:54
+msgid ""
+"**Cloud API traffic** — Communicates with local hypervisors (VMware, HVM, "
+"Nutanix, SCVMM, Hyper-V, OpenStack, etc.) on behalf of the regional Manager"
+msgstr ""
+"**Tráfico de la API de nube** — Se comunica con los hipervisores locales "
+"(VMware, HVM, Nutanix, SCVMM, Hyper-V, OpenStack, etc.) en nombre del "
+"Manager regional"
+
+#: ../../getting_started/guides/edge_site_management.rst:55
+msgid ""
+"**Agent relay** — Relays |morpheus| Agent traffic from managed VMs back to "
+"the Manager"
+msgstr ""
+"**Retransmisión del Agent** — Retransmite el tráfico del Agent de |morpheus|"
+" desde las VM gestionadas de vuelta al Manager"
+
+#: ../../getting_started/guides/edge_site_management.rst:56
+msgid ""
+"**Console gateway** — Routes browser-based console sessions to local VMs "
+"without requiring direct connectivity from user browsers to the hypervisor "
+"network"
+msgstr ""
+"**Gateway de consola** — Enruta las sesiones de consola basadas en navegador"
+" hacia las VM locales sin requerir conectividad directa desde los "
+"navegadores de los usuarios a la red del hipervisor"
+
+#: ../../getting_started/guides/edge_site_management.rst:57
+msgid ""
+"**HVM quorum witness** — Provides witness services for two-node or stretch "
+"HVM clusters at edge sites"
+msgstr ""
+"**Testigo de quórum de HVM** — Proporciona servicios de testigo para "
+"clústeres HVM de dos nodos o extendidos en sitios edge"
+
+#: ../../getting_started/guides/edge_site_management.rst:59
+msgid "**When to deploy a Worker at an edge site:**"
+msgstr "**Cuándo implementar un Worker en un sitio edge:**"
+
+#: ../../getting_started/guides/edge_site_management.rst:61
+msgid ""
+"The regional Manager cannot directly reach the hypervisor management network"
+" at the edge location"
+msgstr ""
+"El Manager regional no puede alcanzar directamente la red de gestión del "
+"hipervisor en la ubicación edge"
+
+#: ../../getting_started/guides/edge_site_management.rst:62
+msgid "Agent traffic from edge VMs cannot route directly to the Manager"
+msgstr ""
+"El tráfico del Agent de las VM edge no puede enrutarse directamente al "
+"Manager"
+
+#: ../../getting_started/guides/edge_site_management.rst:63
+msgid "Users need console access to VMs at edge sites without VPN"
+msgstr ""
+"Los usuarios necesitan acceso a la consola de las VM en sitios edge sin VPN"
+
+#: ../../getting_started/guides/edge_site_management.rst:64
+msgid ""
+"Network segmentation or firewall policy requires all traffic to egress "
+"through a known endpoint"
+msgstr ""
+"La segmentación de red o la política de firewall requiere que todo el "
+"tráfico salga a través de un endpoint conocido"
+
+#: ../../getting_started/guides/edge_site_management.rst:65
+msgid ""
+"HVM clusters at edge sites need a remote quorum witness for availability"
+msgstr ""
+"Los clústeres HVM en sitios edge necesitan un testigo de quórum remoto para "
+"la disponibilidad"
+
+#: ../../getting_started/guides/edge_site_management.rst:67
+msgid "**Deployment considerations:**"
+msgstr "**Consideraciones de implementación:**"
+
+#: ../../getting_started/guides/edge_site_management.rst:69
+msgid "Workers require only outbound HTTPS (TCP 443) to the regional Manager"
+msgstr ""
+"Los Workers solo requieren HTTPS saliente (TCP 443) hacia el Manager "
+"regional"
+
+#: ../../getting_started/guides/edge_site_management.rst:70
+msgid ""
+"Multiple Workers can share the same Worker key for HA at a single edge site"
+msgstr ""
+"Varios Workers pueden compartir la misma clave de Worker para HA en un único"
+" sitio edge"
+
+#: ../../getting_started/guides/edge_site_management.rst:71
+msgid ""
+"A single Worker can serve multiple roles (cloud proxy, console gateway, "
+"witness)"
+msgstr ""
+"Un único Worker puede cumplir varias funciones (proxy de nube, gateway de "
+"consola, testigo)"
+
+#: ../../getting_started/guides/edge_site_management.rst:72
+msgid ""
+"Separate Workers per role may be preferred for fault isolation or "
+"independent scaling"
+msgstr ""
+"Se pueden preferir Workers separados por función para el aislamiento de "
+"fallos o el escalado independiente"
+
+#: ../../getting_started/guides/edge_site_management.rst:74
+msgid ""
+"For installation, configuration, and HA deployment details, see "
+":doc:`/administration/integrations/workers`. For two-Host GFS2 witness "
+"operations, see :doc:`/infrastructure/clusters/hvm/two_node_clusters`. For "
+"stretch-cluster witness operations, see "
+":doc:`/infrastructure/clusters/hvm/stretch_clusters`."
+msgstr ""
+"Para conocer los detalles de instalación, configuración e implementación de "
+"HA, consulte :doc:`/administration/integrations/workers`. Para las "
+"operaciones de testigo de dos hosts GFS2, consulte "
+":doc:`/infrastructure/clusters/hvm/two_node_clusters`. Para las operaciones "
+"de testigo de clústeres extendidos, consulte "
+":doc:`/infrastructure/clusters/hvm/stretch_clusters`."
+
+#: ../../getting_started/guides/edge_site_management.rst:77
+msgid "Tier 2: Regional Morpheus Managers"
+msgstr "Nivel 2: Managers regionales de Morpheus"
+
+#: ../../getting_started/guides/edge_site_management.rst:79
+msgid ""
+"Each region, data center, or major campus operates its own |morpheus| "
+"Manager appliance (or HA appliance cluster). The regional Manager:"
+msgstr ""
+"Cada región, centro de datos o campus principal opera su propio dispositivo "
+"Manager de |morpheus| (o clúster de dispositivos HA). El Manager regional:"
+
+#: ../../getting_started/guides/edge_site_management.rst:81
+msgid "Owns all cloud integrations, groups, and tenants for its scope"
+msgstr ""
+"Posee todas las integraciones de nube, grupos y tenants dentro de su alcance"
+
+#: ../../getting_started/guides/edge_site_management.rst:82
+msgid "Handles provisioning, automation, governance, and policy enforcement"
+msgstr ""
+"Gestiona el aprovisionamiento, la automatización, la gobernanza y la "
+"aplicación de políticas"
+
+#: ../../getting_started/guides/edge_site_management.rst:83
+msgid ""
+"Manages its own set of Distributed Workers deployed at edge locations within"
+" the region"
+msgstr ""
+"Gestiona su propio conjunto de Distributed Workers implementados en "
+"ubicaciones edge dentro de la región"
+
+#: ../../getting_started/guides/edge_site_management.rst:84
+msgid ""
+"Operates independently if connectivity to Morpheus Central is interrupted"
+msgstr ""
+"Opera de forma independiente si se interrumpe la conectividad con Morpheus "
+"Central"
+
+#: ../../getting_started/guides/edge_site_management.rst:86
+msgid "**Sizing guidance:**"
+msgstr "**Guía de dimensionamiento:**"
+
+#: ../../getting_started/guides/edge_site_management.rst:88
+msgid ""
+"A single Manager can manage thousands of VMs across many Distributed Workers"
+msgstr ""
+"Un único Manager puede gestionar miles de VM a través de muchos Distributed "
+"Workers"
+
+#: ../../getting_started/guides/edge_site_management.rst:89
+msgid ""
+"Deploy additional regional Managers when geographic latency, compliance "
+"boundaries, or blast-radius requirements demand independent control planes"
+msgstr ""
+"Implemente Managers regionales adicionales cuando la latencia geográfica, "
+"los límites de cumplimiento o los requisitos de radio de impacto exijan "
+"planos de control independientes"
+
+#: ../../getting_started/guides/edge_site_management.rst:90
+msgid ""
+"Each Manager maintains its own database, elasticsearch, and RabbitMQ (or HA "
+"equivalents)"
+msgstr ""
+"Cada Manager mantiene su propia base de datos, elasticsearch y RabbitMQ (o "
+"equivalentes HA)"
+
+#: ../../getting_started/guides/edge_site_management.rst:92
+msgid ""
+"For appliance installation and HA configuration, see "
+":doc:`/getting_started/ha/ha`."
+msgstr ""
+"Para la instalación del dispositivo y la configuración de HA, consulte "
+":doc:`/getting_started/ha/ha`."
+
+#: ../../getting_started/guides/edge_site_management.rst:95
+msgid "Tier 1: Morpheus Central (Federated Management)"
+msgstr "Nivel 1: Morpheus Central (gestión federada)"
+
+#: ../../getting_started/guides/edge_site_management.rst:97
+msgid ""
+"Morpheus Central provides a federated management layer that connects "
+"multiple regional Managers into a single organizational view:"
+msgstr ""
+"Morpheus Central proporciona una capa de gestión federada que conecta varios"
+" Managers regionales en una única vista organizativa:"
+
+#: ../../getting_started/guides/edge_site_management.rst:99
+msgid ""
+"**Unified visibility** — View infrastructure, instances, and operations "
+"across all registered regions from a single interface"
+msgstr ""
+"**Visibilidad unificada** — Vea la infraestructura, las instancias y las "
+"operaciones de todas las regiones registradas desde una única interfaz"
+
+#: ../../getting_started/guides/edge_site_management.rst:100
+msgid ""
+"**License management** — Centralized license allocation and consumption "
+"tracking across all Managers"
+msgstr ""
+"**Gestión de licencias** — Asignación centralizada de licencias y "
+"seguimiento del consumo en todos los Managers"
+
+#: ../../getting_started/guides/edge_site_management.rst:101
+msgid ""
+"**Cross-region coordination** — Federated reporting, compliance visibility, "
+"and operational awareness"
+msgstr ""
+"**Coordinación entre regiones** — Informes federados, visibilidad de "
+"cumplimiento y conocimiento operativo"
+
+#: ../../getting_started/guides/edge_site_management.rst:103
+msgid ""
+"Each regional Manager registers with Morpheus Central via |AdmSet| (Morpheus"
+" Central tab). Registration requires outbound HTTPS connectivity from the "
+"Manager to the Central service."
+msgstr ""
+"Cada Manager regional se registra en Morpheus Central a través de |AdmSet| "
+"(pestaña Morpheus Central). El registro requiere conectividad HTTPS saliente"
+" desde el Manager hacia el servicio Central."
+
+#: ../../getting_started/guides/edge_site_management.rst:105
+msgid "Note"
+msgstr "Nota"
+
+#: ../../getting_started/guides/edge_site_management.rst:107
+msgid ""
+"Morpheus Central is a federated visibility and coordination layer. Each "
+"regional Manager retains full autonomy for provisioning, automation, and "
+"day-to-day operations. Central does not replace or override regional Manager"
+" functionality."
+msgstr ""
+"Morpheus Central es una capa de visibilidad y coordinación federada. Cada "
+"Manager regional conserva total autonomía para el aprovisionamiento, la "
+"automatización y las operaciones diarias. Central no reemplaza ni anula la "
+"funcionalidad del Manager regional."
+
+#: ../../getting_started/guides/edge_site_management.rst:110
+msgid "Deployment Patterns"
+msgstr "Patrones de implementación"
+
+#: ../../getting_started/guides/edge_site_management.rst:113
+msgid "Single Region with Edge Sites"
+msgstr "Región única con sitios edge"
+
+#: ../../getting_started/guides/edge_site_management.rst:115
+msgid ""
+"The simplest pattern: one Manager with multiple Workers at remote sites."
+msgstr ""
+"El patrón más simple: un Manager con varios Workers en sitios remotos."
+
+#: ../../getting_started/guides/edge_site_management.rst:117
+msgid "1 |morpheus| Manager (data center or central office)"
+msgstr "1 Manager de |morpheus| (centro de datos u oficina central)"
+
+#: ../../getting_started/guides/edge_site_management.rst:118
+msgid "N Distributed Workers (one per edge site or remote network zone)"
+msgstr "N Distributed Workers (uno por sitio edge o zona de red remota)"
+
+#: ../../getting_started/guides/edge_site_management.rst:119
+msgid "Workers proxy cloud and agent traffic from edge hypervisors"
+msgstr ""
+"Los Workers actúan como proxy del tráfico de nube y del Agent desde los "
+"hipervisores edge"
+
+#: ../../getting_started/guides/edge_site_management.rst:122
+msgid "Multi-Region with Edge Sites"
+msgstr "Multirregión con sitios edge"
+
+#: ../../getting_started/guides/edge_site_management.rst:124
+msgid "For organizations spanning multiple geographies:"
+msgstr "Para organizaciones que abarcan varias geografías:"
+
+#: ../../getting_started/guides/edge_site_management.rst:126
+msgid "1 Morpheus Central instance"
+msgstr "1 instancia de Morpheus Central"
+
+#: ../../getting_started/guides/edge_site_management.rst:127
+msgid "N |morpheus| Managers (one per region)"
+msgstr "N Managers de |morpheus| (uno por región)"
+
+#: ../../getting_started/guides/edge_site_management.rst:128
+msgid ""
+"M Distributed Workers per region (at edge locations within each region)"
+msgstr ""
+"M Distributed Workers por región (en ubicaciones edge dentro de cada región)"
+
+#: ../../getting_started/guides/edge_site_management.rst:130
+msgid "This pattern provides:"
+msgstr "Este patrón proporciona:"
+
+#: ../../getting_started/guides/edge_site_management.rst:132
+msgid "Regional autonomy (each Manager operates independently)"
+msgstr "Autonomía regional (cada Manager opera de forma independiente)"
+
+#: ../../getting_started/guides/edge_site_management.rst:133
+msgid "Edge reach (Workers extend each Manager to remote sites)"
+msgstr "Alcance edge (los Workers extienden cada Manager a sitios remotos)"
+
+#: ../../getting_started/guides/edge_site_management.rst:134
+msgid "Federated oversight (Central provides cross-region visibility)"
+msgstr "Supervisión federada (Central proporciona visibilidad entre regiones)"
+
+#: ../../getting_started/guides/edge_site_management.rst:137
+msgid "Compliance-Driven Segmentation"
+msgstr "Segmentación basada en cumplimiento"
+
+#: ../../getting_started/guides/edge_site_management.rst:139
+msgid ""
+"For environments with strict data sovereignty or compliance boundaries:"
+msgstr ""
+"Para entornos con estrictos límites de soberanía de datos o cumplimiento:"
+
+#: ../../getting_started/guides/edge_site_management.rst:141
+msgid "Separate Managers per compliance zone (e.g., one for EMEA, one for US)"
+msgstr ""
+"Managers separados por zona de cumplimiento (por ejemplo, uno para EMEA y "
+"otro para EE. UU.)"
+
+#: ../../getting_started/guides/edge_site_management.rst:142
+msgid ""
+"Workers within each zone cannot communicate with Managers in other zones"
+msgstr ""
+"Los Workers de cada zona no pueden comunicarse con Managers de otras zonas"
+
+#: ../../getting_started/guides/edge_site_management.rst:143
+msgid ""
+"Central provides visibility across zones without moving workload data across"
+" boundaries"
+msgstr ""
+"Central proporciona visibilidad entre zonas sin mover los datos de las "
+"cargas de trabajo a través de los límites"
+
+#: ../../getting_started/guides/edge_site_management.rst:146
+msgid "Planning Checklist"
+msgstr "Lista de verificación de planificación"
+
+#: ../../getting_started/guides/edge_site_management.rst:152
+msgid "Question"
+msgstr "Pregunta"
+
+#: ../../getting_started/guides/edge_site_management.rst:153
+msgid "Guidance"
+msgstr "Guía"
+
+#: ../../getting_started/guides/edge_site_management.rst:154
+msgid "How many geographic regions or compliance zones?"
+msgstr "¿Cuántas regiones geográficas o zonas de cumplimiento?"
+
+#: ../../getting_started/guides/edge_site_management.rst:155
+msgid "One Manager per region or zone"
+msgstr "Un Manager por región o zona"
+
+#: ../../getting_started/guides/edge_site_management.rst:156
+msgid "How many edge sites per region?"
+msgstr "¿Cuántos sitios edge por región?"
+
+#: ../../getting_started/guides/edge_site_management.rst:157
+msgid "One or more Workers per edge site (HA pairs for critical sites)"
+msgstr "Uno o más Workers por sitio edge (pares HA para sitios críticos)"
+
+#: ../../getting_started/guides/edge_site_management.rst:158
+msgid "Do edge sites have HVM clusters?"
+msgstr "¿Los sitios edge tienen clústeres HVM?"
+
+#: ../../getting_started/guides/edge_site_management.rst:159
+msgid ""
+"Deploy a Worker with witness capability (separate from cloud proxy if "
+"desired)"
+msgstr ""
+"Implemente un Worker con capacidad de testigo (independiente del proxy de "
+"nube si se desea)"
+
+#: ../../getting_started/guides/edge_site_management.rst:160
+msgid "Do users need console access to edge VMs?"
+msgstr "¿Los usuarios necesitan acceso a la consola de las VM edge?"
+
+#: ../../getting_started/guides/edge_site_management.rst:161
+msgid "Configure Workers as console gateways"
+msgstr "Configure los Workers como gateways de consola"
+
+#: ../../getting_started/guides/edge_site_management.rst:162
+msgid "Is cross-region visibility required?"
+msgstr "¿Se requiere visibilidad entre regiones?"
+
+#: ../../getting_started/guides/edge_site_management.rst:163
+msgid "Deploy Morpheus Central"
+msgstr "Implemente Morpheus Central"
+
+#: ../../getting_started/guides/edge_site_management.rst:164
+msgid "What is the blast radius tolerance?"
+msgstr "¿Cuál es la tolerancia al radio de impacto?"
+
+#: ../../getting_started/guides/edge_site_management.rst:165
+msgid "Separate Managers reduce the impact of a single Manager failure"
+msgstr "Managers separados reducen el impacto de un único fallo de Manager"
