@@ -62,7 +62,7 @@ Installation
 
 A distributed worker VM is installed and configured similarly to a |morpheus| appliance via ``rpm`` or ``deb`` package.
 
-.. NOTE:: Package URLs for the distributed worker are available at https://app.morpheushub.com in the downloads section.
+.. NOTE:: Package URLs for the distributed worker are available at https://myenterpriselicense.hpe.com in the downloads section.
 
 .. NOTE:: The distributed worker requires that the |morpheus| appliance has a trusted SSL certificate.  This can be accomplished by configuring a public trusted SSL certificate on the |morpheus| appliance (or load balancer) or ensure the certificate and chain are added to the Java Keystore of the Distributed Worker to trust the certificate.
 

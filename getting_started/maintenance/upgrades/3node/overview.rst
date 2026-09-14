@@ -5,7 +5,7 @@ Current 3-Node HA appliances use three application nodes with RabbitMQ and Elast
 
 |morpheus| Packages
 ```````````````````
-|morpheus| Release Package urls can be obtained from `https://app.morpheushub.com <https://app.morpheushub.com>`_
+|morpheus| Release Package urls can be obtained from `https://myenterpriselicense.hpe.com <https://myenterpriselicense.hpe.com>`_
 
 Refer to :ref:`compatibility` for any 3-node variations using externalized MySQL, Elasticsearch and/or RabbitMQ version requirements.
 

@@ -8,7 +8,7 @@ The following covers upgrading the |morpheus| App nodes in 3 Node HA configurati
 
 |morpheus| Packages
 ...................
-|morpheus| Release Package urls can be obtained from `https://app.morpheushub.com <https://app.morpheushub.com>`_
+|morpheus| Release Package urls can be obtained from `https://myenterpriselicense.hpe.com <https://myenterpriselicense.hpe.com>`_
 
 Below |minRollingUpgradeVer| -> |morphver| (non-rolling)
 .......................................................

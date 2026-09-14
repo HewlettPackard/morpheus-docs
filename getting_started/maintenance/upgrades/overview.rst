@@ -6,7 +6,7 @@ Use this page for package sources, backup expectations, and shared requirements 
 |morpheus| Packages
 ...................
 
-|morpheus| release packages are obtained from My HPE Software Center. Some environments still use package URLs from `https://app.morpheushub.com <https://app.morpheushub.com>`_.
+|morpheus| release packages are obtained from `My HPE Software Center <https://myenterpriselicense.hpe.com>`_.
 
 Upgrade Requirements
 ....................

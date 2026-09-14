@@ -1,7 +1,7 @@
 Single Node Install on CentOS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. note:: Appliance Package links are available at https://app.morpheushub.com in the downloads section.
+.. note:: Appliance Package links are available at https://myenterpriselicense.hpe.com in the downloads section.
 
 Quick Install
 `````````````
