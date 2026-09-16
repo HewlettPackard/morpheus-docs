@@ -39,7 +39,7 @@ Firmware & Boot
      - Description
    * - UEFI
      - Off
-      - Enables UEFI firmware instead of legacy BIOS. Required for Secure Boot and recommended for modern operating systems. Toggling UEFI on an existing VM is a cold reconfigure; confirm the guest disk can boot the new firmware before applying. The VM is powered off automatically if it is running.
+     - Enables UEFI firmware instead of legacy BIOS. Required for Secure Boot and recommended for modern operating systems. Toggling UEFI on an existing VM is a cold reconfigure; confirm the guest disk can boot the new firmware before applying. The VM is powered off automatically if it is running.
    * - Secure Boot
      - Off
      - Enables UEFI Secure Boot, which verifies the integrity of the boot chain. Requires UEFI. Enabling Secure Boot without UEFI is rejected. You can enable both in the same reconfigure.
@@ -50,11 +50,11 @@ Firmware & Boot
      - Off
      - Enables PXE/network boot for the VM. When enabled, the primary network interface is boot order 1; the root disk and any attached ISO devices follow it in boot order. The selected VM network must reach the DHCP/PXE services used by your environment.
    * - Boot to BIOS/UEFI
-     - Off
-     - When enabled, the VM boots directly into the BIOS/UEFI firmware setup menu on every restart until this option is disabled. Useful for troubleshooting boot issues or changing firmware settings. *Reconfigure only.*
-   * - Boot Menu Timeout (seconds)
+     - Enabled (9.1.0 and later)
+     - Enabled by default for VMs provisioned on 9.1.0 and later. VMs provisioned on earlier versions remain disabled until this option is enabled. When enabled, the VM boots directly into the BIOS/UEFI firmware setup menu on every restart until this option is disabled. Useful for troubleshooting boot issues or changing firmware settings. *Reconfigure only.*
+   * - Boot Delay (seconds)
      - 3
-     - The number of seconds the boot menu waits before auto-selecting the default boot entry. Valid range is 1-30 seconds. Only visible when Boot to BIOS/UEFI is enabled. *Reconfigure only.*
+     - The number of seconds the boot menu waits before auto-selecting the default boot entry. Valid range is 1-30 seconds. Only visible when Boot to BIOS/UEFI is enabled. Available under Provisioning > Advanced Options and Reconfigure > Advanced Options.
 
 Security
 --------
@@ -205,8 +205,8 @@ Option Availability Summary
    * - Boot to BIOS/UEFI
      - No
      - Yes
-   * - Boot Menu Timeout
-     - No
+   * - Boot Delay (seconds)
+     - Yes
      - Yes
    * - TPM
      - Yes
