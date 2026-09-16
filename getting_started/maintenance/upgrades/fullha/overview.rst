@@ -5,7 +5,7 @@ Full HA configurations represent multiple app nodes with external (non-system) M
 
 |morpheus| Packages
 ```````````````````
-|morpheus| Release Package urls can be obtained from `https://app.morpheushub.com <https://app.morpheushub.com>`_
+|morpheus| Release Package urls can be obtained from `https://myenterpriselicense.hpe.com <https://myenterpriselicense.hpe.com>`_
 
 Overview
 ````````

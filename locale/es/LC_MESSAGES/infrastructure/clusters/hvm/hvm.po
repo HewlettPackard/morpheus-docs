@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Morpheus Docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-26 11:17-0400\n"
+"POT-Creation-Date: 2026-09-08 10:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -21,9 +21,8 @@ msgstr ""
 "Generated-By: Babel 2.18.0\n"
 
 #: ../../infrastructure/clusters/hvm/hvm.rst:2
-#, fuzzy
 msgid "HVM Clusters"
-msgstr "HVM 1.3 Clústeres"
+msgstr "Clústeres HVM"
 
 #: ../../infrastructure/clusters/hvm/hvm.rst:4
 msgid ""
@@ -32,7 +31,14 @@ msgid ""
 "and high availability. This guide covers every supported HVM cluster "
 "layout. Use the layout matrix to identify the operating system, "
 "networking model, and management tools that apply to a cluster."
-msgstr "Los clústers HVM proporcionan virtualización basada en KVM, administración centralizada del ciclo de vida, ubicación de cargas de trabajo, almacenamiento compartido, monitoreo, migración y alta disponibilidad. Esta guía cubre todos los diseños de clúster HVM compatibles. Use la matriz de diseños para identificar el sistema operativo, el modelo de red y las herramientas de administración que se aplican a un clúster."
+msgstr ""
+"Los clústers HVM proporcionan virtualización basada en KVM, "
+"administración centralizada del ciclo de vida, ubicación de cargas de "
+"trabajo, almacenamiento compartido, monitoreo, migración y alta "
+"disponibilidad. Esta guía cubre todos los diseños de clúster HVM "
+"compatibles. Use la matriz de diseños para identificar el sistema "
+"operativo, el modelo de red y las herramientas de administración que se "
+"aplican a un clúster."
 
 #: ../../infrastructure/clusters/hvm/hvm.rst:39
 msgid "Supported Layouts"
@@ -121,7 +127,11 @@ msgid ""
 "Layout and HVM OS versions are separate from the |morpheus| Manager "
 "version. Confirm the cluster layout on the cluster detail page before "
 "following a layout-specific procedure."
-msgstr "Las versiones de diseño y de HVM OS son independientes de la versión del Administrador |morpheus|. Confirme el diseño del clúster en la página de detalle del clúster antes de seguir un procedimiento específico del diseño."
+msgstr ""
+"Las versiones de diseño y de HVM OS son independientes de la versión del "
+"Administrador |morpheus|. Confirme el diseño del clúster en la página de "
+"detalle del clúster antes de seguir un procedimiento específico del "
+"diseño."
 
 #: ../../infrastructure/clusters/hvm/hvm.rst:71
 msgid "How to Use This Guide"
@@ -133,13 +143,20 @@ msgid ""
 "2.0. Legacy clusters remain supported, but their Pacemaker, Ceph, "
 "provisioning, and OVS differences are collected in "
 ":doc:`/infrastructure/clusters/mvm` to keep current workflows singular."
-msgstr "A menos que una sección contenga un aviso de diseño, se aplica a los diseños 1.3 y 2.0. Los clústeres Legacy siguen siendo compatibles, pero sus diferencias de Pacemaker, Ceph, aprovisionamiento y OVS se recopilan en :doc:`/infrastructure/clusters/mvm` para mantener los flujos de trabajo actuales unificados."
+msgstr ""
+"A menos que una sección contenga un aviso de diseño, se aplica a los "
+"diseños 1.3 y 2.0. Los clústeres Legacy siguen siendo compatibles, pero "
+"sus diferencias de Pacemaker, Ceph, aprovisionamiento y OVS se recopilan "
+"en :doc:`/infrastructure/clusters/mvm` para mantener los flujos de "
+"trabajo actuales unificados."
 
 #: ../../infrastructure/clusters/hvm/hvm.rst:75
 msgid ""
 "For OVS networking on Legacy and layout 1.3 clusters, see "
 ":doc:`hvm_networks`."
-msgstr "Para redes OVS en clústeres Legacy y diseño 1.3, consulte :doc:`hvm_networks`."
+msgstr ""
+"Para redes OVS en clústeres Legacy y diseño 1.3, consulte "
+":doc:`hvm_networks`."
 
 #: ../../infrastructure/clusters/hvm/hvm.rst:76
 msgid "For layout 2.0 networking, see :doc:`virtual_switches`."
@@ -147,29 +164,76 @@ msgstr "Para redes del diseño 2.0, consulte :doc:`virtual_switches`."
 
 #: ../../infrastructure/clusters/hvm/hvm.rst:77
 msgid "For layout 2.0 host commands, see :doc:`/tools/hvmcli/hvmcli`."
-msgstr "Para comandos de host del diseño 2.0, consulte :doc:`/tools/hvmcli/hvmcli`."
+msgstr ""
+"Para comandos de host del diseño 2.0, consulte "
+":doc:`/tools/hvmcli/hvmcli`."
 
 #: ../../infrastructure/clusters/hvm/hvm.rst:78
 msgid ""
 "For NVIDIA SR-IOV vGPU profiles, Host preparation, Service Plans, and "
 "guest licensing, see :doc:`nvidia_vgpu`."
-msgstr "Para perfiles NVIDIA SR-IOV vGPU, preparación del Host, Planes de servicio y licencias de invitado, consulte :doc:`nvidia_vgpu`."
+msgstr ""
+"Para perfiles NVIDIA SR-IOV vGPU, preparación del Host, Planes de "
+"servicio y licencias de invitado, consulte :doc:`nvidia_vgpu`."
 
 #: ../../infrastructure/clusters/hvm/hvm.rst:79
 msgid ""
 "For datastore creation, Datastore Groups, file browsing, maintenance, and"
 " capacity operations, see :doc:`storage_operations`."
-msgstr "Para creación de almacenes de datos, Grupos de almacenes de datos, exploración de archivos, mantenimiento y operaciones de capacidad, consulte :doc:`storage_operations`."
+msgstr ""
+"Para creación de almacenes de datos, Grupos de almacenes de datos, "
+"exploración de archivos, mantenimiento y operaciones de capacidad, "
+"consulte :doc:`storage_operations`."
 
 #: ../../infrastructure/clusters/hvm/hvm.rst:80
 msgid ""
 "For VM snapshots and creating linked clone Virtual Images, see "
 ":doc:`snapshots`."
-msgstr "Para snapshots de VM y creación de Imágenes virtuales de clon enlazado, consulte :doc:`snapshots`."
+msgstr ""
+"Para snapshots de VM y creación de Imágenes virtuales de clon enlazado, "
+"consulte :doc:`snapshots`."
 
 #: ../../infrastructure/clusters/hvm/hvm.rst:81
-msgid "For layout and HVM OS upgrades, see :doc:`upgrading`."
-msgstr "Para actualizaciones de diseño y HVM OS, consulte :doc:`upgrading`."
+msgid ""
+"For moving VMs between hosts or HVM clusters (Actions > Move), see "
+":doc:`vm_migration`."
+msgstr ""
+"Para mover VMs entre hosts o clústeres HVM (Actions > Move), consulte "
+":doc:`vm_migration`."
+
+#: ../../infrastructure/clusters/hvm/hvm.rst:82
+msgid ""
+"For layout and HVM OS upgrades, start at "
+":doc:`/getting_started/maintenance/upgrades/hvm_clusters`, then use "
+":doc:`upgrading` for detailed cluster procedures."
+msgstr ""
+"Para actualizaciones de diseño y de HVM OS, comience en "
+":doc:`/getting_started/maintenance/upgrades/hvm_clusters`, luego use "
+":doc:`upgrading` para los procedimientos detallados del clúster."
+
+#: ../../infrastructure/clusters/hvm/hvm.rst:83
+msgid ""
+"For two-Host GFS2 clusters that use a Distributed Worker witness and no "
+"Site Groups, see :doc:`two_node_clusters`."
+msgstr ""
+"Para clústeres GFS2 de dos hosts que usan un testigo de Distributed "
+"Worker y sin Grupos de sitio, consulte :doc:`two_node_clusters`."
+
+#: ../../infrastructure/clusters/hvm/hvm.rst:84
+msgid ""
+"For multi-site stretch clusters that use Site Groups and a "
+"``siteWitness``, see :doc:`stretch_clusters`."
+msgstr ""
+"Para clústeres extendidos multisitio que usan Grupos de sitio y un "
+"``siteWitness``, consulte :doc:`stretch_clusters`."
+
+#: ../../infrastructure/clusters/hvm/hvm.rst:85
+msgid ""
+"For the quorum vote model and Quorum panel differences between those "
+"topologies, see :doc:`architecture`."
+msgstr ""
+"Para el modelo de voto de quórum y las diferencias del panel de Quórum "
+"entre esas topologías, consulte :doc:`architecture`."
 
 #~ msgid "Contents:"
 #~ msgstr "Contents:"
@@ -207,4 +271,7 @@ msgstr "Para actualizaciones de diseño y HVM OS, consulte :doc:`upgrading`."
 #~ "gestión, y el |morpheus| agent para "
 #~ "quorum decisions, fallo detection, y "
 #~ "automated recuperación."
+
+#~ msgid "For layout and HVM OS upgrades, see :doc:`upgrading`."
+#~ msgstr "Para actualizaciones de diseño y HVM OS, consulte :doc:`upgrading`."
 

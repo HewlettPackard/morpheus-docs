@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Morpheus Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-26 11:17-0400\n"
+"POT-Creation-Date: 2026-09-04 16:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -34,14 +34,21 @@ msgid ""
 "or resource pools within a cloud. The migration (also referred to as VM "
 "Move) allows you to relocate a workload to a different compute target "
 "without reprovisioning."
-msgstr "|morpheus| oferece suporte à migração de máquinas virtuais entre hosts, clusters ou pools de recursos dentro de uma nuvem. A migração (também chamada de VM Move) permite realocar uma carga de trabalho para um destino de computação diferente sem reprovisionar."
+msgstr ""
+"|morpheus| oferece suporte à migração de máquinas virtuais entre hosts, "
+"clusters ou pools de recursos dentro de uma nuvem. A migração (também "
+"chamada de VM Move) permite realocar uma carga de trabalho para um "
+"destino de computação diferente sem reprovisionar."
 
 #: ../../infrastructure/servers/server_migration.rst:9
 msgid ""
 "Migration is supported for cloud types that provide native VM mobility, "
 "such as VMware vSphere (vMotion), Nutanix AHV, and other hypervisor "
 "platforms."
-msgstr "A migração é suportada para tipos de nuvem que oferecem mobilidade nativa de VM, como VMware vSphere (vMotion), Nutanix AHV e outras plataformas de hypervisor."
+msgstr ""
+"A migração é suportada para tipos de nuvem que oferecem mobilidade nativa"
+" de VM, como VMware vSphere (vMotion), Nutanix AHV e outras plataformas "
+"de hypervisor."
 
 #: ../../infrastructure/servers/server_migration.rst:12
 msgid "Role Requirements"
@@ -51,7 +58,9 @@ msgstr "Requisitos de Função"
 msgid ""
 "``Infrastructure: Compute`` role permission at **Full** level is required"
 " to perform migrations."
-msgstr "É necessária a permissão de função ``Infrastructure: Compute`` no nível **Full** para realizar migrações."
+msgstr ""
+"É necessária a permissão de função ``Infrastructure: Compute`` no nível "
+"**Full** para realizar migrações."
 
 #: ../../infrastructure/servers/server_migration.rst:17
 msgid "Migrating a Server"
@@ -61,7 +70,9 @@ msgstr "Migrando um Servidor"
 msgid ""
 "Navigate to ``Infrastructure > Compute > Virtual Machines`` or to the "
 "server detail page"
-msgstr "Navegue até ``Infrastructure > Compute > Virtual Machines`` ou até a página de detalhes do servidor"
+msgstr ""
+"Navegue até ``Infrastructure > Compute > Virtual Machines`` ou até a "
+"página de detalhes do servidor"
 
 #: ../../infrastructure/servers/server_migration.rst:20
 msgid "Select the target server"
@@ -87,7 +98,9 @@ msgstr "TARGET HOST"
 msgid ""
 "Select the destination hypervisor host. Available hosts are filtered "
 "based on the server's current cloud and compatibility."
-msgstr "Selecione o host hypervisor de destino. Os hosts disponíveis são filtrados com base na nuvem atual do servidor e na compatibilidade."
+msgstr ""
+"Selecione o host hypervisor de destino. Os hosts disponíveis são "
+"filtrados com base na nuvem atual do servidor e na compatibilidade."
 
 #: ../../infrastructure/servers/server_migration.rst:27
 msgid "TARGET RESOURCE POOL"
@@ -97,7 +110,9 @@ msgstr "TARGET RESOURCE POOL"
 msgid ""
 "Select the destination resource pool or cluster (if applicable). This may"
 " be required for cross-cluster migrations."
-msgstr "Selecione o pool de recursos ou cluster de destino (se aplicável). Isso pode ser obrigatório para migrações entre clusters."
+msgstr ""
+"Selecione o pool de recursos ou cluster de destino (se aplicável). Isso "
+"pode ser obrigatório para migrações entre clusters."
 
 #: ../../infrastructure/servers/server_migration.rst:29
 msgid "TARGET DATASTORE"
@@ -107,7 +122,10 @@ msgstr "TARGET DATASTORE"
 msgid ""
 "Select the destination datastore for the VM's storage (for storage "
 "migrations or combined compute+storage moves)."
-msgstr "Selecione o datastore de destino para o armazenamento da VM (para migrações de armazenamento ou movimentos combinados de computação+armazenamento)."
+msgstr ""
+"Selecione o datastore de destino para o armazenamento da VM (para "
+"migrações de armazenamento ou movimentos combinados de "
+"computação+armazenamento)."
 
 #: ../../infrastructure/servers/server_migration.rst:31
 msgid "PRIORITY"
@@ -137,7 +155,9 @@ msgstr "Clique em :guilabel:`EXECUTE`"
 msgid ""
 "The migration operation runs asynchronously. Progress can be monitored on"
 " the server's History tab."
-msgstr "A operação de migração é executada de forma assíncrona. O progresso pode ser monitorado na aba History do servidor."
+msgstr ""
+"A operação de migração é executada de forma assíncrona. O progresso pode "
+"ser monitorado na aba History do servidor."
 
 #: ../../infrastructure/servers/server_migration.rst:43
 msgid "Migration Types"
@@ -151,7 +171,10 @@ msgstr "Live Migration (vMotion)"
 msgid ""
 "The VM is moved while running, with no downtime. Requires shared storage "
 "or storage vMotion capability between source and destination hosts."
-msgstr "A VM é movida enquanto está em execução, sem downtime. Requer armazenamento compartilhado ou capacidade de storage vMotion entre os hosts de origem e destino."
+msgstr ""
+"A VM é movida enquanto está em execução, sem downtime. Requer "
+"armazenamento compartilhado ou capacidade de storage vMotion entre os "
+"hosts de origem e destino."
 
 #: ../../infrastructure/servers/server_migration.rst:48
 msgid "Cold Migration"
@@ -161,7 +184,10 @@ msgstr "Cold Migration"
 msgid ""
 "The VM is powered off, moved to the new location, and optionally powered "
 "back on. Used when live migration prerequisites are not met."
-msgstr "A VM é desligada, movida para o novo local e, opcionalmente, ligada novamente. Usada quando os pré-requisitos de live migration não são atendidos."
+msgstr ""
+"A VM é desligada, movida para o novo local e, opcionalmente, ligada "
+"novamente. Usada quando os pré-requisitos de live migration não são "
+"atendidos."
 
 #: ../../infrastructure/servers/server_migration.rst:51
 msgid "Storage Migration"
@@ -171,48 +197,71 @@ msgstr "Migração de Armazenamento"
 msgid ""
 "Only the VM's storage is relocated to a different datastore. The VM "
 "remains on the same host."
-msgstr "Somente o armazenamento da VM é realocado para um datastore diferente. A VM permanece no mesmo host."
+msgstr ""
+"Somente o armazenamento da VM é realocado para um datastore diferente. A "
+"VM permanece no mesmo host."
 
 #: ../../infrastructure/servers/server_migration.rst:54
+msgid ""
+"For HVM/KVM clusters, use :guilabel:`Actions` > :guilabel:`Move` on the "
+"Instance or VM detail page to relocate a VM to another host or HVM "
+"cluster. Cross-cluster moves map datastores and networks on the "
+"destination cluster. This is not a VMware-to-HVM conversion. See "
+":doc:`/infrastructure/clusters/hvm/vm_migration`."
+msgstr ""
+"Para clusters HVM/KVM, use :guilabel:`Actions` > :guilabel:`Move` na "
+"página de detalhes da Instância ou VM para realocar uma VM para outro host"
+" ou cluster HVM. Movimentações entre clusters mapeiam datastores e redes "
+"no cluster de destino. Isso não é uma conversão de VMware para HVM. "
+"Consulte :doc:`/infrastructure/clusters/hvm/vm_migration`."
+
+#: ../../infrastructure/servers/server_migration.rst:56
 msgid "Note"
 msgstr "Nota"
 
-#: ../../infrastructure/servers/server_migration.rst:54
+#: ../../infrastructure/servers/server_migration.rst:56
 msgid ""
 "Migration availability and options depend on the underlying cloud type "
 "and hypervisor capabilities. Not all cloud types support all migration "
 "modes."
-msgstr "A disponibilidade e as opções de migração dependem do tipo de nuvem subjacente e das capacidades do hypervisor. Nem todos os tipos de nuvem suportam todos os modos de migração."
+msgstr ""
+"A disponibilidade e as opções de migração dependem do tipo de nuvem "
+"subjacente e das capacidades do hypervisor. Nem todos os tipos de nuvem "
+"suportam todos os modos de migração."
 
-#: ../../infrastructure/servers/server_migration.rst:57
+#: ../../infrastructure/servers/server_migration.rst:59
 msgid "Monitoring Migration Status"
 msgstr "Monitorando o Status da Migração"
 
-#: ../../infrastructure/servers/server_migration.rst:59
+#: ../../infrastructure/servers/server_migration.rst:61
 msgid ""
 "Migration operations appear in the server's **History** tab with status "
 "indicators:"
-msgstr "As operações de migração aparecem na aba **History** do servidor com indicadores de status:"
+msgstr ""
+"As operações de migração aparecem na aba **History** do servidor com "
+"indicadores de status:"
 
-#: ../../infrastructure/servers/server_migration.rst:61
+#: ../../infrastructure/servers/server_migration.rst:63
 msgid "**Running** — Migration is in progress"
 msgstr "**Running** — A migração está em andamento"
 
-#: ../../infrastructure/servers/server_migration.rst:62
+#: ../../infrastructure/servers/server_migration.rst:64
 msgid "**Complete** — Migration finished successfully"
 msgstr "**Complete** — A migração foi concluída com sucesso"
 
-#: ../../infrastructure/servers/server_migration.rst:63
+#: ../../infrastructure/servers/server_migration.rst:65
 msgid ""
 "**Failed** — Migration encountered an error (check event details for the "
 "failure reason)"
-msgstr "**Failed** — A migração encontrou um erro (verifique os detalhes do evento para o motivo da falha)"
+msgstr ""
+"**Failed** — A migração encontrou um erro (verifique os detalhes do "
+"evento para o motivo da falha)"
 
-#: ../../infrastructure/servers/server_migration.rst:66
+#: ../../infrastructure/servers/server_migration.rst:68
 msgid "VME Migration: LVM and Source SCSI Disks"
 msgstr "Migração VME: LVM e Discos SCSI de Origem"
 
-#: ../../infrastructure/servers/server_migration.rst:68
+#: ../../infrastructure/servers/server_migration.rst:70
 msgid ""
 "Before migrating a VM that uses Linux LVM, record the source physical "
 "volumes, volume groups, logical volumes, mount points, boot volume, and "
@@ -221,9 +270,17 @@ msgid ""
 "destination datastores with at least the source capacity. The guest must "
 "be able to load the destination storage driver and discover every volume "
 "required for boot and application data."
-msgstr "Antes de migrar uma VM que usa Linux LVM, registre os physical volumes, volume groups, logical volumes, pontos de montagem, volume de boot e o controlador e número de unidade de cada disco virtual de origem. Confirme que todos os discos de origem necessários estão incluídos no plano de migração e mapeados para datastores de destino com pelo menos a capacidade de origem. O guest deve ser capaz de carregar o driver de armazenamento de destino e descobrir cada volume necessário para boot e dados da aplicação."
+msgstr ""
+"Antes de migrar uma VM que usa Linux LVM, registre os physical volumes, "
+"volume groups, logical volumes, pontos de montagem, volume de boot e o "
+"controlador e número de unidade de cada disco virtual de origem. Confirme"
+" que todos os discos de origem necessários estão incluídos no plano de "
+"migração e mapeados para datastores de destino com pelo menos a "
+"capacidade de origem. O guest deve ser capaz de carregar o driver de "
+"armazenamento de destino e descobrir cada volume necessário para boot e "
+"dados da aplicação."
 
-#: ../../infrastructure/servers/server_migration.rst:70
+#: ../../infrastructure/servers/server_migration.rst:72
 msgid ""
 "The migration planner preserves source controller bus and unit mappings "
 "where they are available. When a source VM has any SCSI-backed volume, "
@@ -233,9 +290,18 @@ msgid ""
 "registered, then stop the destination VM and move its disks to the "
 "selected paravirtual controller. Do not manually change controller "
 "mappings while that migration is running."
-msgstr "O planejador de migração preserva os mapeamentos de bus e unidade do controlador de origem quando disponíveis. Quando uma VM de origem tem qualquer volume com backend SCSI, o destino HVM usa um controlador VirtIO-SCSI para o mapeamento de disco pós-conversão; caso contrário, usa VirtIO Block. Migrações Windows que instalam guest tools iniciam inicialmente a partir de SATA enquanto os drivers VirtIO são registrados, depois param a VM de destino e movem seus discos para o controlador paravirtual selecionado. Não altere manualmente os mapeamentos de controlador enquanto essa migração estiver em execução."
+msgstr ""
+"O planejador de migração preserva os mapeamentos de bus e unidade do "
+"controlador de origem quando disponíveis. Quando uma VM de origem tem "
+"qualquer volume com backend SCSI, o destino HVM usa um controlador "
+"VirtIO-SCSI para o mapeamento de disco pós-conversão; caso contrário, usa"
+" VirtIO Block. Migrações Windows que instalam guest tools iniciam "
+"inicialmente a partir de SATA enquanto os drivers VirtIO são registrados,"
+" depois param a VM de destino e movem seus discos para o controlador "
+"paravirtual selecionado. Não altere manualmente os mapeamentos de "
+"controlador enquanto essa migração estiver em execução."
 
-#: ../../infrastructure/servers/server_migration.rst:72
+#: ../../infrastructure/servers/server_migration.rst:74
 msgid ""
 "The legacy **LVM Migration** backup type is a separate, deprecated "
 "workflow. Its implementation requires SSH and sudo access to source and "
@@ -245,9 +311,18 @@ msgid ""
 "connectivity from source to destination. It copies a single selected "
 "logical-volume snapshot and is not evidence that arbitrary multi-PV, "
 "thin-pool, encrypted, clustered, or nested LVM layouts are supported."
-msgstr "O tipo de backup legado **LVM Migration** é um workflow separado e descontinuado. Sua implementação requer acesso SSH e sudo à origem e ao destino, ``lvm2`` e ``pv``, um dispositivo de logical volume de origem explicitamente selecionado, espaço livre suficiente no volume group de origem para um snapshot LVM, um dispositivo de dados de destino gravável e conectividade de transferência baseada em chave da origem ao destino. Ele copia um único snapshot de logical volume selecionado e não constitui evidência de suporte a layouts LVM multi-PV, thin-pool, criptografados, em cluster ou aninhados arbitrários."
+msgstr ""
+"O tipo de backup legado **LVM Migration** é um workflow separado e "
+"descontinuado. Sua implementação requer acesso SSH e sudo à origem e ao "
+"destino, ``lvm2`` e ``pv``, um dispositivo de logical volume de origem "
+"explicitamente selecionado, espaço livre suficiente no volume group de "
+"origem para um snapshot LVM, um dispositivo de dados de destino gravável "
+"e conectividade de transferência baseada em chave da origem ao destino. "
+"Ele copia um único snapshot de logical volume selecionado e não constitui"
+" evidência de suporte a layouts LVM multi-PV, thin-pool, criptografados, "
+"em cluster ou aninhados arbitrários."
 
-#: ../../infrastructure/servers/server_migration.rst:74
+#: ../../infrastructure/servers/server_migration.rst:76
 msgid ""
 "After migration, verify that the destination boots from the expected "
 "controller, every expected disk is present at the intended bus/unit "
@@ -255,5 +330,12 @@ msgid ""
 "mount, and application data is accessible. If discovery does not match "
 "the recorded source layout, stop validation and retain the source VM; do "
 "not invent device-renaming or bootloader repair steps."
-msgstr "Após a migração, verifique se o destino inicia a partir do controlador esperado, se cada disco esperado está presente no mapeamento de bus/unidade pretendido, se todos os volume groups e logical volumes são ativados, se os sistemas de arquivos são montados e se os dados da aplicação estão acessíveis. Se a descoberta não corresponder ao layout de origem registrado, interrompa a validação e retenha a VM de origem; não invente etapas de renomeação de dispositivo ou reparo do bootloader."
+msgstr ""
+"Após a migração, verifique se o destino inicia a partir do controlador "
+"esperado, se cada disco esperado está presente no mapeamento de "
+"bus/unidade pretendido, se todos os volume groups e logical volumes são "
+"ativados, se os sistemas de arquivos são montados e se os dados da "
+"aplicação estão acessíveis. Se a descoberta não corresponder ao layout de"
+" origem registrado, interrompa a validação e retenha a VM de origem; não "
+"invente etapas de renomeação de dispositivo ou reparo do bootloader."
 

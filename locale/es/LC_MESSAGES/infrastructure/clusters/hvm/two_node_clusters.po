@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Morpheus Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-26 11:17-0400\n"
+"POT-Creation-Date: 2026-09-08 10:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -31,14 +31,26 @@ msgid ""
 "topology is available for HVM layout 1.3 or later and applies wherever "
 "HVM is included, including HPE VM Essentials, HPE Morpheus Enterprise "
 "Software, and HPE Morpheus Advanced Software."
-msgstr "Un clúster HVM de dos nodos puede usar un almacén de datos HPE Shared File System (GFS2) cuando un Distributed Worker proporciona un voto de quórum independiente. Esta topología está disponible para HVM layout 1.3 o posterior y se aplica dondequiera que se incluya HVM, incluidos HPE VM Essentials, HPE Morpheus Enterprise Software y HPE Morpheus Advanced Software."
+msgstr ""
+"Un clúster HVM de dos nodos puede usar un almacén de datos HPE Shared "
+"File System (GFS2) cuando un Distributed Worker proporciona un voto de "
+"quórum independiente. Esta topología está disponible para HVM layout 1.3 "
+"o posterior y se aplica dondequiera que se incluya HVM, incluidos HPE VM "
+"Essentials, HPE Morpheus Enterprise Software y HPE Morpheus Advanced "
+"Software."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:8
 msgid ""
 "The witness is a quorum-only member. It does not run VMs, mount the GFS2 "
 "datastore, or become an HVM compute Host. Deploy it outside the failure "
-"domain shared by the two HVM Hosts."
-msgstr "El testigo es un miembro de solo quórum. No ejecuta VMs, no monta el almacén de datos GFS2 ni se convierte en un Host de compute HVM. Despliéguelo fuera del dominio de fallo compartido por los dos Hosts HVM."
+"domain shared by the two HVM Hosts. For vote math and Quorum panel "
+"fields, see :doc:`architecture`."
+msgstr ""
+"El testigo es un miembro de solo quórum. No ejecuta VMs, no monta el "
+"almacén de datos GFS2 ni se convierte en un Host de compute HVM. "
+"Despliéguelo fuera del dominio de fallo compartido por los dos Hosts "
+"HVM. Para el cálculo de votos y los campos del panel Quorum, consulte "
+":doc:`architecture`."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:11
 msgid "Topology"
@@ -66,7 +78,11 @@ msgid ""
 "Each Host must also resolve, reach, and trust the HTTPS Worker URL. "
 "|morpheus| derives the witness endpoint as ``<Worker "
 "URL>/witness/<cluster UUID>/quorum``."
-msgstr "Los dos Hosts se comunican entre sí en la red de quórum del Agente. Cada Host también debe resolver, alcanzar y confiar en la Worker URL HTTPS. |morpheus| deriva el endpoint del testigo como ``<Worker URL>/witness/<cluster UUID>/quorum``."
+msgstr ""
+"Los dos Hosts se comunican entre sí en la red de quórum del Agente. Cada "
+"Host también debe resolver, alcanzar y confiar en la Worker URL HTTPS. "
+"|morpheus| deriva el endpoint del testigo como ``<Worker "
+"URL>/witness/<cluster UUID>/quorum``."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:21
 msgid "Important"
@@ -77,7 +93,10 @@ msgid ""
 "The Worker's outbound connection to the |morpheus| appliance does not "
 "prove that the HVM Hosts can reach the witness. Validate the Host-to-"
 "Worker path independently."
-msgstr "La conexión saliente del Worker al dispositivo |morpheus| no demuestra que los Hosts HVM puedan alcanzar el testigo. Valide la ruta Host-Worker de forma independiente."
+msgstr ""
+"La conexión saliente del Worker al dispositivo |morpheus| no demuestra "
+"que los Hosts HVM puedan alcanzar el testigo. Valide la ruta Host-Worker "
+"de forma independiente."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:24
 msgid "Prerequisites"
@@ -89,17 +108,23 @@ msgstr "|morpheus| Manager 9.0 o posterior"
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:27
 msgid "An HVM layout 1.3 or later cluster with exactly two compatible Hosts"
-msgstr "Un clúster HVM layout 1.3 o posterior con exactamente dos Hosts compatibles"
+msgstr ""
+"Un clúster HVM layout 1.3 o posterior con exactamente dos Hosts "
+"compatibles"
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:28
 msgid "Static management addresses and Host-to-Host connectivity on TCP 7443"
-msgstr "Direcciones de administración estáticas y conectividad Host-Host en TCP 7443"
+msgstr ""
+"Direcciones de administración estáticas y conectividad Host-Host en TCP "
+"7443"
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:29
 msgid ""
 "Shared block storage, such as iSCSI or Fibre Channel, visible to both "
 "Hosts"
-msgstr "Almacenamiento en bloque compartido, como iSCSI o Fibre Channel, visible para ambos Hosts"
+msgstr ""
+"Almacenamiento en bloque compartido, como iSCSI o Fibre Channel, visible "
+"para ambos Hosts"
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:30
 msgid "One Distributed Worker outside the two-Host failure domain"
@@ -109,13 +134,18 @@ msgstr "Un Distributed Worker fuera del dominio de fallo de los dos Hosts"
 msgid ""
 "A stable Worker URL whose DNS name, route, firewall port, and certificate"
 " chain are valid from both Hosts"
-msgstr "Una Worker URL estable cuyo nombre DNS, ruta, puerto de firewall y cadena de certificados sean válidos desde ambos Hosts"
+msgstr ""
+"Una Worker URL estable cuyo nombre DNS, ruta, puerto de firewall y cadena"
+" de certificados sean válidos desde ambos Hosts"
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:32
 msgid ""
 "Enough capacity on either Host to run the workloads that must remain "
 "available while the other Host is offline"
-msgstr "Capacidad suficiente en cualquiera de los Hosts para ejecutar las cargas de trabajo que deben permanecer disponibles mientras el otro Host esté offline"
+msgstr ""
+"Capacidad suficiente en cualquiera de los Hosts para ejecutar las cargas "
+"de trabajo que deben permanecer disponibles mientras el otro Host esté "
+"offline"
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:34
 msgid ""
@@ -124,7 +154,12 @@ msgid ""
 "``/witness/<cluster UUID>/quorum`` path when a proxy is used. The "
 "external HTTPS port is the port in the configured Worker URL; do not "
 "assume the Worker's internal application port is exposed directly."
-msgstr "La Worker URL puede terminar TLS directamente en el Worker o a través de un proxy inverso o balanceador de carga admitido. Preserve la ruta ``/witness/<cluster UUID>/quorum`` cuando se use un proxy. El puerto HTTPS externo es el puerto de la Worker URL configurada; no asuma que el puerto interno de aplicación del Worker se expone directamente."
+msgstr ""
+"La Worker URL puede terminar TLS directamente en el Worker o a través de "
+"un proxy inverso o balanceador de carga admitido. Preserve la ruta "
+"``/witness/<cluster UUID>/quorum`` cuando se use un proxy. El puerto "
+"HTTPS externo es el puerto de la Worker URL configurada; no asuma que el "
+"puerto interno de aplicación del Worker se expone directamente."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:37
 msgid "Deployment"
@@ -133,38 +168,54 @@ msgstr "Implementación"
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:39
 msgid ""
 "Create the two-Host HVM cluster using :doc:`building_clusters`. Do not "
-"add the GFS2 datastore yet."
-msgstr "Cree el clúster HVM de dos Hosts usando :doc:`building_clusters`. Aún no agregue el almacén de datos GFS2."
+"add the GFS2 datastore yet. Do not select a witness during initial "
+"cluster create."
+msgstr ""
+"Cree el clúster HVM de dos Hosts usando :doc:`building_clusters`. Aún no "
+"agregue el almacén de datos GFS2. No seleccione un testigo durante la "
+"creación inicial del clúster."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:40
 msgid ""
 "Deploy and register a Distributed Worker using :ref:`hvm-witness-"
 "deployment`."
-msgstr "Implemente y registre un Distributed Worker usando :ref:`hvm-witness-deployment`."
+msgstr ""
+"Implemente y registre un Distributed Worker usando :ref:`hvm-witness-"
+"deployment`."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:41
 msgid ""
 "From both HVM Hosts, verify DNS resolution and TLS connectivity to the "
 "Worker URL."
-msgstr "Desde ambos Hosts HVM, verifique la resolución DNS y la conectividad TLS con la Worker URL."
+msgstr ""
+"Desde ambos Hosts HVM, verifique la resolución DNS y la conectividad TLS "
+"con la Worker URL."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:42
 msgid ""
-"Edit the HVM cluster, select the Distributed Worker in the **Witness** "
-"field, and save the cluster."
-msgstr "Edite el clúster HVM, seleccione el Distributed Worker en el campo **Witness** y guarde el clúster."
+"Navigate to |InfClu|, open the cluster, click :guilabel:`Edit`, select "
+"the Distributed Worker in the **Witness** field, and save the cluster."
+msgstr ""
+"Vaya a |InfClu|, abra el clúster, haga clic en :guilabel:`Edit`, "
+"seleccione el Distributed Worker en el campo **Witness** y guarde el "
+"clúster."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:43
 msgid ""
 "Add the shared block-storage target to both Hosts and confirm both Hosts "
 "resolve the same stable multipath device. See :doc:`storage_operations`."
-msgstr "Agregue el destino de almacenamiento en bloque compartido a ambos Hosts y confirme que ambos Hosts resuelven el mismo dispositivo multipath estable. Consulte :doc:`storage_operations`."
+msgstr ""
+"Agregue el destino de almacenamiento en bloque compartido a ambos Hosts y"
+" confirme que ambos Hosts resuelven el mismo dispositivo multipath "
+"estable. Consulte :doc:`storage_operations`."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:44
 msgid ""
 "Create the HPE Shared File System (GFS2) datastore and select one "
 "reliable datastore as the **Heartbeat Target**."
-msgstr "Cree el almacén de datos HPE Shared File System (GFS2) y seleccione un almacén de datos fiable como **Heartbeat Target**."
+msgstr ""
+"Cree el almacén de datos HPE Shared File System (GFS2) y seleccione un "
+"almacén de datos fiable como **Heartbeat Target**."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:45
 msgid "Open the cluster **Summary** tab and verify the Quorum panel."
@@ -176,7 +227,12 @@ msgid ""
 "exists. The selected Worker may therefore appear active as a Distributed "
 "Worker before it appears as an HVM quorum member. Adding the GFS2 "
 "datastore activates the three-member Agent quorum workflow."
-msgstr "El Manager envía información de quórum del Agente solo después de que exista un almacén de datos GFS2. Por tanto, el Worker seleccionado puede aparecer activo como Distributed Worker antes de aparecer como miembro de quórum HVM. Agregar el almacén de datos GFS2 activa el flujo de quórum del Agente de tres miembros."
+msgstr ""
+"El Manager envía información de quórum del Agente solo después de que "
+"exista un almacén de datos GFS2. Por tanto, el Worker seleccionado puede "
+"aparecer activo como Distributed Worker antes de aparecer como miembro de"
+" quórum HVM. Agregar el almacén de datos GFS2 activa el flujo de quórum "
+"del Agente de tres miembros."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:49
 msgid "Warning"
@@ -187,7 +243,10 @@ msgid ""
 "Do not place production workloads on a new GFS2 datastore until all three"
 " quorum members are reachable and the Quorum panel reports a healthy "
 "state."
-msgstr "No coloque cargas de trabajo de producción en un almacén de datos GFS2 nuevo hasta que los tres miembros de quórum sean accesibles y el panel Quorum informe un estado saludable."
+msgstr ""
+"No coloque cargas de trabajo de producción en un almacén de datos GFS2 "
+"nuevo hasta que los tres miembros de quórum sean accesibles y el panel "
+"Quorum informe un estado saludable."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:54
 msgid "Witness Deployment"
@@ -199,7 +258,9 @@ msgstr "Navegue a |AdmIntDis| y cree una configuración Distributed Worker."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:57
 msgid "Set **Worker URL** to the stable client-facing HTTPS URL for the Worker."
-msgstr "Configure **Worker URL** con la URL HTTPS estable orientada al cliente del Worker."
+msgstr ""
+"Configure **Worker URL** con la URL HTTPS estable orientada al cliente "
+"del Worker."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:58
 msgid "Save the API key."
@@ -209,7 +270,9 @@ msgstr "Guarde la clave API."
 msgid ""
 "Install and configure the Worker using the package or container procedure"
 " in :doc:`/administration/integrations/workers`."
-msgstr "Instale y configure el Worker usando el procedimiento de paquete o contenedor en :doc:`/administration/integrations/workers`."
+msgstr ""
+"Instale y configure el Worker usando el procedimiento de paquete o "
+"contenedor en :doc:`/administration/integrations/workers`."
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:60
 msgid "Confirm the Worker is active in |AdmIntDis|."
@@ -219,252 +282,388 @@ msgstr "Confirme que el Worker esté activo en |AdmIntDis|."
 msgid ""
 "From each HVM Host, verify the configured DNS name and TLS path. For "
 "example:"
-msgstr "Desde cada Host HVM, verifique el nombre DNS configurado y la ruta TLS. Por ejemplo:"
+msgstr ""
+"Desde cada Host HVM, verifique el nombre DNS configurado y la ruta TLS. "
+"Por ejemplo:"
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:63
 msgid ""
 "getent hosts witness.example.com\n"
 "curl --head https://witness.example.com"
 msgstr ""
+"getent hosts witness.example.com\n"
+"curl --head https://witness.example.com"
 
 #: ../../infrastructure/clusters/hvm/two_node_clusters.rst:68
 msgid ""
 "Do not use ``--insecure`` for production validation. If a reverse proxy "
 "or load balancer fronts the Worker, also confirm it preserves the witness"
 " path and does not require interactive authentication."
-msgstr "No use ``--insecure`` para la validación en producción. Si un proxy inverso o balanceador de carga está delante del Worker, confirme también que preserve la ruta del testigo y no requiera autenticación interactiva."
+msgstr ""
+"No use ``--insecure`` para la validación en producción. Si un proxy "
+"inverso o balanceador de carga está delante del Worker, confirme también "
+"que preserve la ruta del testigo y no requiera autenticación interactiva."
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:71
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:70
+msgid ""
+"After the cluster UUID is available on the cluster detail page, verify "
+"the generated witness path from each Host:"
+msgstr ""
+"Una vez que el UUID del clúster esté disponible en la página de detalle "
+"del clúster, verifique la ruta de testigo generada desde cada Host:"
+
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:72
+msgid "curl --head https://witness.example.com/witness/<cluster UUID>/quorum"
+msgstr "curl --head https://witness.example.com/witness/<cluster UUID>/quorum"
+
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:76
+msgid ""
+"Replace ``witness.example.com`` with the host in the configured Worker "
+"URL. Do not use ``--insecure``."
+msgstr ""
+"Reemplace ``witness.example.com`` con el host de la URL del Worker "
+"configurada. No use ``--insecure``."
+
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:79
 msgid "Quorum Validation"
 msgstr "Validación de quórum"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:73
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:81
 msgid ""
-"After adding the GFS2 datastore, open the cluster Quorum panel and "
-"confirm:"
-msgstr "Tras agregar el almacén de datos GFS2, abra el panel Quorum del clúster y confirme:"
+"After adding the GFS2 datastore, open |InfClu|, select the cluster, and "
+"expand the **Summary** Quorum panel. Confirm:"
+msgstr ""
+"Tras agregar el almacén de datos GFS2, abra |InfClu|, seleccione el "
+"clúster y expanda el panel **Summary** de Quorum. Confirme:"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:75
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:83
 msgid "Quorum status is **ACHIEVED**"
 msgstr "El estado de quórum es **ACHIEVED**"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:76
-msgid "Two compute Hosts and one witness are configured"
-msgstr "Dos Hosts de compute y un testigo están configurados"
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:84
+msgid "Nodes configured: 3 (two Hosts plus the witness)"
+msgstr "Nodos configurados: 3 (dos Hosts más el testigo)"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:77
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:85
 msgid "Both Hosts are online and reachable"
 msgstr "Ambos Hosts están online y accesibles"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:78
-msgid "The witness is reachable"
-msgstr "El testigo es accesible"
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:86
+msgid "The Witness row is present and reachable"
+msgstr "La fila del testigo está presente y es accesible"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:79
-msgid "A Designated Coordinator is assigned"
-msgstr "Se ha asignado un Designated Coordinator"
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:87
+msgid "There is no **Sites** row"
+msgstr "No hay fila **Sites**"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:80
-msgid "GFS2 lockspaces are healthy and not waiting for fencing"
-msgstr "Los lockspaces GFS2 están sanos y no esperan fencing"
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:88
+msgid "The Host table is a flat list, not grouped by site"
+msgstr "La tabla de Hosts es una lista plana, no agrupada por sitio"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:81
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:89
+msgid "The Designated Coordinator is one of the two Hosts"
+msgstr "El Designated Coordinator es uno de los dos Hosts"
+
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:90
+msgid "GFS2 lockspaces are **OK**, not **WAIT FENCING**"
+msgstr "Los lockspaces GFS2 están **OK**, no **WAIT FENCING**"
+
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:91
 msgid "The selected heartbeat datastore is healthy on both Hosts"
 msgstr "El almacén de datos heartbeat seleccionado está sano en ambos Hosts"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:83
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:93
 msgid ""
 "Corosync supplies membership information to DLM but does not decide Agent"
 " quorum for layout 1.3 or later. A two-node cluster can show ``Quorate: "
 "No`` in ``corosync-quorumtool`` while the Agent Quorum panel correctly "
 "reports **ACHIEVED**. Use the Agent quorum state as the operational "
 "authority."
-msgstr "Corosync proporciona información de pertenencia a DLM pero no decide el quórum del Agente para layout 1.3 o posterior. Un clúster de dos nodos puede mostrar ``Quorate: No`` en ``corosync-quorumtool`` mientras el panel Quorum del Agente informa correctamente **ACHIEVED**. Use el estado de quórum del Agente como autoridad operativa."
+msgstr ""
+"Corosync proporciona información de pertenencia a DLM pero no decide el "
+"quórum del Agente para layout 1.3 o posterior. Un clúster de dos nodos "
+"puede mostrar ``Quorate: No`` en ``corosync-quorumtool`` mientras el "
+"panel Quorum del Agente informa correctamente **ACHIEVED**. Use el estado"
+" de quórum del Agente como autoridad operativa."
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:86
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:96
 msgid "Failure and Maintenance Behavior"
 msgstr "Comportamiento ante fallos y mantenimiento"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:92
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:102
 msgid "Condition"
 msgstr "Condición"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:93
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:103
 msgid "Available votes"
 msgstr "Votos disponibles"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:94
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:104
 msgid "Expected behavior"
 msgstr "Comportamiento esperado"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:95
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:105
 msgid "Both Hosts and witness reachable"
 msgstr "Ambos Hosts y testigo accesibles"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:96
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:106
 msgid "3 of 3"
 msgstr "3 de 3"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:97
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:107
 msgid "Normal operation"
 msgstr "Operación normal"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:98
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:108
 msgid "One Host unavailable; witness reachable"
 msgstr "Un Host no disponible; testigo accesible"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:99
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:102
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:109
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:112
 msgid "2 of 3"
 msgstr "2 de 3"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:100
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:110
 msgid ""
 "The surviving Host retains quorum; eligible VMs can recover after the "
 "heartbeat failure threshold"
-msgstr "El Host superviviente conserva el quórum; las VMs elegibles pueden recuperarse tras el umbral de fallo del heartbeat"
+msgstr ""
+"El Host superviviente conserva el quórum; las VMs elegibles pueden "
+"recuperarse tras el umbral de fallo del heartbeat"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:101
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:111
 msgid "Witness unavailable; both Hosts reachable"
 msgstr "Testigo no disponible; ambos Hosts accesibles"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:103
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:113
 msgid ""
 "The cluster retains quorum, but no Host may be taken offline until "
 "witness service is restored"
-msgstr "El clúster conserva el quórum, pero ningún Host puede ponerse offline hasta que se restaure el servicio del testigo"
+msgstr ""
+"El clúster conserva el quórum, pero ningún Host puede ponerse offline "
+"hasta que se restaure el servicio del testigo"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:104
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:114
 msgid "One Host and the witness unavailable"
 msgstr "Un Host y el testigo no disponibles"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:105
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:115
 msgid "1 of 3"
 msgstr "1 de 3"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:106
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:116
 msgid ""
 "The remaining Host cannot retain quorum and protects shared storage by "
 "fencing"
-msgstr "El Host restante no puede conservar el quórum y protege el almacenamiento compartido mediante fencing"
+msgstr ""
+"El Host restante no puede conservar el quórum y protege el almacenamiento"
+" compartido mediante fencing"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:107
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:117
 msgid "Host-to-Host partition"
 msgstr "Partición Host-Host"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:108
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:118
 msgid "Depends on witness reachability"
 msgstr "Depende de la accesibilidad del testigo"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:109
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:119
 msgid ""
 "The Host that can reach the witness can form 2 of 3 votes; the other Host"
 " cannot retain quorum"
-msgstr "El Host que puede alcanzar el testigo puede formar 2 de 3 votos; el otro Host no puede conservar el quórum"
+msgstr ""
+"El Host que puede alcanzar el testigo puede formar 2 de 3 votos; el otro "
+"Host no puede conservar el quórum"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:110
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:120
 msgid "|morpheus| Manager unavailable"
 msgstr "|morpheus| Manager no disponible"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:111
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:121
 msgid "Unchanged"
 msgstr "Sin cambios"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:112
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:122
 msgid ""
 "Agent and witness quorum continue independently; UI management is "
 "unavailable until the Manager returns"
-msgstr "El quórum del Agente y del testigo continúan de forma independiente; la administración de la interfaz no está disponible hasta que el Manager vuelva"
+msgstr ""
+"El quórum del Agente y del testigo continúan de forma independiente; la "
+"administración de la interfaz no está disponible hasta que el Manager "
+"vuelva"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:114
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:124
+msgid ""
+"Host unreachability is detected after 60 seconds. Eligible VM recovery on"
+" the surviving Host follows the 140-second heartbeat failure threshold "
+"and requires the witness to remain reachable. Do not treat these timeouts"
+" as the same interval."
+msgstr ""
+"La inaccesibilidad del Host se detecta tras 60 segundos. La recuperación"
+" de VMs elegibles en el Host superviviente sigue el umbral de fallo de "
+"heartbeat de 140 segundos y requiere que el testigo permanezca "
+"accesible. No trate estos tiempos de espera como el mismo intervalo."
+
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:126
 msgid ""
 "For planned Host maintenance, confirm the witness and the other Host are "
 "healthy before entering maintenance mode. Do not maintain a Host and the "
 "witness at the same time. Restore all three members before beginning "
 "maintenance on the second Host."
-msgstr "Para mantenimiento planificado del Host, confirme que el testigo y el otro Host estén sanos antes de entrar en modo de mantenimiento. No mantenga un Host y el testigo al mismo tiempo. Restaure los tres miembros antes de comenzar el mantenimiento del segundo Host."
+msgstr ""
+"Para mantenimiento planificado del Host, confirme que el testigo y el "
+"otro Host estén sanos antes de entrar en modo de mantenimiento. No "
+"mantenga un Host y el testigo al mismo tiempo. Restaure los tres miembros"
+" antes de comenzar el mantenimiento del segundo Host."
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:117
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:129
 msgid "Troubleshooting"
 msgstr "Solución de problemas"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:119
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:131
 msgid ""
 "**Worker active but witness unreachable:** The Worker can reach the "
 "Manager, but one or both Hosts cannot reach the Worker URL. Correct DNS, "
 "routing, firewall, proxy, or certificate trust."
-msgstr "**Worker activo pero testigo inaccesible:** El Worker puede alcanzar el Manager, pero uno o ambos Hosts no pueden alcanzar la Worker URL. Corrija DNS, enrutamiento, firewall, proxy o confianza del certificado."
+msgstr ""
+"**Worker activo pero testigo inaccesible:** El Worker puede alcanzar el "
+"Manager, pero uno o ambos Hosts no pueden alcanzar la Worker URL. Corrija"
+" DNS, enrutamiento, firewall, proxy o confianza del certificado."
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:120
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:132
 msgid ""
 "**Witness absent from the Quorum panel:** Confirm the Worker is selected "
-"on the cluster and a GFS2 datastore exists. Allow the cluster refresh to "
+"on the cluster and a GFS2 datastore exists. The Manager sends Agent "
+"quorum information only after GFS2 exists. Allow the cluster refresh to "
 "propagate updated quorum information."
-msgstr "**Testigo ausente del panel Quorum:** Confirme que el Worker está seleccionado en el clúster y que existe un almacén de datos GFS2. Permita que la actualización del clúster propague la información de quórum actualizada."
+msgstr ""
+"**Testigo ausente del panel Quorum:** Confirme que el Worker está "
+"seleccionado en el clúster y que existe un almacén de datos GFS2. El "
+"Manager envía información de quórum del Agente solo después de que "
+"exista GFS2. Permita que la actualización del clúster propague la "
+"información de quórum actualizada."
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:121
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:133
+msgid ""
+"**Sites row on a two-node cluster:** Site Groups were created. Stop and "
+"treat this as a stretch misconfiguration. Remove the Site Groups or "
+"follow :doc:`stretch_clusters` only if you intended to convert the "
+"topology."
+msgstr ""
+"**Fila Sites en un clúster de dos nodos:** Se crearon Grupos de sitio. "
+"Deténgase y trate esto como una configuración incorrecta de tipo "
+"extendido. Elimine los Grupos de sitio o siga :doc:`stretch_clusters` "
+"solo si su intención era convertir la topología."
+
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:134
 msgid ""
 "**Wrong witness URL:** Set **Worker URL** to the client-facing Worker "
 "endpoint, not the |morpheus| appliance URL. Verify the generated "
 "``/witness/<cluster UUID>/quorum`` route through any proxy."
-msgstr "**URL de testigo incorrecta:** Configure **Worker URL** con el endpoint Worker orientado al cliente, no con la URL del dispositivo |morpheus|. Verifique la ruta generada ``/witness/<cluster UUID>/quorum`` a través de cualquier proxy."
+msgstr ""
+"**URL de testigo incorrecta:** Configure **Worker URL** con el endpoint "
+"Worker orientado al cliente, no con la URL del dispositivo |morpheus|. "
+"Verifique la ruta generada ``/witness/<cluster UUID>/quorum`` a través de"
+" cualquier proxy."
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:122
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:135
 msgid ""
 "**Certificate error:** Serve a complete certificate chain trusted by both"
 " HVM Hosts. Do not bypass certificate validation."
-msgstr "**Error de certificado:** Sirva una cadena de certificados completa en la que confíen ambos Hosts HVM. No omita la validación del certificado."
+msgstr ""
+"**Error de certificado:** Sirva una cadena de certificados completa en la"
+" que confíen ambos Hosts HVM. No omita la validación del certificado."
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:123
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:136
 msgid ""
 "**GFS2 lockspace waiting for fencing:** Do not issue manual fence "
 "acknowledgements until the unreachable Host is physically isolated from "
 "shared storage. Follow :doc:`troubleshooting` or contact HPE Support."
-msgstr "**Lockspace GFS2 esperando fencing:** No emita reconocimientos manuales de fence hasta que el Host inaccesible esté físicamente aislado del almacenamiento compartido. Siga :doc:`troubleshooting` o contacte con el Soporte de HPE."
+msgstr ""
+"**Lockspace GFS2 esperando fencing:** No emita reconocimientos manuales "
+"de fence hasta que el Host inaccesible esté físicamente aislado del "
+"almacenamiento compartido. Siga :doc:`troubleshooting` o contacte con el "
+"Soporte de HPE."
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:124
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:137
 msgid ""
 "**Witness lost during Host maintenance:** Stop the maintenance operation "
 "if possible and restore either the witness or the Host before making "
 "another member unavailable."
-msgstr "**Testigo perdido durante el mantenimiento del Host:** Detenga la operación de mantenimiento si es posible y restaure el testigo o el Host antes de dejar otro miembro no disponible."
+msgstr ""
+"**Testigo perdido durante el mantenimiento del Host:** Detenga la "
+"operación de mantenimiento si es posible y restaure el testigo o el Host "
+"antes de dejar otro miembro no disponible."
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:127
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:140
 msgid "Limitations"
 msgstr "Limitaciones"
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:129
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:142
 msgid ""
 "A two-node cluster has less compute and maintenance capacity than a "
 "three-node cluster."
-msgstr "Un clúster de dos nodos tiene menos capacidad de compute y mantenimiento que un clúster de tres nodos."
+msgstr ""
+"Un clúster de dos nodos tiene menos capacidad de compute y mantenimiento "
+"que un clúster de tres nodos."
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:130
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:143
 msgid ""
 "The witness is required for Host-failure tolerance; two Hosts without the"
 " witness cannot tolerate either Host becoming unavailable."
-msgstr "El testigo es necesario para tolerar fallos de Host; dos Hosts sin el testigo no pueden tolerar que cualquiera de los Hosts quede no disponible."
+msgstr ""
+"El testigo es necesario para tolerar fallos de Host; dos Hosts sin el "
+"testigo no pueden tolerar que cualquiera de los Hosts quede no "
+"disponible."
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:131
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:144
 msgid ""
-"This topology is not a stretch cluster. It does not use site groups or "
-"the ``siteWitness`` designation."
-msgstr "Esta topología no es un clúster stretch. No usa grupos de sitio ni la designación ``siteWitness``."
+"This topology is not a stretch cluster. It does not use Site Groups or "
+"the ``siteWitness`` designation. Do not create Site Groups on a two-node "
+"GFS2 cluster; adding them switches the witness classification to stretch "
+"``siteWitness``. Site Groups are created from the Host-VM Groups tab; see"
+" :doc:`host_vm_groups`."
+msgstr ""
+"Esta topología no es un clúster extendido. No usa Grupos de sitio ni la "
+"designación ``siteWitness``. No cree Grupos de sitio en un clúster GFS2 "
+"de dos nodos; agregarlos cambia la clasificación del testigo a "
+"``siteWitness`` extendido. Los Grupos de sitio se crean desde la "
+"pestaña Host-VM Groups; consulte :doc:`host_vm_groups`."
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:132
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:145
 msgid ""
 "The witness does not replace shared-storage redundancy, multipathing, "
 "backups, or sufficient capacity on the surviving Host."
-msgstr "El testigo no sustituye la redundancia del almacenamiento compartido, el multipath, los backups ni la capacidad suficiente en el Host superviviente."
+msgstr ""
+"El testigo no sustituye la redundancia del almacenamiento compartido, el "
+"multipath, los backups ni la capacidad suficiente en el Host "
+"superviviente."
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:133
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:146
 msgid ""
 "Configure one heartbeat target. If it becomes unhealthy, restore it or "
 "select another healthy GFS2 datastore before relying on automatic VM "
 "recovery."
-msgstr "Configure un destino heartbeat. Si deja de estar sano, restáurelo o seleccione otro almacén de datos GFS2 sano antes de confiar en la recuperación automática de VMs."
+msgstr ""
+"Configure un destino heartbeat. Si deja de estar sano, restáurelo o "
+"seleccione otro almacén de datos GFS2 sano antes de confiar en la "
+"recuperación automática de VMs."
 
-#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:135
+#: ../../infrastructure/clusters/hvm/two_node_clusters.rst:148
 msgid "For multi-site HVM clusters with site groups, see :doc:`stretch_clusters`."
-msgstr "Para clústers HVM multisitio con grupos de sitio, consulte :doc:`stretch_clusters`."
+msgstr ""
+"Para clústers HVM multisitio con grupos de sitio, consulte "
+":doc:`stretch_clusters`."
+
+#~ msgid "Two compute Hosts and one witness are configured"
+#~ msgstr "Dos Hosts de compute y un testigo están configurados"
+
+#~ msgid ""
+#~ "This topology is not a stretch "
+#~ "cluster. It does not use site "
+#~ "groups or the ``siteWitness`` designation."
+#~ msgstr ""
+#~ "Esta topología no es un clúster "
+#~ "stretch. No usa grupos de sitio ni"
+#~ " la designación ``siteWitness``."
 

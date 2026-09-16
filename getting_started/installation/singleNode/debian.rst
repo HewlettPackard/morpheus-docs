@@ -7,9 +7,9 @@ To get started installing |morpheus| on Ubuntu or Debian a few preparatory items
 
    .. IMPORTANT:: If the machine is unable to resolve its own hostname ``nslookup hostname`` some installation commands will be unable to verify service health during installation and fail.
 
- #. Next simply download the relevant ``.deb`` package for installation. This package can be acquired from https://app.morpheushub.com downloads section.
+ #. Next simply download the relevant ``.deb`` package for installation. This package can be acquired from https://myenterpriselicense.hpe.com downloads section.
 
-    .. TIP:: Use the ``wget`` command to directly download the package to your appliance server. i.e. ``wget https://downloads.morpheusdata.com/path/to/package/morpheus-appliance_x.x.x-1_amd64.deb``
+   .. TIP:: You can get a ``curl`` command from My Software Center to directly download the package to your appliance server.
 
 #. Next we must install the package onto the machine and configure the morpheus services:
 

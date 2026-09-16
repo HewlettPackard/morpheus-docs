@@ -171,7 +171,7 @@ VDI Gateway VM Install
 
 A VDI Gateway VM is installed and configured similarly to a |morpheus| appliance via ``rpm`` or ``deb`` package.
 
-.. NOTE:: VDI Gateway Package URLs are available at https://app.morpheushub.com in the downloads section.
+.. NOTE:: VDI Gateway Package URLs are available at https://myenterpriselicense.hpe.com in the downloads section.
 
 **Requirements**
 

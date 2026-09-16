@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Morpheus Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-26 11:17-0400\n"
+"POT-Creation-Date: 2026-09-04 16:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: pt\n"
@@ -36,7 +36,9 @@ msgstr "Versão compatível do Worker |morpheus|: |workerVer|"
 msgid ""
 "Minimum upgrade versions: Non-rolling: |minUpgradeVer|, Rolling: "
 "|minRollingUpgradeVer|"
-msgstr "Versões mínimas para atualização: Não-rolling: |minUpgradeVer|, Rolling: |minRollingUpgradeVer|"
+msgstr ""
+"Versões mínimas para atualização: Não-rolling: |minUpgradeVer|, Rolling: "
+"|minRollingUpgradeVer|"
 
 #: ../../release_notes/current.rst:11
 msgid "Release Dates"
@@ -63,7 +65,18 @@ msgid ""
 "correct script against the correct HVM Host. Though many do, it is "
 "possible that some version upgrade hops will not contain an HVM Host "
 "agent upgrade."
-msgstr "Após atualizar para |morphver|, é recomendado verificar também se há atualizações do agente do HVM Host. Para atualizar os agentes do HVM Host, navegue até a página de detalhes de cada HVM Host, expanda o menu ACTIONS e clique em \"Upgrade Agent.\" Este processo deve ser realizado em todos os HVM Hosts. Alternativamente, você pode selecionar \"Download Agent Script\" para baixar um script shell para realizar a atualização. Conecte-se ao HVM Host por uma sessão de terminal e execute o script baixado. Os scripts são únicos para cada HVM Host, portanto você deve baixar todos os scripts necessários e executar o script correto no HVM Host correto. Embora muitos contenham, é possível que alguns saltos de atualização de versão não incluam uma atualização do agente do HVM Host."
+msgstr ""
+"Após atualizar para |morphver|, é recomendado verificar também se há "
+"atualizações do agente do HVM Host. Para atualizar os agentes do HVM "
+"Host, navegue até a página de detalhes de cada HVM Host, expanda o menu "
+"ACTIONS e clique em \"Upgrade Agent.\" Este processo deve ser realizado "
+"em todos os HVM Hosts. Alternativamente, você pode selecionar \"Download "
+"Agent Script\" para baixar um script shell para realizar a atualização. "
+"Conecte-se ao HVM Host por uma sessão de terminal e execute o script "
+"baixado. Os scripts são únicos para cada HVM Host, portanto você deve "
+"baixar todos os scripts necessários e executar o script correto no HVM "
+"Host correto. Embora muitos contenham, é possível que alguns saltos de "
+"atualização de versão não incluam uma atualização do agente do HVM Host."
 
 #: ../../release_notes/current.rst:20
 msgid "New Features"
@@ -80,7 +93,12 @@ msgid ""
 "Ansible, Kubernetes (HKS), Workflows, Service Catalog, Personas, and "
 "additional automation and integration capabilities. See "
 ":doc:`feature_matrix` for the complete tier comparison."
-msgstr "Introduzido o nível de licença **Advanced**, expandindo a plataforma para três níveis: VM Essentials, Advanced e Enterprise. O Advanced inclui Ansible, Kubernetes (HKS), Workflows, Service Catalog, Personas e recursos adicionais de automação e integração. Consulte :doc:`feature_matrix` para a comparação completa de níveis."
+msgstr ""
+"Introduzido o nível de licença **Advanced**, expandindo a plataforma para"
+" três níveis: VM Essentials, Advanced e Enterprise. O Advanced inclui "
+"Ansible, Kubernetes (HKS), Workflows, Service Catalog, Personas e "
+"recursos adicionais de automação e integração. Consulte "
+":doc:`feature_matrix` para a comparação completa de níveis."
 
 #: ../../release_notes/current.rst
 msgid "HVM & VM Essentials"
@@ -91,192 +109,271 @@ msgid ""
 "Virtual Switch management: add, edit, and remove virtual switches with "
 "advanced port group management and network reconfiguration directly from "
 "the UI"
-msgstr "Gerenciamento de Virtual Switch: adicionar, editar e remover switches virtuais com gerenciamento avançado de port groups e reconfiguração de rede diretamente pela interface"
+msgstr ""
+"Gerenciamento de Virtual Switch: adicionar, editar e remover switches "
+"virtuais com gerenciamento avançado de port groups e reconfiguração de "
+"rede diretamente pela interface"
 
 #: ../../release_notes/current.rst:25
 msgid ""
 "NVIDIA vGPU slicing: create SR-IOV vGPU profiles on supported HVM Hosts "
 "and bind physical GPU types or vGPU Segment Types to Service Plans"
-msgstr "NVIDIA vGPU slicing: criar perfis SR-IOV vGPU em HVM Hosts compatíveis e vincular tipos de GPU física ou tipos de segmento vGPU a Service Plans"
+msgstr ""
+"NVIDIA vGPU slicing: criar perfis SR-IOV vGPU em HVM Hosts compatíveis e "
+"vincular tipos de GPU física ou tipos de segmento vGPU a Service Plans"
 
 #: ../../release_notes/current.rst:26
 msgid ""
 "Host Profiles: define and apply standardized host configurations across "
 "cluster hosts, similar to VMware vCenter Host Profiles"
-msgstr "Host Profiles: definir e aplicar configurações padronizadas de Host em Hosts do Cluster, semelhante aos Host Profiles do VMware vCenter"
+msgstr ""
+"Host Profiles: definir e aplicar configurações padronizadas de Host em "
+"Hosts do Cluster, semelhante aos Host Profiles do VMware vCenter"
 
 #: ../../release_notes/current.rst:27
 msgid ""
 "Host Configuration Backup & Restore: back up HVM host identity and "
 "configuration for faster hardware replacement"
-msgstr "Backup e Restauração de Configuração de Host: realizar backup da identidade e configuração do HVM Host para substituição de hardware mais rápida"
+msgstr ""
+"Backup e Restauração de Configuração de Host: realizar backup da "
+"identidade e configuração do HVM Host para substituição de hardware mais "
+"rápida"
 
 #: ../../release_notes/current.rst:28
 msgid ""
 "Bulk operations: trigger actions on multiple VMs or hosts simultaneously "
 "(migrate, snapshot, power operations, tag, and more)"
-msgstr "Operações em massa: disparar ações em múltiplas VMs ou Hosts simultaneamente (migrar, snapshot, operações de energia, tags e mais)"
+msgstr ""
+"Operações em massa: disparar ações em múltiplas VMs ou Hosts "
+"simultaneamente (migrar, snapshot, operações de energia, tags e mais)"
 
 #: ../../release_notes/current.rst:29
 msgid ""
 "Increased live migration concurrency during Maintenance Mode to reduce "
 "maintenance windows for dense environments"
-msgstr "Aumento da concorrência de migração ao vivo durante o Modo de Manutenção para reduzir janelas de manutenção em ambientes densos"
+msgstr ""
+"Aumento da concorrência de migração ao vivo durante o Modo de Manutenção "
+"para reduzir janelas de manutenção em ambientes densos"
 
 #: ../../release_notes/current.rst:30
+msgid ""
+"Cross-cluster Move: relocate running HVM/KVM VMs between HVM clusters in "
+"the same Cloud, mapping datastores and networks from Instance or VM "
+":guilabel:`Actions` > :guilabel:`Move`"
+msgstr ""
+"Movimentação entre clusters: realoque VMs HVM/KVM em execução entre "
+"clusters HVM na mesma Nuvem, mapeando Armazéns de dados e Redes a partir "
+"de :guilabel:`Actions` > :guilabel:`Move` da Instância ou VM"
+
+#: ../../release_notes/current.rst:31
 msgid ""
 "Connect and disconnect virtual network interfaces on running VMs without "
 "requiring a full reconfigure, supporting backup recovery and security "
 "isolation workflows"
-msgstr "Conectar e desconectar interfaces de rede virtuais em VMs em execução sem necessidade de reconfiguração completa, suportando fluxos de trabalho de recuperação de backup e isolamento de segurança"
-
-#: ../../release_notes/current.rst:31
-msgid ""
-"Expose advanced VM deployment settings (TPM, Secure Boot, UEFI, Nested "
-"Virtualization) in Reconfigure for Day 2 modifications without rebuilding"
-msgstr "Expor configurações avançadas de implantação de VM (TPM, Secure Boot, UEFI, Virtualização Aninhada) em Reconfigure para modificações Day 2 sem necessidade de reconstrução"
+msgstr ""
+"Conectar e desconectar interfaces de rede virtuais em VMs em execução sem"
+" necessidade de reconfiguração completa, suportando fluxos de trabalho de"
+" recuperação de backup e isolamento de segurança"
 
 #: ../../release_notes/current.rst:32
 msgid ""
-"Centralized Affinity Placement management: view and manage VM affinity "
-"rules and pinning overrides from a single cluster-level interface"
-msgstr "Gerenciamento centralizado de Affinity Placement: visualizar e gerenciar regras de afinidade de VM e sobrescritas de fixação a partir de uma interface única em nível de Cluster"
+"Expose advanced VM deployment settings (TPM, Secure Boot, UEFI, Nested "
+"Virtualization) in Reconfigure for Day 2 modifications without rebuilding"
+msgstr ""
+"Expor configurações avançadas de implantação de VM (TPM, Secure Boot, "
+"UEFI, Virtualização Aninhada) em Reconfigure para modificações Day 2 sem "
+"necessidade de reconstrução"
 
 #: ../../release_notes/current.rst:33
 msgid ""
-"Linked clones: create space-efficient clones that share a base disk image"
-" with the parent VM"
-msgstr "Linked clones: criar clones eficientes em espaço que compartilham uma imagem de disco base com a VM pai"
+"Centralized Affinity Placement management: view and manage VM affinity "
+"rules and pinning overrides from a single cluster-level interface"
+msgstr ""
+"Gerenciamento centralizado de Affinity Placement: visualizar e gerenciar "
+"regras de afinidade de VM e sobrescritas de fixação a partir de uma "
+"interface única em nível de Cluster"
 
 #: ../../release_notes/current.rst:34
 msgid ""
-"Datastore Evacuation / Maintenance Mode: automatically migrate VMs off a "
-"datastore being retired or replaced"
-msgstr "Evacuação de Datastore / Modo de Manutenção: migrar automaticamente VMs de um datastore sendo desativado ou substituído"
+"Linked clones: create space-efficient clones that share a base disk image"
+" with the parent VM"
+msgstr ""
+"Linked clones: criar clones eficientes em espaço que compartilham uma "
+"imagem de disco base com a VM pai"
 
 #: ../../release_notes/current.rst:35
 msgid ""
-"Raw Device Block Mapping (RDBM): attach raw host block devices directly "
-"to VMs for performance-sensitive workloads"
-msgstr "Raw Device Block Mapping (RDBM): conectar dispositivos de bloco brutos do Host diretamente a VMs para cargas de trabalho sensíveis a desempenho"
+"Datastore Evacuation / Maintenance Mode: automatically migrate VMs off a "
+"datastore being retired or replaced"
+msgstr ""
+"Evacuação de Datastore / Modo de Manutenção: migrar automaticamente VMs "
+"de um datastore sendo desativado ou substituído"
 
 #: ../../release_notes/current.rst:36
+msgid ""
+"Raw Device Block Mapping (RDBM): attach raw host block devices directly "
+"to VMs for performance-sensitive workloads"
+msgstr ""
+"Raw Device Block Mapping (RDBM): conectar dispositivos de bloco brutos do"
+" Host diretamente a VMs para cargas de trabalho sensíveis a desempenho"
+
+#: ../../release_notes/current.rst:37
 msgid "Virtual machine console access directly from HVM hosts"
 msgstr "Acesso ao console de máquina virtual diretamente dos HVM Hosts"
 
-#: ../../release_notes/current.rst:37
-msgid "CPU Ready-equivalent metric for monitoring vCPU scheduling contention"
-msgstr "Métrica equivalente ao CPU Ready para monitoramento de contenção de agendamento de vCPU"
-
 #: ../../release_notes/current.rst:38
+msgid "CPU Ready-equivalent metric for monitoring vCPU scheduling contention"
+msgstr ""
+"Métrica equivalente ao CPU Ready para monitoramento de contenção de "
+"agendamento de vCPU"
+
+#: ../../release_notes/current.rst:39
 msgid ""
 "Leverage QEMU Guest Agent to gather guest OS information (IP addresses, "
 "OS version, hostname) without network-based access"
-msgstr "Utilizar o QEMU Guest Agent para coletar informações do sistema operacional convidado (endereços IP, versão do SO, hostname) sem acesso baseado em rede"
+msgstr ""
+"Utilizar o QEMU Guest Agent para coletar informações do sistema "
+"operacional convidado (endereços IP, versão do SO, hostname) sem acesso "
+"baseado em rede"
 
-#: ../../release_notes/current.rst:39
+#: ../../release_notes/current.rst:40
 msgid ""
 "VSS-aware application-consistent snapshots: when the QEMU Guest Agent is "
 "connected, snapshots trigger Windows Volume Shadow Copy Service for "
 "database and application consistency"
-msgstr "Snapshots consistentes com a aplicação via VSS: quando o QEMU Guest Agent está conectado, os snapshots acionam o Windows Volume Shadow Copy Service para consistência de banco de dados e aplicação"
-
-#: ../../release_notes/current.rst:40
-msgid ""
-"vNUMA provisioning: automatic or manual virtual NUMA topology for wide "
-"VMs spanning multiple CPU sockets, with Off/Auto/Manual modes"
-msgstr "Provisionamento vNUMA: topologia NUMA virtual automática ou manual para VMs amplas que abrangem múltiplos soquetes de CPU, com modos Off/Auto/Manual"
+msgstr ""
+"Snapshots consistentes com a aplicação via VSS: quando o QEMU Guest Agent"
+" está conectado, os snapshots acionam o Windows Volume Shadow Copy "
+"Service para consistência de banco de dados e aplicação"
 
 #: ../../release_notes/current.rst:41
 msgid ""
-"vCPU Placement: cluster-level CPU affinity management with Unmanaged, "
-"Region, and Pinned modes for NUMA-aware workload performance"
-msgstr "vCPU Placement: gerenciamento de afinidade de CPU em nível de Cluster com modos Unmanaged, Region e Pinned para desempenho de carga de trabalho com reconhecimento de NUMA"
+"vNUMA provisioning: automatic or manual virtual NUMA topology for wide "
+"VMs spanning multiple CPU sockets, with Off/Auto/Manual modes"
+msgstr ""
+"Provisionamento vNUMA: topologia NUMA virtual automática ou manual para "
+"VMs amplas que abrangem múltiplos soquetes de CPU, com modos "
+"Off/Auto/Manual"
 
 #: ../../release_notes/current.rst:42
+msgid ""
+"vCPU Placement: cluster-level CPU affinity management with Unmanaged, "
+"Region, and Pinned modes for NUMA-aware workload performance"
+msgstr ""
+"vCPU Placement: gerenciamento de afinidade de CPU em nível de Cluster com"
+" modos Unmanaged, Region e Pinned para desempenho de carga de trabalho "
+"com reconhecimento de NUMA"
+
+#: ../../release_notes/current.rst:43
 msgid ""
 "Improved audit logging: administrative actions (datastore changes, "
 "cluster settings, VM promotions) now recorded in object History for full "
 "traceability"
-msgstr "Registro de auditoria aprimorado: ações administrativas (alterações de datastore, configurações de Cluster, promoções de VM) agora registradas no Histórico do objeto para rastreabilidade completa"
+msgstr ""
+"Registro de auditoria aprimorado: ações administrativas (alterações de "
+"datastore, configurações de Cluster, promoções de VM) agora registradas "
+"no Histórico do objeto para rastreabilidade completa"
 
-#: ../../release_notes/current.rst:43
+#: ../../release_notes/current.rst:44
 msgid ""
 "HVM Cluster OS Layout Ubuntu/HVM 26.04 support for confidential compute "
 "functions"
-msgstr "Suporte ao layout de SO do Cluster HVM Ubuntu/HVM 26.04 para funções de computação confidencial"
+msgstr ""
+"Suporte ao layout de SO do Cluster HVM Ubuntu/HVM 26.04 para funções de "
+"computação confidencial"
 
 #: ../../release_notes/current.rst
 msgid "Monitoring & Administration"
 msgstr "Monitoramento & Administração"
 
-#: ../../release_notes/current.rst:45
+#: ../../release_notes/current.rst:46
 msgid ""
 "Monitoring tab time ranges for instance and server details, allowing "
 "analysis over configurable periods"
-msgstr "Intervalos de tempo na aba de monitoramento para detalhes de Instância e servidor, permitindo análise em períodos configuráveis"
-
-#: ../../release_notes/current.rst:46
-msgid "Log rotation and retention period configuration from the GUI"
-msgstr "Configuração de rotação de logs e período de retenção pela interface gráfica"
+msgstr ""
+"Intervalos de tempo na aba de monitoramento para detalhes de Instância e "
+"servidor, permitindo análise em períodos configuráveis"
 
 #: ../../release_notes/current.rst:47
+msgid "Log rotation and retention period configuration from the GUI"
+msgstr ""
+"Configuração de rotação de logs e período de retenção pela interface "
+"gráfica"
+
+#: ../../release_notes/current.rst:48
 msgid ""
 "Read-only access level for Appliance Settings permission, allowing "
 "auditors and operators to view configuration without modification rights"
-msgstr "Nível de acesso somente leitura para permissão de Appliance Settings, permitindo que auditores e operadores visualizem a configuração sem direitos de modificação"
+msgstr ""
+"Nível de acesso somente leitura para permissão de Appliance Settings, "
+"permitindo que auditores e operadores visualizem a configuração sem "
+"direitos de modificação"
 
 #: ../../release_notes/current.rst
 msgid "Storage & Backup"
 msgstr "Armazenamento & Backup"
 
-#: ../../release_notes/current.rst:49
+#: ../../release_notes/current.rst:50
 msgid ""
 "Unified File Support Phase 2: Morpheus File Shares (create, grow, "
 "inventory, security toggles)"
-msgstr "Suporte Unificado a Arquivos Fase 2: Morpheus File Shares (criar, expandir, inventariar, opções de segurança)"
+msgstr ""
+"Suporte Unificado a Arquivos Fase 2: Morpheus File Shares (criar, "
+"expandir, inventariar, opções de segurança)"
 
 #: ../../release_notes/current.rst
 msgid "BMaaS / Bare Metal"
 msgstr "BMaaS / Bare Metal"
 
-#: ../../release_notes/current.rst:51
+#: ../../release_notes/current.rst:52
 msgid ""
 "PXE/Network Boot support: boot Bare Metal hosts via customer PXE "
 "infrastructure instead of virtual media, with optional Config ISO for "
 "post-deployment automation"
-msgstr "Suporte a PXE/Network Boot: inicializar Hosts Bare Metal via infraestrutura PXE do cliente em vez de mídia virtual, com Config ISO opcional para automação pós-implantação"
-
-#: ../../release_notes/current.rst:52
-msgid ""
-"Brownfield import in Boot From SAN (BFS): discover and manage existing "
-"BFS-provisioned servers"
-msgstr "Importação brownfield em Boot From SAN (BFS): descobrir e gerenciar servidores existentes provisionados via BFS"
+msgstr ""
+"Suporte a PXE/Network Boot: inicializar Hosts Bare Metal via "
+"infraestrutura PXE do cliente em vez de mídia virtual, com Config ISO "
+"opcional para automação pós-implantação"
 
 #: ../../release_notes/current.rst:53
 msgid ""
+"Brownfield import in Boot From SAN (BFS): discover and manage existing "
+"BFS-provisioned servers"
+msgstr ""
+"Importação brownfield em Boot From SAN (BFS): descobrir e gerenciar "
+"servidores existentes provisionados via BFS"
+
+#: ../../release_notes/current.rst:54
+msgid ""
 "Support for multiple networks (VLANs) with Unmanaged Networking on a "
 "single physical or bond interface"
-msgstr "Suporte a múltiplas redes (VLANs) com Unmanaged Networking em uma única interface física ou bond"
+msgstr ""
+"Suporte a múltiplas redes (VLANs) com Unmanaged Networking em uma única "
+"interface física ou bond"
 
 #: ../../release_notes/current.rst
 msgid "HKS / Kubernetes"
 msgstr "HKS / Kubernetes"
 
-#: ../../release_notes/current.rst:55
+#: ../../release_notes/current.rst:56
 msgid ""
 "NGINX Replacement with Kubernetes Gateway API (Phase 1): Gateway API CRDs"
 " (GatewayClass, Gateway, HTTPRoute) replace NGINX Ingress Controller on "
 "HVM, VMware, and Bare Metal layouts"
-msgstr "Substituição do NGINX pela Kubernetes Gateway API (Fase 1): CRDs da Gateway API (GatewayClass, Gateway, HTTPRoute) substituem o NGINX Ingress Controller em layouts HVM, VMware e Bare Metal"
+msgstr ""
+"Substituição do NGINX pela Kubernetes Gateway API (Fase 1): CRDs da "
+"Gateway API (GatewayClass, Gateway, HTTPRoute) substituem o NGINX Ingress"
+" Controller em layouts HVM, VMware e Bare Metal"
 
-#: ../../release_notes/current.rst:56
+#: ../../release_notes/current.rst:57
 msgid ""
 "HKS cluster packages updated to latest Kubernetes versions (1.33, 1.34, "
 "1.35) with CVE evaluation"
-msgstr "Pacotes de Cluster HKS atualizados para as versões mais recentes do Kubernetes (1.33, 1.34, 1.35) com avaliação de CVE"
+msgstr ""
+"Pacotes de Cluster HKS atualizados para as versões mais recentes do "
+"Kubernetes (1.33, 1.34, 1.35) com avaliação de CVE"
 
-#: ../../release_notes/current.rst:57
+#: ../../release_notes/current.rst:58
 msgid "HKS enhancements for 9.1.0"
 msgstr "Melhorias do HKS para 9.1.0"
 
@@ -284,52 +381,66 @@ msgstr "Melhorias do HKS para 9.1.0"
 msgid "Platform & Orchestration"
 msgstr "Plataforma & Orquestração"
 
-#: ../../release_notes/current.rst:59
+#: ../../release_notes/current.rst:60
 msgid ""
 "PCO Support for Host addition and removal within existing VMware/VME "
 "clusters"
-msgstr "Suporte PCO para adição e remoção de Host em Clusters VMware/VME existentes"
-
-#: ../../release_notes/current.rst:60
-msgid ""
-"Unified & Contextual Approval Framework for consistent approval workflows"
-" across provisioning operations"
-msgstr "Framework de Aprovação Unificado e Contextual para fluxos de trabalho de aprovação consistentes em operações de provisionamento"
+msgstr ""
+"Suporte PCO para adição e remoção de Host em Clusters VMware/VME "
+"existentes"
 
 #: ../../release_notes/current.rst:61
 msgid ""
+"Unified & Contextual Approval Framework for consistent approval workflows"
+" across provisioning operations"
+msgstr ""
+"Framework de Aprovação Unificado e Contextual para fluxos de trabalho de "
+"aprovação consistentes em operações de provisionamento"
+
+#: ../../release_notes/current.rst:62
+msgid ""
 "Import existing systems into |morpheus| for management without "
 "reprovisioning"
-msgstr "Importar sistemas existentes no |morpheus| para gerenciamento sem necessidade de reprovisionar"
+msgstr ""
+"Importar sistemas existentes no |morpheus| para gerenciamento sem "
+"necessidade de reprovisionar"
 
 #: ../../release_notes/current.rst
 msgid "CLI & Tooling"
 msgstr "CLI & Ferramentas"
 
-#: ../../release_notes/current.rst:63
+#: ../../release_notes/current.rst:64
 msgid ""
 "hvmcli: unified CLI tool for HVM host management including log viewing, "
 "VM/node/storage/cluster status, network configuration, and health "
 "validation"
-msgstr "hvmcli: ferramenta CLI unificada para gerenciamento de HVM Host incluindo visualização de logs, status de VM/nó/armazenamento/Cluster, configuração de rede e validação de saúde"
-
-#: ../../release_notes/current.rst:64
-msgid ""
-"Aruba CX Support Bundle: collect diagnostic logs from Aruba CX switches "
-"as part of the |morpheus| support bundle"
-msgstr "Aruba CX Support Bundle: coletar logs de diagnóstico de switches Aruba CX como parte do pacote de suporte do |morpheus|"
+msgstr ""
+"hvmcli: ferramenta CLI unificada para gerenciamento de HVM Host incluindo"
+" visualização de logs, status de VM/nó/armazenamento/Cluster, "
+"configuração de rede e validação de saúde"
 
 #: ../../release_notes/current.rst:65
 msgid ""
-"Password Management for iLO, ESXi, and Switch credentials via Cypher-"
-"backed credential store with multi-device linking and rotation support"
-msgstr "Gerenciamento de Senhas para credenciais de iLO, ESXi e Switch via armazenamento de credenciais baseado em Cypher com vinculação multi-dispositivo e suporte a rotação"
+"Aruba CX Support Bundle: collect diagnostic logs from Aruba CX switches "
+"as part of the |morpheus| support bundle"
+msgstr ""
+"Aruba CX Support Bundle: coletar logs de diagnóstico de switches Aruba CX"
+" como parte do pacote de suporte do |morpheus|"
 
 #: ../../release_notes/current.rst:66
+msgid ""
+"Password Management for iLO, ESXi, and Switch credentials via Cypher-"
+"backed credential store with multi-device linking and rotation support"
+msgstr ""
+"Gerenciamento de Senhas para credenciais de iLO, ESXi e Switch via "
+"armazenamento de credenciais baseado em Cypher com vinculação multi-"
+"dispositivo e suporte a rotação"
+
+#: ../../release_notes/current.rst:67
 msgid "Plugin ReadMe Standardization"
 msgstr "Padronização de ReadMe de Plugins"
 
-#: ../../release_notes/current.rst:69
+#: ../../release_notes/current.rst:70
 msgid "Fixes"
 msgstr "Correções"
 
@@ -337,67 +448,86 @@ msgstr "Correções"
 msgid "HVM"
 msgstr "HVM"
 
-#: ../../release_notes/current.rst:71
+#: ../../release_notes/current.rst:72
 msgid ""
 "Fixed an issue where Dynamic Placement continuously attempted to move VMs"
 " to a memory-exhausted host, causing repeated migration failures"
-msgstr "Corrigido um problema em que o Dynamic Placement tentava continuamente mover VMs para um Host com memória esgotada, causando falhas de migração repetidas"
-
-#: ../../release_notes/current.rst:72
-msgid "Fixed allocated memory displaying incorrect values after cluster syncs"
-msgstr "Corrigida a exibição de valores incorretos de memória alocada após sincronizações de Cluster"
+msgstr ""
+"Corrigido um problema em que o Dynamic Placement tentava continuamente "
+"mover VMs para um Host com memória esgotada, causando falhas de migração "
+"repetidas"
 
 #: ../../release_notes/current.rst:73
-msgid "Fixed network statistic information not displaying in the cluster view"
-msgstr "Corrigida a não exibição de informações de estatísticas de Rede na visualização do Cluster"
+msgid "Fixed allocated memory displaying incorrect values after cluster syncs"
+msgstr ""
+"Corrigida a exibição de valores incorretos de memória alocada após "
+"sincronizações de Cluster"
 
 #: ../../release_notes/current.rst:74
+msgid "Fixed network statistic information not displaying in the cluster view"
+msgstr ""
+"Corrigida a não exibição de informações de estatísticas de Rede na "
+"visualização do Cluster"
+
+#: ../../release_notes/current.rst:75
 msgid "Fixed failure to attach a volume to a VM in certain configurations"
-msgstr "Corrigida a falha ao anexar um volume a uma VM em determinadas configurações"
+msgstr ""
+"Corrigida a falha ao anexar um volume a uma VM em determinadas "
+"configurações"
 
 #: ../../release_notes/current.rst
 msgid "Monitoring"
 msgstr "Monitoramento"
 
-#: ../../release_notes/current.rst:76
+#: ../../release_notes/current.rst:77
 #, python-format
 msgid ""
 "Fixed old open incidents not being automatically closed when all health "
 "checks return 100% healthy"
-msgstr "Corrigidos incidentes antigos abertos que não eram fechados automaticamente quando todas as verificações de saúde retornavam 100% healthy"
+msgstr ""
+"Corrigidos incidentes antigos abertos que não eram fechados "
+"automaticamente quando todas as verificações de saúde retornavam 100% "
+"healthy"
 
-#: ../../release_notes/current.rst:78
+#: ../../release_notes/current.rst:79
 msgid "Fixed HKS cluster provisioning failures in proxy environments"
 msgstr "Corrigidas falhas de provisionamento de Cluster HKS em ambientes com proxy"
 
-#: ../../release_notes/current.rst:80
+#: ../../release_notes/current.rst:81
 msgid ""
 "Fixed Bare Metal instance status remaining in \"Provisioning\" state in "
 "multi-node scenarios"
-msgstr "Corrigido o status da Instância Bare Metal permanecendo no estado \"Provisioning\" em cenários multi-nó"
+msgstr ""
+"Corrigido o status da Instância Bare Metal permanecendo no estado "
+"\"Provisioning\" em cenários multi-nó"
 
 #: ../../release_notes/current.rst
 msgid "Networking"
 msgstr "Rede"
 
-#: ../../release_notes/current.rst:82
+#: ../../release_notes/current.rst:83
 msgid ""
 "Fixed Huawei Private Network option being unavailable when adding "
 "networks in a subtenant"
-msgstr "Corrigida a opção Huawei Private Network indisponível ao adicionar redes em um subtenant"
+msgstr ""
+"Corrigida a opção Huawei Private Network indisponível ao adicionar redes "
+"em um subtenant"
 
-#: ../../release_notes/current.rst:84
+#: ../../release_notes/current.rst:85
 msgid "Note"
 msgstr "Nota"
 
-#: ../../release_notes/current.rst:84
+#: ../../release_notes/current.rst:85
 msgid ""
 "Additional bug fixes and regressions are being addressed throughout the "
 "9.1.0 development cycle. See MORPH-13190 and MORPH-13191 for ongoing "
 "tracking."
-msgstr "Correções de bugs adicionais e regressões estão sendo tratadas ao longo do ciclo de desenvolvimento 9.1.0. Consulte MORPH-13190 e MORPH-13191 para acompanhamento contínuo."
+msgstr ""
+"Correções de bugs adicionais e regressões estão sendo tratadas ao longo "
+"do ciclo de desenvolvimento 9.1.0. Consulte MORPH-13190 e MORPH-13191 "
+"para acompanhamento contínuo."
 
-#: ../../release_notes/current.rst:87
+#: ../../release_notes/current.rst:88
 msgid "Appliance & Agent Updates"
 msgstr "Atualizações de Appliance & Agente"
 
@@ -405,7 +535,7 @@ msgstr "Atualizações de Appliance & Agente"
 msgid "Node Packages"
 msgstr "Pacotes Node"
 
-#: ../../release_notes/current.rst:89
+#: ../../release_notes/current.rst:90
 msgid "|morpheus| Node and VM Node packages updated to |nodePackageVer|"
 msgstr "Pacotes |morpheus| Node e VM Node atualizados para |nodePackageVer|"
 
@@ -413,7 +543,7 @@ msgstr "Pacotes |morpheus| Node e VM Node atualizados para |nodePackageVer|"
 msgid "Linux Agent"
 msgstr "Linux Agent"
 
-#: ../../release_notes/current.rst:90
+#: ../../release_notes/current.rst:91
 msgid "Updated to |linuxagentver|"
 msgstr "Atualizado para |linuxagentver|"
 
@@ -421,7 +551,7 @@ msgstr "Atualizado para |linuxagentver|"
 msgid "Windows Agent"
 msgstr "Windows Agent"
 
-#: ../../release_notes/current.rst:91
+#: ../../release_notes/current.rst:92
 msgid "|winagentver|"
 msgstr "|winagentver|"
 
@@ -429,7 +559,7 @@ msgstr "|winagentver|"
 msgid "macOS Agent"
 msgstr "macOS Agent"
 
-#: ../../release_notes/current.rst:92
+#: ../../release_notes/current.rst:93
 msgid "|macagentver|"
 msgstr "|macagentver|"
 
@@ -437,7 +567,7 @@ msgstr "|macagentver|"
 msgid "Plugin API"
 msgstr "Plugin API"
 
-#: ../../release_notes/current.rst:93
+#: ../../release_notes/current.rst:94
 msgid "Updated to |pluginVer|"
 msgstr "Atualizado para |pluginVer|"
 
