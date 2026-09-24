@@ -160,7 +160,6 @@ Winner Actions
 
 The winning site:
 
-- Adjusts Corosync votes to maintain quorum with remaining nodes
 - Issues ``fence_ack`` for nodes at the failed site
 
 Loser Actions
@@ -176,7 +175,6 @@ Recovery
 After the failed site is restored:
 
 - 3 consecutive healthy ping cycles (~3 minutes) must pass
-- Corosync votes are restored to normal values
 - Fenced nodes are rebooted and rejoin the cluster
 
 NFS-Based Stretch Clusters

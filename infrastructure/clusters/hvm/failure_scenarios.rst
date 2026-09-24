@@ -102,16 +102,16 @@ Timeline
      - Site failure detected (all non-witness nodes at site unreachable)
    * - T+60s
      - Surviving site checks witness reachability
-   * - T+60s
-     - Arbitration: alphabetically first site name wins
-   * - T+60s
-     - Winner adjusts Corosync votes, issues ``fence_ack``
-   * - T+60s
-     - Loser self-fences (stops DLM, Corosync)
-   * - T+140s
-     - VM failover begins for VMs from the failed site
+    * - T+60s
+      - Arbitration: alphabetically first site name wins
+    * - T+60s
+      - Winner issues ``fence_ack``
+    * - T+60s
+      - Loser self-fences (stops DLM, Corosync)
+    * - T+140s
+      - VM failover begins for VMs from the failed site
 
-**Recovery:** Automatic. After the failed site is restored, 3 consecutive healthy cycles (~3 minutes) must pass. Votes are restored, fenced nodes reboot and rejoin. Redistribute VMs across sites after recovery.
+**Recovery:** Automatic. After the failed site is restored, 3 consecutive healthy cycles (~3 minutes) must pass. Fenced nodes reboot and rejoin. Redistribute VMs across sites after recovery.
 
 Two-Node Cluster Failures
 -------------------------
