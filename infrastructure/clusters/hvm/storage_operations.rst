@@ -131,6 +131,19 @@ Datastore Explorer does not create empty directories or rename, move, copy, or e
 
    Datastore Explorer operates directly on the shared filesystem. Do not modify or delete VM disks, snapshot backing files, image artifacts, heartbeat data, active process files, or unknown datastore content. Use supported VM, snapshot, and datastore actions for managed artifacts.
 
+.. _hvm-gfs2-space-reporting:
+
+GFS2 Storage Utilization Reporting
+----------------------------------
+
+.. note:: HPE Clustered Datastores use GFS2, a shared clustered filesystem. Commands such as ``df -h`` can temporarily report different **Used**, **Avail**, or **Use%** values on different HVM Hosts mounting the same datastore. This is expected GFS2 space-accounting behavior and, by itself, does not indicate lost data or filesystem corruption.
+
+GFS2 maintains local space-accounting changes on each host and periodically synchronizes them with shared filesystem statistics. ``df`` reads those statistics rather than performing an instantaneous cluster-wide scan. Allocations and deletions on one host may therefore take time to appear in another host's report, particularly during VM provisioning, disk growth, migration, or deletion.
+
+When comparing utilization, confirm that each host is reporting the same datastore and mount point, then compare timestamped readings again after storage activity settles and accounting updates have had time to propagate. Do not expect simultaneous ``df`` readings to match exactly during active I/O. Filesystem utilization also measures a different layer from physical storage-array consumption, which can be affected by thin provisioning, snapshots, and data reduction.
+
+Temporary differences in used or available space are distinct from a mismatch in total filesystem or backing-device size after LUN expansion. For expansion-related size mismatches, see `Growing an Existing GFS2 Datastore`_. If utilization discrepancies persist after activity settles, or occur alongside I/O errors, a withdrawn filesystem, or failed storage paths, collect the per-host readings and cluster/storage health information for investigation.
+
 Adding a New Datastore
 -----------------------
 

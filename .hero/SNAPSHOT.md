@@ -1,6 +1,6 @@
 # Project Snapshot — morpheus-docs
 
-_Last refreshed: 2026-09-10T10:48:06Z · projected from 286 source nodes_
+_Last refreshed: 2026-09-24T11:01:03Z · projected from 286 source nodes_
 
 ## Surfaces
 
@@ -100,7 +100,7 @@ _Run `hero snapshot assign` to bucket unassigned specs._
 
 ## Recently completed (last 14 days)
 
-- **(unassigned)** — docs-hvm-two-node-gfs2-operations, docs-hvm-witness-discovery-crosslinks, docs-hvm-quorum-topology-model
+_Nothing recent._
 
 ## Next up across surfaces
 
@@ -113,7 +113,7 @@ _Run `hero snapshot assign` to bucket unassigned specs._
 ## Open risks & blockers
 
 - **Blocked specs (6):** `docs-distributed-worker-deployment` (waits on docs-distributed-worker-capabilities); `docs-distributed-worker-witness` (waits on docs-distributed-worker-capabilities, docs-distributed-worker-deployment); `docs-hvm-qcow2-image-guidance` (waits on docs-qcow2-multidisk-upload); `docs-license-consumption-examples` (waits on docs-license-consumption-reference); `docs-multitenancy-administration-limitations` (waits on docs-multitenancy-hierarchy); `docs-multitenancy-resource-inheritance` (waits on docs-multitenancy-hierarchy).
-- **Stale-in-flight (12):** `docs-cluster-ha-dynamic-placement` (50d), `docs-fc-storage-connection` (50d), `docs-field-feedback-improvements` (50d), `docs-host-passthrough-guide` (50d), `docs-migrations-linux-drivers` (50d), `docs-storage-network-interfaces-hvm` (50d), `docs-tagged-bonds-guide` (50d), `docs-virtual-image-options-reference` (50d), `docs-windows-cloud-guest-customization` (50d), `docs-windows-domain-join-guide` (50d), `docs-windows-migration-conflict-resolution` (50d), `docs-910-system-updates` (29d).
+- **Stale-in-flight (12):** `docs-cluster-ha-dynamic-placement` (64d), `docs-fc-storage-connection` (64d), `docs-field-feedback-improvements` (64d), `docs-host-passthrough-guide` (64d), `docs-migrations-linux-drivers` (64d), `docs-storage-network-interfaces-hvm` (64d), `docs-tagged-bonds-guide` (64d), `docs-virtual-image-options-reference` (64d), `docs-windows-cloud-guest-customization` (64d), `docs-windows-domain-join-guide` (64d), `docs-windows-migration-conflict-resolution` (64d), `docs-910-system-updates` (43d).
 - **Unassigned specs (277) — no `surface:` declared.** Run `hero snapshot assign` to bucket them.
 
 ## Snapshot health

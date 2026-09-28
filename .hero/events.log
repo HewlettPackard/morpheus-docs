@@ -296,3 +296,6 @@
 {"event":"post-commit","sha":"33ac0b221202ab78b7a26a03f3ddc2ba951a6bcf","t":"2026-09-08T10:49:55Z"}
 {"ts":"2026-09-10T10:38:12.662589Z","type":"files_modified","agent":"mcp/hero","slug":"docs-910-release-notes","message":"Reconciled 9.1.0 RC notes with live MORPH fixVersion 'Morpheus 9.1.0' on 2026-09-10. Added missing features/grouped fixes and Fixes Being Finalized; retained In Test/In Progress scope. MORPH-6224 password framework and MORPH-3608 Huawei fix now target 9.1.2 and were removed. MORPH-12240 cross-Manager migration has no fixVersion. Rejected can mean failed QA, not canceled scope (12255,12306,12309). current.rst includes versioned body, verified identical HTML on current/versioned/homepage. Build completes with repository warnings; make test unavailable (unregistered Sphinx builder). Final package versions need release-manifest reconciliation."}
 {"event":"post-commit","sha":"44717cbf70685c43285cc4b6b783699614097db8","t":"2026-09-10T10:48:05Z"}
+{"event":"post-commit","sha":"551150ff0d6d1e900445bf53fd93bfeb9a0aa84a","t":"2026-09-10T10:49:06Z"}
+{"event":"post-commit","sha":"7ed0cfb39709ef70337d7e1d200756e51e5c73f1","t":"2026-09-16T11:09:32Z"}
+{"event":"post-commit","sha":"6e3fdda7d838a75723bfc9b13c01e2e80373fed0","t":"2026-09-24T11:01:02Z"}

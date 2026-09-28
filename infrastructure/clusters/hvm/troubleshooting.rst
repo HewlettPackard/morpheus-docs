@@ -216,6 +216,13 @@ GFS2 Withdrawn
 #. If remount fails, reboot the affected host
 #. Investigate the cause (storage connectivity, DLM issue) before the host rejoins
 
+Different ``df -h`` Utilization Across Hosts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Symptoms:** Hosts mounting the same HPE Clustered Datastore report different used space, available space, or utilization percentages in ``df -h``.
+
+Temporary differences are normal for GFS2 because each host's space-accounting changes are synchronized periodically. A difference alone is not evidence of filesystem corruption. Confirm the datastore and mount point, then compare readings again after storage activity settles. See :ref:`hvm-gfs2-space-reporting` for details and when further investigation is appropriate.
+
 GFS2 Capacity Does Not Increase After LUN Expansion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
