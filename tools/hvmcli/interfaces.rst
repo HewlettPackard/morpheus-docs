@@ -82,4 +82,22 @@ Manage SR-IOV Virtual Functions (VFs) on supported interfaces.
 
    sudo hvmcli interfaces vf set --interface ens1f0np0 --vf 0 --mac 00:11:22:33:44:55
 
+**Set VLAN, rate limit, and trust/anti-spoofing properties:**
+
+.. code-block:: bash
+
+   sudo hvmcli interfaces vf set --interface ens1f0np0 --vf 0 --vlan 100 --qos 500 --spoofchk off --trust on --state enable
+
+Options:
+
+- ``--interface <name>`` — Physical interface owning the VF (required)
+- ``--vf <id>`` — VF index (required)
+- ``--mac <mac>`` — MAC address to assign to the VF
+- ``--vlan <0-4094>`` — VLAN ID to assign to the VF
+- ``--qos <0-10000>`` — Rate-limit QoS value for the VF
+- ``--spoofchk <on|off>`` — Enable or disable MAC/VLAN anti-spoofing checks
+- ``--trust <on|off>`` — Mark the VF as trusted, allowing the guest to set otherwise-privileged settings (e.g. promiscuous mode)
+- ``--state <auto|enable|disable>`` — Administrative link state of the VF
+- ``--json`` — JSON output
+
 .. note:: SR-IOV must be enabled in the BIOS and the NIC must support virtual functions. Use ``hvmcli interfaces list`` to check SR-IOV support status.

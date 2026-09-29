@@ -46,7 +46,7 @@ For administrators coming from VMware environments, the following analogy table 
      - VLAN tagging is set on the Network record or on the Virtual Switch traffic segment.
    * - VM Network / Management Network
      - VM Network traffic type (Virtual Switch)
-     - The default Virtual Switch (``virtSwitch0``) carries VM traffic. Additional switches can be created for storage and migration.
+     - The default Virtual Switch (``vs0``) carries VM traffic. Additional switches can be created for storage and migration.
    * - VMkernel adapter (vmk) for storage
      - Data (NFS) or Data (iSCSI) traffic type
      - Storage traffic is carried on dedicated Virtual Switch segments with host-level IP addresses assigned.

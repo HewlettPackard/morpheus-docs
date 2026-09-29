@@ -25,7 +25,7 @@ Published Constraints
    * - Virtual Switches per cluster
      - 8
      - Published limit
-     - HVM layout 2.0. The default ``virtSwitch0`` counts toward the total. See :doc:`virtual_switches`.
+     - HVM layout 2.0. The default ``vs0`` counts toward the total. See :doc:`virtual_switches`.
    * - LUN-per-vDisk volumes per cluster
      - Approximately 800
      - Operational threshold

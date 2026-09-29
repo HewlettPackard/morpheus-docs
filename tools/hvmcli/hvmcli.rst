@@ -13,6 +13,7 @@ HVMCLI
    :maxdepth: 2
 
    getting_started
+   version
    vm
    node
    interfaces
@@ -27,3 +28,4 @@ HVMCLI
    top
    security
    deploy
+   tui

@@ -111,7 +111,7 @@ Configure the host management uplink. A management virtSwitch is created on the 
 .. image:: /images/getting_started/installation/installer/host_network.png
    :alt: HPE Morpheus Installer - Host Network configuration
 
-- **Management virtSwitch** — Displays the detected management virtSwitch (e.g., ``virtSwitch0 already exists on this host and will be reused``)
+- **Management virtSwitch** — Displays the detected management virtSwitch (e.g., ``vs0 already exists on this host and will be reused``)
 
 Optional settings:
 

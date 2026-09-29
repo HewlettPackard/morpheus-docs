@@ -139,3 +139,7 @@ Namespaces
      - Security compliance operations (FIPS 140)
    * - ``deploy``
      - Deploy VME Manager or Worker virtual machines
+   * - ``tui``
+     - Interactive terminal user interface
+   * - ``version``
+     - Show installed ``hvmcli`` version and build information
