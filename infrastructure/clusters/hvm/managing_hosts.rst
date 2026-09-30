@@ -125,8 +125,8 @@ Procedure
 #. Place the host in maintenance mode to evacuate VMs (see :doc:`host_maintenance`)
 #. Navigate to ``Infrastructure > Clusters > [Cluster] > Hosts``
 #. Select the host to remove
-#. Click :guilabel:`Remove`
-#. Confirm the removal
+#. Click ``Delete``
+#. Confirm Deletion
 #. Wait for the removal operation to finish; do not manually edit Corosync or Agent quorum files
 
 What Happens Automatically
