@@ -625,6 +625,21 @@ Attaching an RDBM Volume
 
 Hot-attach is supported for running VMs without requiring a reboot.
 
+Enabling support for SCSI-3 Persistent Reservations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SCSI-3 Persistent Reservations (PR) are required for certain cluster-aware applications to coordinate access to shared storage. To enable SCSI-3 PR for an RDBM volume:
+
+#. Ensure the underlying storage supports SCSI-3 PR
+#. Navigate to the Instance with the mapped disk
+#. Make sure the VM is powered off
+#. Click the :guilabel:`Actions` dropdown and select :guilabel:`Reconfigure`
+#. Click on the `+` sign to the right of the *Storage Controllers* section
+#. Select **SCSI VirtIO** as the storage controller type in the dropdown
+#. On the disk row, select **SCSI X:Y** to attach the disk to the newly created SCSI VirtIO controller
+#. Check the **Persistent Reservations** checkbox under the disk
+#. Save the changes
+
 Detaching an RDBM Volume
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
