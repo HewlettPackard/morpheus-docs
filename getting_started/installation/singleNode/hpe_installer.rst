@@ -71,8 +71,7 @@ Configure the SSH connection to the target HVM hypervisor host where the Morpheu
 - **Host** — The IP address or hostname of the HVM host
 - **Port** — SSH port (default: ``22``)
 - **Username** — SSH user (e.g., ``ubuntu``)
-- **Authentication Method** — Choose between **Password** or **SSH Key** authentication
-- **Password** — Enter the password for the SSH user (if using password authentication)
+- **Password** — Enter the password for the SSH user
 
 Click **Test Connection** to verify connectivity. The installer will:
 
