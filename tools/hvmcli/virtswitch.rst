@@ -128,7 +128,7 @@ Options:
 - ``--uplink-name <nic>[,<nic>]`` — Physical NIC(s) to use as uplinks
 - ``--uplink-mode <active-backup|802.3ad>`` — Bond mode when using two uplinks
 - ``--vlan-id <2-4094>`` — VLAN ID for tagged traffic (top-level; applies when no ``--traffic-type`` block is given)
-- ``--traffic-type <vm|management|data-nfs|live-migration|iscsi|sdn>`` — Starts a traffic-type block; ``--ip``, ``--netmask``, ``--gateway``, and ``--vlan-id`` that follow apply to this block. Repeat ``--traffic-type`` to configure multiple segments in one command.
+- ``--traffic-type <vm|management|data-nfs|live-migration|iscsi|sdn>`` — Starts a traffic-type segment block; ``--ip``, ``--netmask``, ``--gateway``, and ``--vlan-id`` that follow apply to this block. Repeat ``--traffic-type`` to configure multiple segments in one command.
 - ``--ip <address>`` — IP address for the preceding traffic type's segment
 - ``--netmask <prefix|netmask|cidr>`` — Subnet mask, CIDR prefix, or dotted-decimal mask for the preceding segment
 - ``--gateway <address>`` — Gateway for the preceding segment (metadata only for non-management segments; see :doc:`../../infrastructure/clusters/hvm/virtual_switches`)
@@ -174,7 +174,7 @@ Options:
 - ``--bridge <name>`` — Existing bridge to adopt as a Virtual Switch
 - ``--interface <name>`` — Existing raw interface to adopt (alternative to ``--bridge``)
 - ``--type <general|iscsi|sdn>`` — Virtual Switch type to assign
-- ``--virtswitch-name <name>`` — Name to assign to the imported Virtual Switch
+- ``--virtswitch-name <name>`` — Name to assign to the imported Virtual Switch (default: the source bridge's name, or a sanitized form of the interface name when using ``--interface``)
 - ``--force`` — Skip confirmation prompts
 - ``--metadata-only`` — Register the Virtual Switch in metadata without modifying host networking
 - ``--json`` — JSON output
@@ -247,7 +247,7 @@ Add a VLAN segment to an existing general or iSCSI Virtual Switch.
 Options:
 
 - ``--virtswitch-name <name>`` — Target Virtual Switch (required)
-- ``--traffic-type <vm|management|data-nfs|live-migration|iscsi|sdn>`` — Traffic type; accepts a comma-separated list (e.g. ``data-nfs,live-migration``) to register multiple types on one segment
+- ``--traffic-type <vm|management|data-nfs|live-migration|iscsi|sdn>`` — Traffic type (required); accepts a comma-separated list (e.g. ``data-nfs,live-migration``) to register multiple types on one segment
 - ``--vlan-id <2-4094>`` — VLAN ID for the segment (required; pass an empty value ``''`` for untagged)
 - ``--ip <address>`` — IP address for this segment (required for non-VM traffic types)
 - ``--netmask <prefix|netmask|cidr>`` — Subnet mask, CIDR prefix, or dotted-decimal mask (required for non-VM traffic types)

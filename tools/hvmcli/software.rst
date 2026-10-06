@@ -79,7 +79,7 @@ Options:
 - ``--dry-run`` — Simulate the update without making changes (offline updates only)
 - ``--allow-unsigned`` — Accept a bundle that is not cryptographically signed
 - ``--force`` — Skip confirmation prompts
-- ``--json`` — JSON output (requires ``--dry-run`` or ``--force``, since interactive prompts cannot produce clean JSON)
+- ``--json`` — JSON output (requires ``--dry-run`` or ``--force``, since JSON output cannot be interactive)
 
 **Check update status:**
 
@@ -111,7 +111,7 @@ Options:
 
 - ``--dry-run`` — Preview what would be rolled back without making changes
 - ``--force`` — Skip confirmation prompts
-- ``--json`` — JSON output (requires ``--dry-run``, since interactive rollback cannot produce clean JSON)
+- ``--json`` — JSON output (requires ``--dry-run``, since JSON output cannot be interactive)
 
 **Roll back using an offline (dark-site/air-gapped) bundle:**
 

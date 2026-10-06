@@ -3,6 +3,8 @@ node
 
 Manage the physical HVM host node configuration.
 
+All ``node`` commands require ``sudo`` — see :doc:`hvmcli` for ``hvmcli``'s root-privilege requirement.
+
 Commands
 ````````
 
