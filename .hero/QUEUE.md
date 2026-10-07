@@ -6,7 +6,7 @@
 
 # Hero Ready Queue
 
-_Generated: 2026-10-07T10:14:19Z · 130 ready specs_
+_Generated: 2026-10-07T10:16:57Z · 130 ready specs_
 
 ## docs-910-system-updates — "9.1.0 Docs: Morpheus Core System Update Capabilities"
 _initiative · delivering · horizon: now_
