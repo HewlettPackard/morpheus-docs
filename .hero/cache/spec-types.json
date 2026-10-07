@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "active_domain": "engineering",
-  "generated_at": "2026-10-07T10:12:48Z",
+  "generated_at": "2026-10-07T10:14:10Z",
   "types": [
     {
       "name": "bug",
