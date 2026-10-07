@@ -1,6 +1,6 @@
 # Project Snapshot — morpheus-docs
 
-_Last refreshed: 2026-09-24T11:01:03Z · projected from 286 source nodes_
+_Last refreshed: 2026-10-07T10:12:48Z · projected from 286 source nodes_
 
 ## Surfaces
 
@@ -113,7 +113,7 @@ _Nothing recent._
 ## Open risks & blockers
 
 - **Blocked specs (6):** `docs-distributed-worker-deployment` (waits on docs-distributed-worker-capabilities); `docs-distributed-worker-witness` (waits on docs-distributed-worker-capabilities, docs-distributed-worker-deployment); `docs-hvm-qcow2-image-guidance` (waits on docs-qcow2-multidisk-upload); `docs-license-consumption-examples` (waits on docs-license-consumption-reference); `docs-multitenancy-administration-limitations` (waits on docs-multitenancy-hierarchy); `docs-multitenancy-resource-inheritance` (waits on docs-multitenancy-hierarchy).
-- **Stale-in-flight (12):** `docs-cluster-ha-dynamic-placement` (64d), `docs-fc-storage-connection` (64d), `docs-field-feedback-improvements` (64d), `docs-host-passthrough-guide` (64d), `docs-migrations-linux-drivers` (64d), `docs-storage-network-interfaces-hvm` (64d), `docs-tagged-bonds-guide` (64d), `docs-virtual-image-options-reference` (64d), `docs-windows-cloud-guest-customization` (64d), `docs-windows-domain-join-guide` (64d), `docs-windows-migration-conflict-resolution` (64d), `docs-910-system-updates` (43d).
+- **Stale-in-flight (12):** `docs-cluster-ha-dynamic-placement` (77d), `docs-fc-storage-connection` (77d), `docs-field-feedback-improvements` (77d), `docs-host-passthrough-guide` (77d), `docs-migrations-linux-drivers` (77d), `docs-storage-network-interfaces-hvm` (77d), `docs-tagged-bonds-guide` (77d), `docs-virtual-image-options-reference` (77d), `docs-windows-cloud-guest-customization` (77d), `docs-windows-domain-join-guide` (77d), `docs-windows-migration-conflict-resolution` (77d), `docs-910-system-updates` (56d).
 - **Unassigned specs (277) — no `surface:` declared.** Run `hero snapshot assign` to bucket them.
 
 ## Snapshot health

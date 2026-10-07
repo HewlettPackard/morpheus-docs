@@ -1,7 +1,7 @@
 .. _Release Notes 9.1.0:
 
 ****************************************
-v9.1.0 Release Candidate Notes
+v9.1.0 Release Notes
 ****************************************
 
 .. release-notes-910-body
@@ -14,7 +14,8 @@ Release Dates
 
 - |morphver| |releasedate|
 
-.. note:: These release-candidate notes reflect **Morpheus 9.1.0** as reviewed on September 10, 2026. Features and fixes undergoing final implementation or validation remain in scope. Inclusion is not a statement that final validation has completed. Outstanding fixes are listed under **Fixes Being Finalized**; final release content may change.
+..
+   TODO before publish: set |releasedate| in conf.py and confirm |workerVer|, |pluginVer| and agent/node package versions. Reviewed against Jira fixVersion "Morpheus 9.1.0" on October 5, 2026.
 
 .. important:: After upgrading to |morphver|, it is recommended to check for HVM Host agent upgrades as well. To upgrade HVM Host agents, navigate to the detail page for each HVM Host, expand the ACTIONS menu, and click "Upgrade Agent." This process must be undertaken on all HVM Hosts. Alternatively, you may select "Download Agent Script" to download a shell script to handle the upgrade. Connect to the HVM Host over a terminal session and run the downloaded script. The scripts are unique to each HVM Host so you must download all required scripts and run the correct script against the correct HVM Host. Though many do, it is possible that some version upgrade hops will not contain an HVM Host agent upgrade.
 
@@ -46,7 +47,10 @@ New Features
                       - Graceful shutdown and forced power-off choices for VMs, defaulting to graceful shutdown
                       - Legacy OS option using i440fx virtual hardware, with machine-type selection in provisioning and Virtual Images
                       - Boot menu enabled by default and configurable boot delay for HVM VMs
-                      - Primary CD-ROM removal is included in the release scope and remains under validation; see the limitation under **Fixes Being Finalized**
+                      - Remove the primary CD-ROM device from HVM VMs
+                      - SCSI-3 Persistent Reservations on block-type multi-attach volumes for guest clustering
+                      - Boot From SAN support for HVM hosts, including Fibre Channel multipath fresh installations
+                      - Add or remove multiple hosts, and apply tags or policies to many VMs, in a single operation
                       - CPU Ready-equivalent metric for monitoring vCPU scheduling contention
                       - Leverage QEMU Guest Agent to gather guest OS information (IP addresses, OS version, hostname) without network-based access
                       - VSS-aware application-consistent snapshots: when the QEMU Guest Agent is connected, snapshots trigger Windows Volume Shadow Copy Service for database and application consistency
@@ -58,7 +62,7 @@ New Features
 
 :Monitoring & Administration: - Monitoring tab time ranges for instance, server, and cluster details, allowing analysis over configurable periods
                               - Native threshold alarms for host and VM CPU/memory usage, host reachability and memory overcommit, and datastore capacity/offline state, with configurable thresholds and cluster overrides. See :doc:`/infrastructure/clusters/hvm/alarms`
-                              - GPU monitoring for HKS clusters and worker nodes, and KVM/HVM hosts and instances. Agent-collected device metrics expose utilization, memory, temperature, and power where supported, including NVIDIA MIG slices
+                              - GPU monitoring for HKS clusters and worker nodes, and KVM/HVM hosts and instances. Agent-collected device metrics expose utilization, memory, temperature, and power where supported, including NVIDIA MIG slices. AMD and Intel GPUs are supported alongside NVIDIA
                               - Storage-volume performance charts for IOPS, throughput, and latency
                               - Log rotation and retention controls from the GUI, with workload logging settings available to VM Essentials. Logging Settings help distinguishes workload/host controls from appliance logging
                               - Optional agent log throttling with Off, Monitor, and Enforce modes, per-server policy overrides, cooldown-based re-enablement, and duplicate-message suppression. Throttling defaults to Off
@@ -103,9 +107,10 @@ New Features
                            - Provider-driven update actions for supported clusters, compute, storage, and network servers
                            - Simplified HVM installation and a unified Windows/macOS installer for VM Essentials Manager and Morpheus deployments
                            - Distributed Worker support for iLO consoles and HVM console connections
+                           - Embedded Commvault, Veeam, and UpCloud integrations are removed from the core product and are delivered as plugins
                            - Optional preservation of Windows static IP configuration during VMware-to-KVM migration, using the QEMU Guest Agent on the destination VM
 
-:Security: - Phase 2 STIG hardening and FIPS enablement for HVM OS and Morpheus Manager QCOW2/OVA images; validation and hardening guidance are being finalized
+:Security: - Phase 2 STIG hardening and FIPS enablement for HVM OS and Morpheus Manager QCOW2/OVA images
            - SDN dependency and security-hardening updates
 
 :CLI & Tooling: - hvmcli: unified CLI tool for HVM host management including log viewing, VM/node/storage/cluster status, network configuration, and health validation
@@ -128,6 +133,11 @@ Fixes
       - Fixed host addition and network initialization issues on layout 2.0 clusters, and upgrade finalization issues in mixed VMware/HVM systems
       - Fixed legacy machine-type preservation during backup restore, vNUMA memory-resize handling, and CD-ROM validation blocking Reconfigure
       - Fixed vTPM snapshot metadata preservation during datastore migration and QEMU Guest Agent OS-information refresh
+      - Fixed stretched-cluster and GFS2 heartbeat fencing that could stop VMs or prevent HA failover, and VMs not auto-recovering after a network switch reboot
+      - Fixed UEFI, vTPM, Secure Boot, and boot-option settings being lost between VMs, Virtual Images, and provisioning
+      - Fixed disks added to running VMs disappearing from inventory
+      - Fixed cluster layout finalization being blocked by agent installation, and incorrect host status after reboot from Maintenance Mode
+      - Fixed Primary CD-ROM removal being blocked in Reconfigure, and datastore evacuation follow-up issues
 
 :Monitoring: - Fixed old open incidents not being automatically closed when all health checks return 100% healthy
               - Fixed health-log date filtering, performance-chart time windows, CPU Ready value/severity inconsistencies, and alarm acknowledgement from detail views
@@ -145,46 +155,56 @@ Fixes
                    - Fixed Datastore Group threshold validation, inventory visibility, and recommendations in the VM Essentials tier
                    - Fixed backup creation fields, provider filtering, and Veeam subtenant backup execution
                    - Fixed missing provisioning-time backups for ESXi and Rubrik RSC integrations
+                   - Fixed multi-disk image deployment to HPE Alletra MP and high-disk-count VM creation on GFS2 datastores
 
 :Networking: - Fixed VLAN-0 and hybrid-network connectivity, private-network cleanup, and Aruba CX VLAN provisioning/cleanup
               - Fixed Aruba CX DSS network selection and port-group resource-pool validation
               - Fixed SDN overlay connectivity after VM migration, duplicate PowerDNS records, and IP pool deletion after partial EfficientIP sync failures
+              - Fixed SDN Mellanox SR-IOV onboarding and offboarding after VTEP communication failures
 
 :Clouds & Provisioning: - Fixed Azure disk-name/size handling and Marketplace synchronization, concurrent SCVMM cloud sync, and OLVM guest/worker provisioning
                         - Fixed VMware affinity synchronization and validation, and API Proxy selection during cloud creation
                         - Fixed Windows rename/domain-join regressions, ISO filenames containing spaces, and expired multi-disk image download tokens
                         - Fixed Terraform resource-key length errors and Scribe imports duplicating form inputs
                         - Fixed migration detail pages returning HTTP 403 when the source VM still exists
+                        - Fixed post-provision workflows not running on KVM, Xen, OpenStack, and Nutanix Prism, VCD provisioning wizard stalls, and Stop Instance not stopping its container
 
 :Administration & API: - Fixed inherited cloud/group grants on locked subtenant roles, subtenant cloud access, and remembered-login API authorization
                        - Fixed ServiceNow approval links and saved flow/workflow selection, plus Ansible Tower inventory Tenant permissions
                        - Improved cluster, compute inventory, and dashboard load performance; fixed pagination resets and custom whitelabel rendering
                        - Fixed SCVMM overbilling, workflow-layout invoicing, pricing precision, and saved service-plan memory ranges
+                       - Fixed repeated HKS refresh history entries, billing API timeouts, and saved password-field display
 
 :CLI & Appliance: - Fixed hvmcli help handling that could execute an action, invalid-argument handling, large-log viewing, and cluster membership reporting
                    - Fixed software-update history/status and rollback selection, FIPS package handling, and Host Profile NTP remediation
-                   - Fixed installer image-size and management-bridge selection issues, fresh-install seed failures, and Distributed Worker connection initialization
+                   - Fixed hvmcli audit-log access for non-root users
+                   - Fixed installer image-size issues, fresh-install seed failures, and Distributed Worker connection initialization
+                   - Fixed upgrade failures on 3-node HA appliances with large usage tables, and Windows agent upgrades from the UI on Windows Server 2022
+                   - Fixed cluster creation and Manager deployment on FIPS/STIG-hardened hosts
 
 :Security: - Hardened MCP destination validation and category gating, command allowlist enforcement, read-only permissions, and credential redaction in hvmcli audit logs
+           - Fixed the OLVM plugin disabling TLS certificate verification process-wide
 
-Fixes Being Finalized
-=====================
+Known Issues
+============
 
-The following items remain in the release scope but were still in implementation or had outstanding QA findings at the review date. They are not confirmed fixes for every release-candidate build.
+:HVM & Storage: - Moving an image-store disk from HPE Alletra MP to a GFS2 datastore on a stretched cluster can time out
+                 - A failed NFS pool start can cause cluster storage to report 100% usage
+                 - VM provisioning can fail with ``qemu-img: Could not open`` after the local image-cache volume is purged
+                 - Image upload to a new HVM HCI 1.3 cluster can fail
+                 - Some nodes can fail to upgrade during a cluster layout upgrade
 
-:HVM & Storage: - Cluster layout upgrades remaining In Progress and cluster finalization blocked by agent installation
-                 - Incorrect host status after reboot from Maintenance Mode
-                 - Thin/thick volume creation on Alletra datastores and datastore migration of replication-enabled volumes
-                 - Primary CD-ROM removal remains blocked in reported Reconfigure testing
-                 - Bulk compute-and-storage migration and datastore evacuation still have QA follow-up
+:Installer: - The HVM installer can crash when **Use Entire disk** is selected
+             - The GUI installer can select the wrong management virtual switch on hosts with multiple virtual switches
 
-:Provisioning & Integrations: - Post-provision workflows not running on KVM, Xen, OpenStack, and Nutanix Prism; VCD provisioning wizard stalls; and Stop Instance not stopping its container
-                              - SDN Mellanox SR-IOV onboarding/offboarding after VTEP communication failures
+:Networking: - OVS Bridge Domain router creation accepts an interface already attached to another OVS bridge and returns a generic error
+              - Router deletion blocked by associated Networks and VMs returns an unclear error message
 
-:Administration & Tooling: - Slow Load Balancer dialogs, repeated HKS refresh history, and billing API timeouts
-                           - hvmcli audit-log access for non-root users, saved password-field display, and the missing Balancing activity filter
-
-.. note:: Additional bug fixes and regressions are undergoing implementation and testing. Outstanding issues require validation before they can be described as resolved.
+:Integrations: - The Rubrik plugin is not packaged with 9.1.0 builds
+                - Veeam backup restore can display incorrect options
+                - Creating a snapshot of a VMware Cloud Director VM can fail
+                - A Distributed Worker can drop a Windows agent session on reconnect
+                - Hostname updates can intermittently fail during server build
 
 Appliance & Agent Updates
 =========================
@@ -196,4 +216,4 @@ Appliance & Agent Updates
 :macOS Agent: - |macagentver|
 :Plugin API: - Updated to |pluginVer|
 
-.. note:: Final RC package versions are subject to confirmation. Dependency updates include jackson-databind, currently in validation, and Tomcat, currently being finalized.
+.. note:: Dependency updates include jackson-databind and Tomcat.

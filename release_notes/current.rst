@@ -1,7 +1,7 @@
 .. _Release Notes:
 
 **************************************
-|morphver| Release Candidate Notes
+|morphver| Release Notes
 **************************************
 
 .. include:: /release_notes/9_1_0.rst
