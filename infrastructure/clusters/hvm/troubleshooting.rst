@@ -257,6 +257,47 @@ APD Activated
 #. Restart the affected VMs once storage is confirmed healthy
 #. Investigate the root cause of the storage path failure
 
+.. _hvm-stretch-guest-io-errors:
+
+Guest I/O Errors After Stretch Site Failover
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Symptoms:** After a site or array node failure, some VMs on the surviving Hosts report I/O errors even though storage paths remain available:
+
+- Running processes fail with ``Bus error`` (``SIGBUS``, exit code 135)
+- Commands such as ``sudo`` or ``dmesg`` return ``Input/output error``
+- A guest filesystem becomes read-only or shuts down. On XFS this appears as:
+
+  .. code-block:: text
+
+     XFS (vdb): log I/O error -5
+     XFS (vdb): Log I/O error ... Shutting down filesystem
+
+- After a guest-only reboot, the disk may fail to mount (``can't read superblock``) and ``xfs_repair`` fails with ``Input/output error``. This reflects stuck lock state on the Host, not on-disk corruption.
+
+On the Host running the VM, the kernel log shows DLM lock errors shortly after DLM recovery completes:
+
+.. code-block:: bash
+
+   journalctl -k | grep -E 'validate_lock_args -22|lm_lock ret -22'
+
+**Cause:** A GFS2/DLM defect in the HVM OS 24.04 kernel (6.8). After DLM recovery, GFS2 issues downward lock conversions with the ``QUECVT`` flag, DLM rejects them with ``EINVAL``, and GFS2 returns ``EIO`` to QEMU, which passes it to the guest. Any guest filesystem can be affected; XFS makes the failure most visible because it shuts down immediately on a log write error. No data loss has been identified.
+
+The upstream fix (kernel commit ``b6900ce15191``, Linux 6.13) is included in the HVM OS 26.04 kernel and is believed to resolve the issue. Validation is pending.
+
+The issue is intermittent. It has been observed mainly on clusters at or near the maximum of 50 GFS2 datastores under heavy write load. Until the fix is validated, avoid running stretch clusters near the 50-datastore limit.
+
+**Resolution:** A guest-only reboot does not clear the condition. Clear the GFS2 lock state on the Host:
+
+#. Shut down the affected VMs.
+#. Place the Host in maintenance mode: ``Infrastructure > Servers > [Host] > Actions > Enter Maintenance``.
+#. Reboot the Host (recommended), or unmount and remount the affected GFS2 datastore.
+#. Confirm the Host has rejoined the cluster and the datastore is mounted, then exit maintenance mode.
+#. Optionally, run ``qemu-img check`` against the powered-off virtual disks to confirm the images are not corrupt.
+#. Start the affected VMs and confirm the guest filesystems mount and replay their journals cleanly.
+
+.. WARNING:: Do not run ``xfs_repair -L`` in the guest before the Host has been recovered. Zeroing the log can discard valid metadata.
+
 Agent Not Sending Quorum
 ^^^^^^^^^^^^^^^^^^^^^^^^
 

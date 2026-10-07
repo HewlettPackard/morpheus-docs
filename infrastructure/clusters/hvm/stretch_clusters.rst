@@ -177,6 +177,8 @@ After the failed site is restored:
 - 3 consecutive healthy ping cycles (~3 minutes) must pass
 - Fenced nodes are rebooted and rejoin the cluster
 
+.. NOTE:: On HVM OS 24.04, some VMs on the surviving site may report guest I/O errors after DLM recovery completes. This is a known GFS2/DLM kernel issue that requires Host-level recovery. See :ref:`hvm-stretch-guest-io-errors`.
+
 NFS-Based Stretch Clusters
 ---------------------------
 
