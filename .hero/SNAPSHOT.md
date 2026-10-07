@@ -1,6 +1,6 @@
 # Project Snapshot — morpheus-docs
 
-_Last refreshed: 2026-10-07T10:14:19Z · projected from 286 source nodes_
+_Last refreshed: 2026-10-07T10:16:58Z · projected from 286 source nodes_
 
 ## Surfaces
 
@@ -120,5 +120,5 @@ _Nothing recent._
 
 - Surfaces detected: 0 (inferred: 0 · overrides applied: 0)
 - Specs covered: 0/277 (0%)
-- Projection generation: 0ms · Source nodes: 286
+- Projection generation: 1ms · Source nodes: 286
 

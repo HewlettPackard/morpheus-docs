@@ -285,7 +285,7 @@ On the Host running the VM, the kernel log shows DLM lock errors shortly after D
 
 The upstream fix (kernel commit ``b6900ce15191``, Linux 6.13) is included in the HVM OS 26.04 kernel and is believed to resolve the issue. Validation is pending.
 
-The issue is intermittent. It has been observed mainly on clusters at or near the maximum of 50 GFS2 datastores under heavy write load. Until the fix is validated, avoid running stretch clusters near the 50-datastore limit.
+The issue is intermittent. It has been observed mainly on clusters at or near the maximum of 50 GFS2 datastores under heavy write load. Keep stretch clusters at or below the recommended 25 GFS2 datastores (see :doc:`maximums`).
 
 **Resolution:** A guest-only reboot does not clear the condition. Clear the GFS2 lock state on the Host:
 

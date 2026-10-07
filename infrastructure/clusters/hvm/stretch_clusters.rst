@@ -23,6 +23,8 @@ Requirements
      - 1 Distributed Worker deployed in a 3rd site
    * - Network
      - All hosts must be able to communicate with the witness, the |morpheus| manager, and each other
+   * - GFS2 datastores
+     - No more than 25 per stretch cluster recommended (the general cluster limit is 50). See :doc:`maximums`.
 
 Witness Deployment
 ------------------

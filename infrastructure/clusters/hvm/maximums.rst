@@ -30,6 +30,14 @@ Published Constraints
      - Approximately 800
      - Operational threshold
      - Alletra LUN-per-vDisk mode. This is a performance/management threshold, not a general GFS2 vDisk maximum. See :ref:`hvm-lun-per-vdisk-limits`.
+   * - GFS2 datastores per cluster
+     - 50
+     - Published limit
+     - HPE Shared File System (GFS2) datastores in a single HVM cluster.
+   * - GFS2 datastores per stretch cluster
+     - 25
+     - Recommendation
+     - Stretch clusters with Site Groups. Fewer datastores reduce DLM lock recovery load during site failover. See :doc:`stretch_clusters` and :ref:`hvm-stretch-guest-io-errors`.
 
 Limits Not Published
 --------------------
@@ -55,7 +63,7 @@ The following requested maxima are not published in the evidence maintained with
    * - Concurrent live migrations per host or cluster
      - Not published; contact HPE
      - The configurable migration setting is not a certified platform maximum.
-   * - Datastores per cluster or disks per datastore
+   * - Disks per datastore
      - Not published; contact HPE
      - Include transport, array, multipath, and filesystem details.
    * - vCPUs, memory, disks, total disk capacity, or vNICs per VM
