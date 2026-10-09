@@ -53,6 +53,6 @@ Continuously run health checks at a specified interval.
 
 Options:
 
-- ``--interval <seconds>`` — Polling interval in seconds (default: 60)
+- ``--interval <seconds>`` — Polling interval in seconds (default: 30, minimum: 5)
 
 .. tip:: Use ``health watch`` during maintenance operations to continuously monitor host health and detect issues early.

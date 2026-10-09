@@ -179,11 +179,11 @@ Click **Add Virtual Switch** to launch the creation wizard. The wizard guides yo
 Step 1: Select Type
 ~~~~~~~~~~~~~~~~~~~
 
-1. Enter a **Name** for the Virtual Switch (maximum 12 characters)
+1. Enter a **Name** for the Virtual Switch (maximum 16 characters)
 2. Select one or more **traffic types** for this Virtual Switch
 3. Click **Next**
 
-.. note:: The Virtual Switch name is limited to 12 characters because it is used to derive the underlying Linux bridge name (name + ``-br`` suffix), which must fit within the Linux 15-character interface name limit.
+.. note:: The Virtual Switch name is limited to 16 characters as a storage constraint. The underlying Linux bridge, bond, and libvirt network interface names are assigned automatically from a cluster-scoped counter (for example ``hvmbr0``, ``hvmup0``, ``hvmnet0``) and are independent of the Virtual Switch's display name.
 
 .. tip:: The default ``vs0`` created during cluster provisioning can be renamed and edited, but it should not be deleted unless an alternative VM Network Virtual Switch is in place. At least one Virtual Switch with the VM Network traffic type must exist for VMs to have network connectivity.
 
@@ -423,7 +423,7 @@ Virtual Switch Limitations
 ``````````````````````````
 
 - Maximum **8 Virtual Switches** per cluster.
-- Virtual Switch names are limited to **12 characters**.
+- Virtual Switch names are limited to **16 characters**.
 - Each Virtual Switch supports **1 or 2 uplink NICs** per host.
 - **iSCSI** Virtual Switches are limited to a single NIC (no bonding) — multipath is handled at the protocol layer.
 - **SDN** Virtual Switches cannot share uplinks with other traffic types.

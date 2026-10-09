@@ -55,6 +55,12 @@ Manage iSCSI target connections.
 
    sudo hvmcli storage iscsi configure --portal 10.0.0.1
 
+**Configure a target with a specific initiator name:**
+
+.. code-block:: bash
+
+   sudo hvmcli storage iscsi configure --portal 10.0.0.1:3260 --initiator-name iqn.2024-01.com.example:host01
+
 **Delete an iSCSI target:**
 
 .. code-block:: bash
@@ -65,7 +71,8 @@ Options:
 
 - ``--list`` — List current iSCSI sessions
 - ``--multipath`` — Show multipath status for iSCSI devices
-- ``--portal <ip>`` — iSCSI target portal IP address
+- ``--portal <ip[:port]>`` — iSCSI target portal IP address, with an optional port (default: 3260)
+- ``--initiator-name <iqn>`` — Override the host's iSCSI initiator name (IQN) used to discover and log in to the target
 
 storage fc
 ``````````
@@ -121,5 +128,18 @@ Rescan iSCSI and Fibre Channel storage to discover new LUNs.
 .. code-block:: bash
 
    sudo hvmcli storage rescan
+
+By default, ``rescan`` scans both iSCSI and FC, then reloads multipath maps and reports any newly discovered devices. Use ``--iscsi`` or ``--fc`` to scope the rescan to a single transport:
+
+.. code-block:: bash
+
+   sudo hvmcli storage rescan --iscsi
+   sudo hvmcli storage rescan --fc
+
+Options:
+
+- ``--iscsi`` — Rescan iSCSI sessions only
+- ``--fc`` — Rescan Fibre Channel HBAs only
+- ``--json`` — JSON output
 
 .. tip:: Run ``storage rescan`` after provisioning new LUNs on your storage array to make them visible to the host.

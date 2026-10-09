@@ -71,8 +71,7 @@ Configure the SSH connection to the target HVM hypervisor host where the Morpheu
 - **Host** — The IP address or hostname of the HVM host
 - **Port** — SSH port (default: ``22``)
 - **Username** — SSH user (e.g., ``ubuntu``)
-- **Authentication Method** — Choose between **Password** or **SSH Key** authentication
-- **Password** — Enter the password for the SSH user (if using password authentication)
+- **Password** — Enter the password for the SSH user
 
 Click **Test Connection** to verify connectivity. The installer will:
 
@@ -111,7 +110,7 @@ Configure the host management uplink. A management virtSwitch is created on the 
 .. image:: /images/getting_started/installation/installer/host_network.png
    :alt: HPE Morpheus Installer - Host Network configuration
 
-- **Management virtSwitch** — Displays the detected management virtSwitch (e.g., ``virtSwitch0 already exists on this host and will be reused``)
+- **Management virtSwitch** — Displays the detected management virtSwitch (e.g., ``vs0 already exists on this host and will be reused``)
 
 Optional settings:
 
@@ -221,6 +220,8 @@ The deployment steps include:
 14. Cleaning up temporary files
 
 A **Cancel Deployment** button is available if you need to abort the process.
+
+.. note:: The license applied automatically during initial Morpheus setup supports an evaluation-scale HVM cluster of up to 3 nodes. To build an HVM cluster larger than 3 nodes, add a valid license on the Morpheus appliance first. See :doc:`Settings </administration/settings/settings>`.
 
 Troubleshooting a Failed Deployment
 ````````````````````````````````````

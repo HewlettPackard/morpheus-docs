@@ -33,7 +33,7 @@ List all configured virtual networks (libvirt networks) on the host.
    Name     State   Autostart  Persistent  Type   virtSwitch   Interface  Managed
    -------  ------  ---------  ----------  -----  ----------   ---------  -------
    default  active  yes        yes         other  -            -          no
-   vs0      active  yes        yes         bridge virtSwitch0  vs0-br     yes
+   vs0      active  yes        yes         bridge vs0          vs0-br     yes
 
 network test
 ````````````

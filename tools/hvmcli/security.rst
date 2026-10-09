@@ -64,6 +64,19 @@ Options:
 - ``--reboot`` — Automatically reboot the node after enabling FIPS (required for kernel-level FIPS activation)
 - ``--dry-run`` — Preview changes without applying
 
+**Recover from an invalidated FIPS payload (offline enable):**
+
+If an OS update invalidates the on-disk FIPS payload, re-stage it from an offline bundle before re-enabling FIPS. ``--offline`` and ``--file`` are only valid with ``enable`` and must be used together:
+
+.. code-block:: bash
+
+   sudo hvmcli security fips enable --offline --file /path/to/fips_bundle.zip --force
+
+Options:
+
+- ``--offline`` — Re-stage the FIPS payload from an offline bundle before enabling; requires ``--file``
+- ``--file <bundle.zip>`` — Path to the offline bundle carrying the FIPS payload; use with ``--offline``
+
 **Disable FIPS mode (dry run):**
 
 .. code-block:: bash

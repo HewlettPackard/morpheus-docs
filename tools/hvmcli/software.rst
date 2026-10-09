@@ -63,6 +63,24 @@ Options:
 - ``--force`` — Skip confirmation and proceed with update
 - ``--interactive`` — Run in interactive mode with progress display
 
+**Perform an offline (dark-site/air-gapped) OS update:**
+
+On hosts without repository access, stage an offline update bundle and apply it with ``--offline --file``:
+
+.. code-block:: bash
+
+   sudo hvmcli software update os --offline --file /tmp/hvm-os-update-bundle.zip --dry-run
+   sudo hvmcli software update os --offline --file /tmp/hvm-os-update-bundle.zip --force
+
+Options:
+
+- ``--offline`` — Update from a local bundle instead of a repository (requires ``--file``)
+- ``--file <bundle.zip>`` — Path to the offline update bundle
+- ``--dry-run`` — Simulate the update without making changes (offline updates only)
+- ``--allow-unsigned`` — Accept a bundle that is not cryptographically signed
+- ``--force`` — Skip confirmation prompts
+- ``--json`` — JSON output (requires ``--dry-run`` or ``--force``, since JSON output cannot be interactive)
+
 **Check update status:**
 
 .. code-block:: bash
@@ -92,6 +110,20 @@ Options:
 Options:
 
 - ``--dry-run`` — Preview what would be rolled back without making changes
+- ``--force`` — Skip confirmation prompts
+- ``--json`` — JSON output (requires ``--dry-run``, since JSON output cannot be interactive)
+
+**Roll back using an offline (dark-site/air-gapped) bundle:**
+
+If the host has no repository access, source the rollback packages from the previous offline update bundle instead:
+
+.. code-block:: bash
+
+   sudo hvmcli software update rollback --offline --file /tmp/previous-hvm-os-update-bundle.zip --dry-run
+   sudo hvmcli software update rollback --offline --file /tmp/previous-hvm-os-update-bundle.zip --force
+
+- ``--offline`` — Roll back from a local bundle instead of a repository (requires ``--file``)
+- ``--file <previous_bundle.zip>`` — Path to the previous offline update bundle
 
 **Install a specific package:**
 
