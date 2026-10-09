@@ -221,6 +221,8 @@ The deployment steps include:
 
 A **Cancel Deployment** button is available if you need to abort the process.
 
+.. note:: The license applied automatically during initial Morpheus setup supports an evaluation-scale HVM cluster of up to 3 nodes. To build an HVM cluster larger than 3 nodes, add a valid license on the Morpheus appliance first. See :doc:`Settings </administration/settings/settings>`.
+
 Troubleshooting a Failed Deployment
 ````````````````````````````````````
 
