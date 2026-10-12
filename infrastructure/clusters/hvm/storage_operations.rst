@@ -628,14 +628,14 @@ Attaching an RDBM Volume
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Navigate to the HVM cluster detail page (:menuselection:`Infrastructure --> Clusters` > select cluster)
-#. Select the **Storage Volumes** tab
+#. Select the :guilabel:`Hosts` tab and click on one of the hosts in the cluster
+#. Select the **Storage** tab
 #. Locate the raw block device volume to attach
-#. Click :guilabel:`Attach` on the volume row
-#. Select the target VM from the prompt
-#. Confirm the attachment
+#. Mark the :guilabel:`Shareable` checkbox on the desired volume's row
 
-   .. NOTE:: Volumes that are already backing a Datastore are excluded from the available list.
+   .. NOTE:: Volumes that are already backing a Datastore won't have the `Shareable` checkbox available and are excluded from the available list.
 
+#. On Instance provisioning or on the Reconfigure menu, select `+ Add Existing Shared Volume` and select the right volume from the dropdown that appears
 Hot-attach is supported for running VMs without requiring a reboot.
 
 Detaching an RDBM Volume
