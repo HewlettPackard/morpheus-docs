@@ -165,51 +165,39 @@ msgid ""
 "configuration and management."
 msgstr "Die Unterstützung zonenbasierter Regeln variiert je nach Integrationstyp. Details zur Zonenkonfiguration und -verwaltung finden Sie im Integrationsleitfaden Ihrer Sicherheitsplattform."
 
-#: ../../infrastructure/networks/security/security_zones.rst:56
+#: ../../infrastructure/networks/security/security_zones.rst:55
 msgid "Integration-Specific Zone Support"
 msgstr "Integrationsspezifische Zonenunterstützung"
 
 #: ../../infrastructure/networks/security/security_zones.rst:58
-msgid "Palo Alto Networks"
-msgstr "Palo Alto Networks"
-
-#: ../../infrastructure/networks/security/security_zones.rst:59
-msgid ""
-"Palo Alto firewalls use security zones as a primary organizational "
-"construct. Every interface must be assigned to a zone, and all security "
-"policies reference source and destination zones."
-msgstr "Palo-Alto-Firewalls verwenden Security Zones als primäres Organisationskonstrukt. Jede Schnittstelle muss einer Zone zugewiesen sein, und alle Sicherheitsrichtlinien referenzieren Quell- und Zielzonen."
-
-#: ../../infrastructure/networks/security/security_zones.rst:61
 msgid "NSX-T"
 msgstr "NSX-T"
 
-#: ../../infrastructure/networks/security/security_zones.rst:62
+#: ../../infrastructure/networks/security/security_zones.rst:59
 msgid ""
 "NSX-T uses transport zones to define the scope of logical networks. "
 "Security groups and distributed firewall rules in NSX-T operate "
 "independently of transport zones but can reference zone-aware constructs."
 msgstr "NSX-T verwendet Transport Zones, um den Geltungsbereich logischer Netzwerke zu definieren. Security Groups und Distributed-Firewall-Regeln in NSX-T arbeiten unabhängig von Transport Zones, können aber zonenbezogene Konstrukte referenzieren."
 
-#: ../../infrastructure/networks/security/security_zones.rst:64
+#: ../../infrastructure/networks/security/security_zones.rst:61
 msgid "Cisco ACI"
 msgstr "Cisco ACI"
 
-#: ../../infrastructure/networks/security/security_zones.rst:65
+#: ../../infrastructure/networks/security/security_zones.rst:62
 msgid ""
 "ACI uses the concept of security domains and contexts (VRFs) as zone "
 "equivalents, providing multi-tenant isolation."
 msgstr "ACI verwendet das Konzept von Security Domains und Contexts (VRFs) als Zonenäquivalente und bietet mandantenfähige Isolation."
 
-#: ../../infrastructure/networks/security/security_zones.rst:68
+#: ../../infrastructure/networks/security/security_zones.rst:64
 msgid "Required Role Permissions"
 msgstr "Erforderliche Rollenberechtigungen"
 
-#: ../../infrastructure/networks/security/security_zones.rst:70
+#: ../../infrastructure/networks/security/security_zones.rst:67
 msgid ""
 "Access to security zone viewing requires the ``Infrastructure: Network "
 "Integrations`` permission with ``read`` or ``full`` access. Managing "
 "zone-based firewall rules requires the ``Infrastructure: Network "
 "Firewalls`` permission with ``managerules`` or ``full`` access."
 msgstr "Der Zugriff auf die Anzeige von Sicherheitszonen erfordert die Berechtigung ``Infrastructure: Network Integrations`` mit ``read``- oder ``full``-Zugriff. Die Verwaltung zonenbasierter Firewall-Regeln erfordert die Berechtigung ``Infrastructure: Network Firewalls`` mit ``managerules``- oder ``full``-Zugriff."
-

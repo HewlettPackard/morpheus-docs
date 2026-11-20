@@ -8,7 +8,7 @@ Security Servers
 Overview
 ^^^^^^^^
 
-Security servers provide centralized management of network security policies, firewall rules, and security groups within |morpheus|. These integrations connect to third-party security platforms (such as Palo Alto Networks, Cisco ACI, or VMware NSX) to provide security orchestration alongside network provisioning workflows.
+Security servers provide centralized management of network security policies, firewall rules, and security groups within |morpheus|. These integrations connect to third-party security platforms (such as Cisco ACI or VMware NSX) to provide security orchestration alongside network provisioning workflows.
 
 Security server integrations enable:
 

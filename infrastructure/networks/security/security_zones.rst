@@ -55,9 +55,6 @@ When creating firewall rules on integrations that support zone-based security, z
 Integration-Specific Zone Support
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Palo Alto Networks
-  Palo Alto firewalls use security zones as a primary organizational construct. Every interface must be assigned to a zone, and all security policies reference source and destination zones.
-
 NSX-T
   NSX-T uses transport zones to define the scope of logical networks. Security groups and distributed firewall rules in NSX-T operate independently of transport zones but can reference zone-aware constructs.
 

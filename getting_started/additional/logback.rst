@@ -550,7 +550,6 @@ Expand below to see all core |morpheus| logger paths set to INFO level.
         <logger name="com.morpheus.network.NetworkService" level="INFO"/>
         <logger name="com.morpheus.network.NetworkServicesService" level="INFO"/>
         <logger name="com.morpheus.network.NutanixNetworkPoolService" level="INFO"/>
-        <logger name="com.morpheus.network.PaloAltoNetworkService" level="INFO"/>
         <logger name="com.morpheus.network.PhpipamNetworkPoolService" level="INFO"/>
         <logger name="com.morpheus.network.PluginNetworkPoolService" level="INFO"/>
         <logger name="com.morpheus.network.PxeService" level="INFO"/>
