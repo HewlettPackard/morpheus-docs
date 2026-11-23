@@ -15,7 +15,7 @@ Before creating an HVM cluster, identify the target layout and ensure the follow
    * - Operating System
      - HVM OS/Ubuntu 24.04 for layout 1.3; HVM OS 26.04 for layout 2.0
    * - Minimum Hosts
-     - 3 Hosts for a standard single-site cluster; 2 Hosts are supported with an external Distributed Worker witness when using an HPE Shared File System (GFS2) datastore (see :doc:`two_node_clusters`)
+     - 3 Hosts for a standard single-site cluster; 2 Hosts are supported with an external Distributed Worker witness when using an HPE Shared File System (GFS2) datastore (see :doc:`two_node_clusters`). 1 Host is also supported when using an HPE Shared File System (GFS2) datastore, but no HA is possible in this scenario.
    * - CPU
      - Hardware virtualization enabled (VT-x/AMD-V)
    * - Memory
